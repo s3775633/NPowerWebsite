@@ -1,0 +1,21 @@
+.titleLight {
+    font-size: 50px;
+    color: #777777;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.titleBold {
+    font-size: 50px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.titleBox1 {
+    padding-bottom: 100px;
+}
+
+.titleBox2 {
+    padding-top: 100px;
+}
