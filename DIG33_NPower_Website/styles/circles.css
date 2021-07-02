@@ -9,7 +9,7 @@
     border-radius: 1000px;
     margin: auto;
     overflow: auto;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    box-shadow: 0px 4px 6px 1px #777;
 	transform: scale(1);
     transition: transform 700ms;
 }
@@ -17,26 +17,28 @@
 .circleAlternatives {
     display: block;
     position: relative;
-    background-color: #6f4ea7;
+    background-color: #7548ac;
     height: 0;
     padding-bottom: 80%;
     width: 80%;
     border-radius: 1000px;
     margin: auto;
     overflow: auto;
+    box-shadow: 0px 4px 6px 1px #777;
     transition: transform 700ms;
 }
 
 .circleEnvironment {
     display: block;
     position: relative;
-    background-color: #00589d;
+    background-color: #0058a3;
     height: 0;
     padding-bottom: 80%;
     width: 80%;
     border-radius: 1000px;
     margin: auto;
     overflow: auto;
+    box-shadow: 0px 4px 6px 1px #777;
     transition: transform 700ms;
 }
 
@@ -108,3 +110,26 @@
 		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	}
 }
+
+@media screen and (max-width: 575px) {
+    .circleReduceCost {
+        padding-bottom: 0%;
+        width: 215px;
+        height: 215px;
+    }
+
+    .circleAlternatives {
+        margin-top: -30px;
+        padding-bottom: 0%;
+        width: 215px;
+        height: 215px;
+    }
+
+    .circleEnvironment {
+        margin-top: -30px;
+        padding-bottom: 0%;
+        width: 215px;
+        height: 215px;
+    }
+  }
+

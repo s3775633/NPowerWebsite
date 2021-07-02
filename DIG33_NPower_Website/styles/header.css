@@ -21,3 +21,61 @@ header img {
     box-shadow: 0px 2px 5px #777;
     border-radius: 40px 40px;
 }
+
+.improveLocation {
+    position: absolute;
+    left: 15%;
+}
+
+.productLocation {
+    position: absolute;
+    left: 30%;
+}
+
+.supportLocation {
+    position: absolute;
+    right: 30%;
+}
+
+.aboutLocation {
+    position: absolute;
+    right: 15%;
+}
+
+.searchLocation {
+    position: absolute;
+    right: 2%;
+}
+
+.navText {
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 991px) {
+    .improveLocation {
+        position: relative;
+        left: 0px;
+    }
+    
+    .productLocation {
+        position: relative;
+        left: 0px;
+    }
+    
+    .supportLocation {
+        position: relative;
+        left: 0px;
+    }
+    
+    .aboutLocation {
+        position: relative;
+        left: 0px;
+    }
+    
+    .searchLocation {
+        position: relative;
+        left: 0px;
+    }
+  }
