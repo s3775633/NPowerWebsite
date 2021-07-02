@@ -45,3 +45,26 @@
         opacity: 1;
      }
 }
+
+@media screen and (max-width: 575px) {
+    .titleBox1 {
+        padding-bottom: 20px;
+        margin-top: -20px;
+    }
+
+    .titleBox2 {
+        padding-top: 20px;
+    }
+
+    .titleLight {
+        font-size: 25px;
+    }
+    
+    .titleBold {
+        font-size: 25px;
+    }
+
+    .jumbotron.text-center {
+        padding-top: 0;
+    }
+  }
