@@ -13,6 +13,7 @@
 }
 
 .titleBox1 {
+    padding-top: 120px;
     padding-bottom: 100px;
     animation: fadeInAnimation1 ease 4s
 }
