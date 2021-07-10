@@ -1,0 +1,224 @@
+
+.reduceCost {
+    display: block;
+    position: relative;
+    background-color: #e70030;
+    height: 0;
+    padding-bottom: 80%;
+    width: 60%;
+    margin: auto;
+    overflow: auto;
+    box-shadow: 0px 4px 6px 1px #777;
+    transform: skew(-10deg);
+    transition: transform 1500ms;
+    overflow: hidden;
+}
+
+.alternatives {
+    display: block;
+    position: relative;
+    background-color: #7548ac;
+    height: 0;
+    padding-bottom: 80%;
+    width: 60%;
+    margin: auto;
+    overflow: auto;
+    box-shadow: 0px 4px 6px 1px #777;
+    transform: skew(-10deg);
+    transition: transform 1500ms;
+    overflow: hidden;
+}
+
+.environment {
+    display: block;
+    position: relative;
+    background-color: #0058a3;
+    height: 0;
+    padding-bottom: 80%;
+    width: 60%;
+    margin: auto;
+    overflow: auto;
+    box-shadow: 0px 4px 6px 1px #777;
+    transform: skew(-10deg);
+    transition: transform 1500ms;
+    overflow: hidden;
+}
+
+.image {
+    position: absolute;
+    height: 38%;
+    width: 50%;
+    top: 40%;
+    left: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+    transform: skew(10deg) translateY(-40%) translateX(-45%);
+}
+
+.fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 700ms, opacity 700ms linear, transform 1500ms;
+    transform: skew(0) translateY(-40%) translateX(-45%);
+}
+
+.fade-in {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 700ms linear, transform 1500ms;
+    transform: skew(10deg) translateY(-40%) translateX(-45%);
+}
+
+.fade-in-description {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1500ms linear;
+}
+
+.fade-out-description {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 700ms, opacity 700ms linear;
+}
+
+.tileDecriptionVisibility {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.content h1 {
+    margin: auto;
+    padding-top: 40%;
+    font-size: 5vh;
+}
+
+.reduceCost:hover {
+    transform: scale(1.4);
+    animation: pulse1 3s infinite;
+}
+
+.alternatives:hover {
+    transform: scale(1.4);
+    animation: pulse2 3s infinite;
+}
+
+.environment:hover {
+    transform: scale(1.4);
+    animation: pulse3 3s infinite;
+}
+
+.tileSection {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+@keyframes pulse1 {
+	0% {
+		box-shadow: 0 0 0 0 #e70030;
+	}
+
+	70% {
+		box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+@keyframes pulse2 {
+	0% {
+		box-shadow: 0 0 0 0 #6f4ea7;
+	}
+
+	70% {
+		box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+@keyframes pulse3 {
+	0% {
+		box-shadow: 0 0 0 0 #00589d;
+	}
+
+	70% {
+		box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+@media screen and (max-width: 1700px) {
+    .tileSection {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+  }
+
+@media screen and (max-width: 1400px) {
+    .tileSection {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+  }
+
+@media screen and (max-width: 575px) {
+    .reduceCost {
+        padding-bottom: 0%;
+        height: 0;
+        border-radius: 1000px;
+        transform: skew(0);
+        width: 25vh;
+        height: 25vh;
+    }
+
+    .alternatives {
+        margin-top: -30px;
+        padding-bottom: 0%;
+        border-radius: 1000px;
+        transform: skew(0);
+        width: 25vh;
+        height: 25vh;
+    }
+
+    .environment {
+        margin-top: -30px;
+        padding-bottom: 0%;
+        border-radius: 1000px;
+        transform: skew(0);
+        width: 25vh;
+        height: 25vh;
+    }
+
+    .image {
+        height: 50%;
+        width: 50%;
+        transform: skew(0) translateY(-50%) translateX(-50%);
+    }
+
+    .reduceCost:hover {
+        transform: scale(1.2);
+    }
+    
+    .alternatives:hover {
+        transform: scale(1.2);
+    }
+    
+    .environment:hover {
+        transform: scale(1.2);
+    }
+  }
+
