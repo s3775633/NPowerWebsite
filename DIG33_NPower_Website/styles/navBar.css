@@ -1,0 +1,29 @@
+@media (max-width: 992px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 56px;
+        box-shadow: inset 2px 2px 5px 0px #777;
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-top: 50px;
+        width: 65%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .navbar-collapse.collapsing {
+        left: -65%;
+        transition: height 0s ease;
+    }
+
+    .navbar-collapse.show {
+        left: 0;
+        transition: left 300ms ease-in-out;
+    }
+
+    .navbar-toggler.collapsed ~ .navbar-collapse {
+        transition: left 500ms ease-in-out;
+    }
+}
