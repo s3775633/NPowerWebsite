@@ -1,6 +1,6 @@
 @media (max-width: 992px) {
     .navbar-collapse {
-        position: absolute;
+        position: fixed;
         top: 56px;
         box-shadow: inset 2px 2px 5px 0px #777;
         left: 0;
@@ -9,8 +9,8 @@
         padding-bottom: 15px;
         padding-top: 50px;
         width: 65%;
-        height: 100vh;
-        z-index: 10;
+        height: 100%;
+        z-index: 1;
     }
 
     .navbar-collapse.collapsing {
