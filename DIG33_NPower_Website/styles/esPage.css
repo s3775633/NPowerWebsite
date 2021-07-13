@@ -1,0 +1,59 @@
+.backButton {
+    width: auto;
+    padding: 0px;
+    font-size: 5vw;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    margin: auto;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.rowES {
+    width: 60%;
+    display: flex; 
+    margin-left: 17%;
+}
+
+.col1 {
+    display: flex;
+    flex: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.col2 {
+    float: left;
+    flex: 90%;
+}
+
+.esContainer {
+    margin: auto;
+    width: 60%;
+}
+
+.esImage {
+    display: block;
+    margin: auto;
+    width: 25%;
+}
+
+@media screen and (max-width: 900px) {
+    .rowES {
+        width: 80%;
+        margin-left: 8%;
+    }
+
+    .esContainer {
+        padding-top: 0;
+        margin: auto;
+        width: 80%;
+    }
+
+    .esImage {
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+  }
+

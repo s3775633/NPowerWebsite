@@ -60,6 +60,22 @@
     margin: 0;
 }
 
+.esDescription {
+    font-size: 1.7vw;
+    margin-bottom: 40px;
+}
+
+.esHeading {
+    text-transform: uppercase;
+    font-size: 2.2vw;
+}
+
+.esTitleBox {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    animation: fadeInAnimation1 ease 4s
+}
+
 @keyframes fadeInAnimation1 {
     0% {
         opacity: 0;
@@ -133,6 +149,15 @@
         margin: 10px;
         text-align: center;
         transform: translateX(-65%);
+    }
+
+    .esDescription {
+        font-size: 15px;
+    }
+
+    .esHeading {
+        text-transform: uppercase;
+        font-size: 20px;
     }
   }
 
