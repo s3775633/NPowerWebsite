@@ -27,6 +27,35 @@
     flex: 90%;
 }
 
+.col1Elig {
+    display: flex;
+    flex: 70%;
+    justify-content: left;
+}
+
+.col2Elig {
+    display: flex;
+    flex: 30%;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-end;
+}
+
+.col3Elig {
+    display: flex;
+    flex: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.formText {
+    vertical-align: middle;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .esContainer {
     margin: auto;
     width: 60%;
@@ -36,6 +65,26 @@
     display: block;
     margin: auto;
     width: 25%;
+    animation: fadeInAnimation ease 8s;
+    cursor: pointer;
+}
+
+.egButton {
+    margin: 30px;
+    width: 120px;
+    height: 50px;
+    animation: fadeInAnimation ease 8s;
+}
+
+.egCombo {
+    padding: 10px;
+    animation: fadeInAnimation ease 8s;
+}
+
+.egCheck {
+    width: 20px;
+    height: 20px;
+    animation: fadeInAnimation ease 8s;
 }
 
 @media screen and (max-width: 900px) {
