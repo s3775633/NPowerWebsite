@@ -12,6 +12,7 @@
     transform: skew(-10deg);
     transition: transform 1500ms;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .alternatives {
@@ -27,6 +28,7 @@
     transform: skew(-10deg);
     transition: transform 1500ms;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .environment {
@@ -42,6 +44,7 @@
     transform: skew(-10deg);
     transition: transform 1500ms;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .image {
