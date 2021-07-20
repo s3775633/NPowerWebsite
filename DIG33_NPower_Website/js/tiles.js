@@ -1,5 +1,5 @@
-
-
+// function used to add and remove classes from home page tiles to give additional
+// hover effects
 function mouseOver(div) {
     var image = div.querySelector(".image");
     var text = div.querySelector(".tileText");
@@ -17,6 +17,8 @@ function mouseOver(div) {
     description.classList.remove("tileDecriptionVisibility");
 }
 
+// function used to add and remove classes from home page tiles to give additional
+// unhover effects
 function mouseOut(div) {
   var image = div.querySelector(".image");
   var text = div.querySelector(".tileText");
