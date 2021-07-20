@@ -2,7 +2,16 @@
     cursor: pointer;
 }
 
-@media (max-width: 992px) {
+.nav-link:hover {
+    color: #000000 !important;
+    text-decoration: underline;
+  }
+
+.search-bar {
+    width: 200px;
+}
+
+@media (max-width: 991px) {
     .navbar-collapse {
         position: fixed;
         top: 56px;
@@ -29,5 +38,9 @@
 
     .navbar-toggler.collapsed ~ .navbar-collapse {
         transition: left 500ms ease-in-out;
+    }
+
+    .search-bar {
+        width: auto;
     }
 }

@@ -28,7 +28,7 @@ header img {
 
 .improveLocation {
     position: absolute;
-    left: 15%;
+    left: 14%;
 }
 
 .productLocation {
@@ -38,17 +38,17 @@ header img {
 
 .supportLocation {
     position: absolute;
-    right: 30%;
+    right: 31%;
 }
 
 .aboutLocation {
     position: absolute;
-    right: 15%;
+    right: 20%;
 }
 
 .searchLocation {
     position: absolute;
-    right: 2%;
+    right: 0.5%;
 }
 
 .navText {
