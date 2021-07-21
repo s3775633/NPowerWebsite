@@ -31,29 +31,30 @@
             <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a class="nav-link navText" id="esNav" aria-current="page" onclick=esPage()>Incentives</a>
+                  <a class="nav-link navText" id="esNav" aria-current="page" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick=esPage()>Incentives</a>
                 </li>
                 <li class="nav-item improveLocation">
-                  <a class="nav-link navText" aria-current="page" href="#">Improvements</a>
+                  <a class="nav-link navText" aria-current="page" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="#">Improvements</a>
                 </li>
                 <li class="nav-item productLocation">
-                  <a class="nav-link navText" aria-current="page" href="#">Products</a>
+                  <a class="nav-link navText" aria-current="page" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="#">Products</a>
                 </li>
                 <li class="nav-item supportLocation">
-                  <a class="nav-link navText" aria-current="page" href="#">Support</a>
+                  <a class="nav-link navText" aria-current="page" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="#">Support</a>
                 </li>
                 <li class="nav-item aboutLocation">
-                  <a class="nav-link navText" aria-current="page" href="#">About</a>
+                  <a class="nav-link navText" id="aboutNav" aria-current="page" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick=aboutPage()>About</a>
                 </li>
               </ul>
               <!--Search form-->
               <form class="form-inline my-2 my-lg-0 ml-auto searchLocation">
                 <div class="input-group search-bar">
-                <input class="form-control" type="search" placeholder="Search">
-                <div class="input-group-append">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fa fa-search fa-lg"></i></button>
-              </div>
-            </div>
+                  <input class="form-control" type="search" placeholder="Search">
+                  <div class="input-group-append">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i
+                        class="fa fa-search fa-lg"></i></button>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
@@ -107,7 +108,7 @@
         </div>
         <div class="jumbotron text-center">
           <div class=titleBox2>
-            <h1 class="titleLight">Contributing towards <b class="titleBold">Our</b> sustainable future</h1>
+            <h1 class="titleLight">Contributing towards <b class="titleBold">Our</b> sustainable future.</h1>
           </div>
         </div>
       </section>
@@ -188,10 +189,37 @@
                 </div>
               </div>
               <div id="checkBoxes">
-            </div>
+              </div>
               <button class="egButton" type="submit">TEST</button>
             </form>
           </div>
+        </div>
+      </section>
+      <!--Section-About_Page-->
+      <section class="aboutPage page">
+        <div class="jumbotron text-center para">
+          <div class="esTitleBox">
+            <div class="rowES">
+              <div class="col1">
+                <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
+              </div>
+              <div class="col2">
+                <span class="titleBold pull-center">About</h1>
+                </span>
+              </div>
+            </div>
+          </div>
+          <h1 class="aboutHeading">Our Mission</h1>
+          <p class="aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Nullam ornare,
+            nunc sed porttitor rutrum, lectus orci finibus massa, consequat porta metus erat eu magna. In vel
+            tempor nulla, ut tempor risus.
+            Donec eu augue eu ligula interdum dignissim.</p>
+          <h1 class="aboutHeading">Your Envolvement</h1>
+          <p class="aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Nullam ornare,
+            nunc sed porttitor rutrum, lectus orci finibus massa, consequat porta metus erat eu magna. In vel
+            tempor nulla, ut tempor risus.</p>
         </div>
       </section>
     </div>
@@ -226,4 +254,5 @@
   <script src="js/navigation.js"></script>
   <script src="js/request.js"></script>
 </body>
+
 </html>
