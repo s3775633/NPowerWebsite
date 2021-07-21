@@ -24,13 +24,22 @@ function homePage() {
     home.style.display = "block";
 }
 
-// Function used to display home page.
+// Function used to display about page.
 function aboutPage() {
     hidePages();
     var about = document.querySelector(".aboutPage"); 
     var aboutNav = document.getElementById("aboutNav");
     about.style.display = "block";
     aboutNav.classList.add("active");
+}
+
+// Function used to display support page.
+function supportPage() {
+    hidePages();
+    var support = document.querySelector(".supportPage"); 
+    var supportNav = document.getElementById("supportNav");
+    support.style.display = "block";
+    supportNav.classList.add("active");
 }
 
 // Function used to hide all pages on the site and make all nav options inactive.

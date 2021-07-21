@@ -40,7 +40,7 @@
                   <a class="nav-link navText" aria-current="page" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="#">Products</a>
                 </li>
                 <li class="nav-item supportLocation">
-                  <a class="nav-link navText" aria-current="page" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="#">Support</a>
+                  <a class="nav-link navText" id="supportNav" aria-current="page" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick=supportPage()>Support</a>
                 </li>
                 <li class="nav-item aboutLocation">
                   <a class="nav-link navText" id="aboutNav" aria-current="page" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick=aboutPage()>About</a>
@@ -222,6 +222,49 @@
             tempor nulla, ut tempor risus.</p>
         </div>
       </section>
+       <!--Section-Support_Page-->
+       <section class="supportPage page">
+        <div class="jumbotron text-center para">
+          <div class="esTitleBox">
+            <div class="rowES">
+              <div class="col1">
+                <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
+              </div>
+              <div class="col2">
+                <span class="titleBold pull-center">Contact & Support</h1>
+                </span>
+              </div>
+            </div>
+          </div>
+            <div class="rowSup">
+              <div class="col1">
+                <i class="fa fa-phone fa-3x"></i>
+              </div>
+              <div class="col2">
+                <a  id="supportEnq"><button class="supportButton1 pull-center">Enquiries</button></a>
+                </span>
+              </div>
+            </div>
+            <div class="rowSup">
+              <div class="col1">
+                <i class="fa fa-phone fa-3x"></i>
+              </div>
+              <div class="col2">
+                <a id="supportFault"><button class="supportButton2 pull-center">Faults/Emergencies</button></a>
+                </span>
+              </div>
+            </div>
+            <div class="rowSup">
+              <div class="col1">
+                <i class="fa fa-envelope fa-3x"></i>
+              </div>
+              <div class="col2">
+                <a id="supportEmail"><button class="supportButton3 pull-center">Message</button></a>
+                </span>
+              </div>
+            </div>
+          </div>
+      </section>
     </div>
     <!-- Footer -->
     <footer class="text-white page-footer fixed-bottom">
@@ -233,11 +276,11 @@
               data-mdb-ripple-color="dark"><i class="fa fa-facebook fa-2x"></i></a>
             <a class="btn btn-link btn-floating btn-lg text-dark m-1 mb-0" id="twitter" role="button"
               data-mdb-ripple-color="dark"><i class="fa fa-twitter fa-2x"></i></a>
-            <a class="btn btn-link btn-floating btn-lg text-dark m-1 pull-right" href="#!" role="button"
+            <a class="btn btn-link btn-floating btn-lg text-dark m-1 pull-right" id="emailButton" role="button"
               data-mdb-ripple-color="dark"><i class="fa fa-envelope fa-2x"></i>
               <p class="iconLabel" id="email"></p>
             </a>
-            <a class="btn btn-link btn-floating btn-lg text-dark m-1 pull-right" href="#!" role="button"
+            <a class="btn btn-link btn-floating btn-lg text-dark m-1 pull-right" id="enqButton" role="button"
               data-mdb-ripple-color="dark"><i class="fa fa-phone fa-2x"></i>
               <p class="iconLabel" id="enqPhone"></p>
             </a>
