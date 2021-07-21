@@ -20,7 +20,6 @@ request.onload = function() {
     }
     populateEligibity(questions);
 };
-request.send();
 
 // function used to populate all questions within the eligibility page
 function populateEligibity(questions)
@@ -75,11 +74,65 @@ function populateEligibity(questions)
     }
 }
 
-// Constructor for a question
-function Question(id, number, options, type)
+var compRequest = new XMLHttpRequest();
+compRequest.open('GET', 'https://npower-s1.herokuapp.com/company');
+compRequest.onload = function() {
+    // JSON string parsed and stores
+    var companyInfo = JSON.parse(compRequest.responseText);
+    console.log(companyInfo);
+    address = new Address(companyInfo.address.street1, companyInfo.address.street2,
+        companyInfo.address.city, companyInfo.address.postcode);
+    company = new Company(companyInfo._id, companyInfo.tradingName, companyInfo.companyName,
+        address, companyInfo.webAddress, companyInfo.enquiryPhone, companyInfo.faultPhone,
+        companyInfo.email, companyInfo.facebook, companyInfo.twitter);
+    setCompanyInfo(company);
+};
+
+function setCompanyInfo(company)
 {
-    this.id = id;
-    this.number = number;
-    this.options = options,
-    this.type = type;
+    var facebookIcon = document.getElementById('facebook');
+    facebookIcon.href = company.facebook;
+    var twitterIcon = document.getElementById('twitter');
+    twitterIcon.href = company.twitter;
+    var email = document.getElementById('email');
+    email.innerHTML = "&nbsp" + company.email;
+    var enqPhone = document.getElementById('enqPhone');
+    enqPhone.innerHTML = "&nbsp" + company.enquiryPhone;
+}
+
+compRequest.send();
+request.send();
+
+// Constructor for a question
+class Question {
+    constructor(id, number, options, type) {
+        this.id = id;
+        this.number = number;
+        this.options = options,
+        this.type = type;
+    }
+}
+
+class Company {
+    constructor(id, tradingName, companyName, address, webAddress, enquiryPhone, faultPhone, email, facebook, twitter) {
+        this.id = id;
+        this.tradingName = tradingName;
+        this.companyName = companyName,
+        this.address = address;
+        this.webAddress = webAddress;
+        this.enquiryPhone = enquiryPhone;
+        this.faultPhone = faultPhone,
+        this.email = email;
+        this.facebook = facebook;
+        this.twitter = twitter;
+    }
+}
+
+class Address {
+    constructor(street1, street2, city, postcode) {
+        this.street1 = street1;
+        this.street2 = street2;
+        this.city = city,
+        this.postcode = postcode;
+    }
 }
