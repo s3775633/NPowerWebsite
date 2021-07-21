@@ -20,6 +20,7 @@
   <div class="page-container">
     <div class="content-wrap">
       <header>
+        <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-style fixed-top">
           <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -45,6 +46,7 @@
                   <a class="nav-link navText" aria-current="page" href="#">About</a>
                 </li>
               </ul>
+              <!--Search form-->
               <form class="form-inline my-2 my-lg-0 ml-auto searchLocation">
                 <div class="input-group search-bar">
                 <input class="form-control" type="search" placeholder="Search">
@@ -57,12 +59,14 @@
           </div>
         </nav>
       </header>
+      <!--Section-Home_page-->
       <section class="homePage page">
         <div class="jumbotron text-center">
           <div class="titleBox1">
             <h1 class="titleLight">As Individuals we are <b class="titleBold">NPower</b>ed.</h1>
           </div>
         </div>
+        <!--Home_Page_Tiles-->
         <div class="container-fluid tileSection">
           <div class="row">
             <div class="col-sm-4">
@@ -107,6 +111,7 @@
           </div>
         </div>
       </section>
+      <!--Section-Energy_saving_Page-->
       <section class="energySaving page">
         <div class="jumbotron text-center">
           <div class="esTitleBox">
@@ -129,6 +134,7 @@
           </div>
         </div>
       </section>
+      <!--Section-Eligibility_Page-->
       <section class="elegibilityPage page">
         <div class="jumbotron text-center">
           <div class="esTitleBox">
@@ -149,9 +155,7 @@
                   <p class="esDescription formText">Household Status</p>
                 </div>
                 <div class="col2Elig">
-                  <select class="egCombo">
-                    <option value="renter">Renter</option>
-                    <option value="renter">Owner</option>
+                  <select class="egCombo" id="status">
                   </select>
                   </span>
                 </div>
@@ -161,17 +165,7 @@
                   <p class="esDescription formText">Combined Income</p>
                 </div>
                 <div class="col2Elig">
-                  <select class="egCombo">
-                    <option value="30K>">&#60 $30K</option>
-                    <option value="30K-40K">$30K - $40K</option>
-                    <option value="40K-50K">$40K - $50K</option>
-                    <option value="50K-60K">$50K - $60K</option>
-                    <option value="60K-70K">$60K - $70K</option>
-                    <option value="70K-80K">$70K - $80K</option>
-                    <option value="80K-90K">$80K - $90K</option>
-                    <option value="90K-100K">$90K - $100K</option>
-                    <option value="100K-120K">$100K - $120K</option>
-                    <option value="120K+">$120K+</option>
+                  <select class="egCombo" id="income">
                   </select>
                   </span>
                 </div>
@@ -181,15 +175,7 @@
                   <p class="esDescription formText">Household Occupants</p>
                 </div>
                 <div class="col2Elig">
-                  <select class="egCombo">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8+">8+</option>
+                  <select class="egCombo" id="occupants">
                   </select>
                   </span>
                 </div>
@@ -201,64 +187,18 @@
                 <div class="col2Elig">
                 </div>
               </div>
-              <div class="rowES ">
-                <div class="col3Elig">
-                  <input type="checkbox" class="egCheck">
-                </div>
-                <div class="col1Elig">
-                  <p class="esDescriptionSmall formText">Smart Meter</p>
-                </div>
-              </div>
-              <div class="rowES ">
-                <div class="col3Elig">
-                  <input type="checkbox" class="egCheck">
-                </div>
-                <div class="col1Elig">
-                  <p class="esDescriptionSmall formText">Energy Efficient Lighting</p>
-                </div>
-              </div>
-              <div class="rowES ">
-                <div class="col3Elig">
-                  <input type="checkbox" class="egCheck">
-                </div>
-                <div class="col1Elig">
-                  <p class="esDescriptionSmall formText">Sealed House</p>
-                </div>
-              </div>
-              <div class="rowES ">
-                <div class="col3Elig">
-                  <input type="checkbox" class="egCheck">
-                </div>
-                <div class="col1Elig">
-                  <p class="esDescriptionSmall formText">Window Shades</p>
-                </div>
-              </div>
-              <div class="rowES ">
-                <div class="col3Elig">
-                  <input type="checkbox" class="egCheck">
-                </div>
-                <div class="col1Elig">
-                  <p class="esDescriptionSmall formText">Low-Flow Faucets</p>
-                </div>
-              </div>
-              <div class="rowES ">
-                <div class="col3Elig">
-                  <input type="checkbox" class="egCheck">
-                </div>
-                <div class="col1Elig">
-                  <p class="esDescriptionSmall formText">Solar Energy</p>
-                </div>
-              </div>
+              <div id="checkBoxes">
+            </div>
               <button class="egButton" type="submit">TEST</button>
             </form>
           </div>
         </div>
       </section>
     </div>
+    <!-- Footer -->
     <footer class="text-white page-footer fixed-bottom">
-      <!-- Grid container -->
       <div class="container-fluid">
-        <!-- Section: Social media -->
+        <!-- Section-Contact icons -->
         <div class="row">
           <div class="col-md-12 mb-0">
             <a class="btn btn-link btn-floating btn-lg text-dark m-1 mb-0" href="#!" role="button"
@@ -284,5 +224,6 @@
     crossorigin="anonymous"></script>
   <script src="js/tiles.js"></script>
   <script src="js/navigation.js"></script>
+  <script src="js/request.js"></script>
 </body>
 </html>
