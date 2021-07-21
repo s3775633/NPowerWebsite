@@ -11,6 +11,10 @@
     width: 200px;
 }
 
+.active {
+    text-decoration: underline;
+}
+
 @media (max-width: 991px) {
     .navbar-collapse {
         position: fixed;
