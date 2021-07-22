@@ -15,12 +15,12 @@
 .titleBox1 {
     padding-top: 120px;
     padding-bottom: 100px;
-    animation: fadeInAnimation ease 4s
+    animation: fadeInAnimation ease 3s
 }
 
 .titleBox2 {
     padding-top: 100px;
-    animation: fadeInAnimation ease 8s;
+    animation: fadeInAnimation ease 6s;
 }
 
 .tileText {
@@ -62,25 +62,29 @@
 }
 
 .esDescription {
+    width: 80%;
+    margin: auto;
     font-size: 1.7vw;
     margin-bottom: 40px;
-    animation: fadeInAnimation ease 8s
+    animation: fadeInAnimation ease 4s
 }
 
 .esDescriptionSmall {
     font-size: 1vw;
     margin-bottom: 40px;
-    animation: fadeInAnimation ease 8s
+    animation: fadeInAnimation ease 4s
 }
 
 .esHeading {
     text-transform: uppercase;
     font-size: 2.2vw;
-    animation: fadeInAnimation ease 8s;
+    animation: fadeInAnimation ease 4s;
     cursor: pointer;
 }
 
 .esTitleBox {
+    width: 80%;
+    margin: auto;
     padding-top: 120px;
     padding-bottom: 40px;
     animation: fadeInAnimation ease 4s
@@ -94,7 +98,7 @@
 .aboutHeading {
     text-transform: uppercase;
     font-size: 2.2vw;
-    animation: fadeInAnimation ease 8s;
+    animation: fadeInAnimation ease 4s;
     padding-top: 40px;
     color: #000000;
 }
@@ -103,7 +107,7 @@
     font-size: 1.7vw;
     margin-bottom: 40px;
     padding-top: 10px;    
-    animation: fadeInAnimation ease 8s
+    animation: fadeInAnimation ease 4s
 }
 
 @keyframes fadeInAnimation {

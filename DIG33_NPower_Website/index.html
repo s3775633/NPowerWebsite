@@ -21,29 +21,29 @@
     <div class="content-wrap">
       <header>
         <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-style fixed-top">
+        <nav class="navbar navbar-light bg-light navbar-style fixed-top">
           <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
               aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <input class="hamburger" type="image" src="./images/Hamburger.png"/>
             </button>
             <a href="#"><img class="homeLogo" onclick=homePage() src="./images/Logo.png" alt=""></a>
             <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a class="nav-link navText" id="esNav" aria-current="page" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick=esPage()>Incentives</a>
+                  <a class="nav-link navText" id="esNav" aria-current="page" onclick=esPage()>Incentives</a>
                 </li>
                 <li class="nav-item improveLocation">
-                  <a class="nav-link navText" aria-current="page" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="#">Improvements</a>
+                  <a class="nav-link navText" aria-current="page" href="#">Improvements</a>
                 </li>
                 <li class="nav-item productLocation">
-                  <a class="nav-link navText" aria-current="page" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="#">Products</a>
+                  <a class="nav-link navText" aria-current="page" href="#">Products</a>
                 </li>
                 <li class="nav-item supportLocation">
-                  <a class="nav-link navText" aria-current="page" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" href="#">Support</a>
+                  <a class="nav-link navText" id="supportNav" aria-current="page" onclick=supportPage()>Support</a>
                 </li>
                 <li class="nav-item aboutLocation">
-                  <a class="nav-link navText" id="aboutNav" aria-current="page" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick=aboutPage()>About</a>
+                  <a class="nav-link navText" id="aboutNav" aria-current="page" onclick=aboutPage()>About</a>
                 </li>
               </ul>
               <!--Search form-->
@@ -115,6 +115,7 @@
       <!--Section-Energy_saving_Page-->
       <section class="energySaving page">
         <div class="jumbotron text-center">
+          <div class="esContainer">
           <div class="esTitleBox">
             <div class="rowES">
               <div class="col1">
@@ -126,7 +127,6 @@
               </div>
             </div>
           </div>
-          <div class="esContainer">
             <p class="esDescription">You could qualify for energy saving improvements like a new boiler, loft insulation
               and cavity or external wall insulation - for free or subsidised.</p>
             <h1 class="esHeading" onclick=elgPage()>Are you eligible ?</h1>
@@ -138,6 +138,7 @@
       <!--Section-Eligibility_Page-->
       <section class="elegibilityPage page">
         <div class="jumbotron text-center">
+          <div class="esContainer">
           <div class="esTitleBox">
             <div class="rowES">
               <div class="col1">
@@ -149,7 +150,6 @@
               </div>
             </div>
           </div>
-          <div class="esContainer">
             <form>
               <div class="rowES">
                 <div class="col1Elig">
@@ -222,6 +222,49 @@
             tempor nulla, ut tempor risus.</p>
         </div>
       </section>
+       <!--Section-Support_Page-->
+       <section class="supportPage page">
+        <div class="jumbotron text-center para">
+          <div class="esTitleBox">
+            <div class="rowES">
+              <div class="col1">
+                <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
+              </div>
+              <div class="col2">
+                <span class="titleBold pull-center">Contact & Support</h1>
+                </span>
+              </div>
+            </div>
+          </div>
+            <div class="rowSup">
+              <div class="col1">
+                <i class="fa fa-phone fa-3x"></i>
+              </div>
+              <div class="col2">
+                <a  id="supportEnq"><button class="supportButton1 pull-center">Enquiries</button></a>
+                </span>
+              </div>
+            </div>
+            <div class="rowSup">
+              <div class="col1">
+                <i class="fa fa-phone fa-3x"></i>
+              </div>
+              <div class="col2">
+                <a id="supportFault"><button class="supportButton2 pull-center">Faults/Emergencies</button></a>
+                </span>
+              </div>
+            </div>
+            <div class="rowSup">
+              <div class="col1">
+                <i class="fa fa-envelope fa-3x"></i>
+              </div>
+              <div class="col2">
+                <a id="supportEmail"><button class="supportButton3 pull-center">Message</button></a>
+                </span>
+              </div>
+            </div>
+          </div>
+      </section>
     </div>
     <!-- Footer -->
     <footer class="text-white page-footer fixed-bottom">
@@ -233,11 +276,11 @@
               data-mdb-ripple-color="dark"><i class="fa fa-facebook fa-2x"></i></a>
             <a class="btn btn-link btn-floating btn-lg text-dark m-1 mb-0" id="twitter" role="button"
               data-mdb-ripple-color="dark"><i class="fa fa-twitter fa-2x"></i></a>
-            <a class="btn btn-link btn-floating btn-lg text-dark m-1 pull-right" href="#!" role="button"
+            <a class="btn btn-link btn-floating btn-lg text-dark m-1 pull-right" id="emailButton" role="button"
               data-mdb-ripple-color="dark"><i class="fa fa-envelope fa-2x"></i>
               <p class="iconLabel" id="email"></p>
             </a>
-            <a class="btn btn-link btn-floating btn-lg text-dark m-1 pull-right" href="#!" role="button"
+            <a class="btn btn-link btn-floating btn-lg text-dark m-1 pull-right" id="enqButton" role="button"
               data-mdb-ripple-color="dark"><i class="fa fa-phone fa-2x"></i>
               <p class="iconLabel" id="enqPhone"></p>
             </a>

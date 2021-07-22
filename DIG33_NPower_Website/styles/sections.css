@@ -4,12 +4,22 @@
 
 .energySaving {
     display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(231, 0, 48, 0.6);
 }
 
 .elegibilityPage {
     display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(231, 0, 48, 0.6);
 }
 
 .aboutPage {
+    display: none;
+}
+
+.supportPage {
     display: none;
 }
