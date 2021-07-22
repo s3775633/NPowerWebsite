@@ -28,27 +28,28 @@ header img {
 
 .improveLocation {
     position: absolute;
-    left: 14%;
+    left: 13%;
 }
 
 .productLocation {
     position: absolute;
-    left: 30%;
+    left: 28%;
 }
 
 .supportLocation {
     position: absolute;
-    right: 31%;
+    right: 40%;
 }
 
 .aboutLocation {
     position: absolute;
-    right: 20%;
+    right: 30%;
 }
 
 .searchLocation {
     position: absolute;
-    right: 0.5%;
+    right: 90px;
+    top: 1px;
 }
 
 .navText {
@@ -57,7 +58,7 @@ header img {
     text-transform: uppercase;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1300px) {
     .improveLocation {
         position: relative;
         left: 0px;

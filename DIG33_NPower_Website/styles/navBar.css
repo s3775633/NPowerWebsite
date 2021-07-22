@@ -5,7 +5,7 @@
 .nav-link:hover {
     color: #000000 !important;
     text-decoration: underline;
-  }
+}
 
 .search-bar {
     width: 200px;
@@ -15,7 +15,64 @@
     text-decoration: underline;
 }
 
-@media (max-width: 991px) {
+.navbar-light .navbar-toggler-icon {
+    background-image: none;
+    border: none;
+
+}
+
+.navbar-toggler {
+    position: absolute;
+    background-color: #f8f9fa;
+    z-index: 10;
+    border-radius: 100px;
+    border: none;
+    padding: 0px;
+}
+
+.navbar {
+    height: 57px;
+}
+
+.hamburger {
+    width: 45px;
+    height: 45px;
+    overflow: visible;
+}
+
+@media (min-width: 1301px) {
+.navbar-collapse {
+    position: fixed;
+    left: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 80px;
+    width: 100%;
+    z-index: 1;
+    background-color: transparent !important;
+}
+
+.navbar-collapse.collapsing {
+    left: -100%;
+    transition: all 0s ease;
+}
+
+.navbar-collapse.show {
+    left: 0;
+    transition: left 600ms ease-in-out;
+}
+
+.navbar-toggler.collapsed ~ .navbar-collapse {
+    left: 0;
+    transition: all 600ms ease-in-out;
+}
+
+.search-bar {
+    width: auto;
+}
+}
+
+@media (max-width: 1300px) {
     .navbar-collapse {
         position: fixed;
         top: 56px;

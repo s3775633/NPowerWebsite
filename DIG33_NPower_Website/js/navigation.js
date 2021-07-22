@@ -1,3 +1,15 @@
+const menuToggle = document.getElementById('navbarCollapse')
+const bsCollapse = new bootstrap.Collapse(menuToggle)
+
+// Function used to close nav menu if in mobile display
+function closeNav() {
+    var screenWidth = window.innerWidth;
+    if(screenWidth < 1301)
+    {
+        bsCollapse.toggle();
+    }
+    console.log(screenWidth);
+}
 
 // Function used to display energy-saving incentives page.
 function esPage() {
@@ -45,7 +57,6 @@ function supportPage() {
 // Function used to hide all pages on the site and make all nav options inactive.
 function hidePages() {   
     var pages = document.getElementsByClassName("page");
-    var nav = document.querySelector('.navbar-collapse');
     for(page of pages)
     {
         page.style.display = "none";
@@ -55,4 +66,5 @@ function hidePages() {
     {
         navItem.classList.remove("active");
     }
+    closeNav();
 }
