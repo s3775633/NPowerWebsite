@@ -6,7 +6,10 @@ function closeNav() {
     var screenWidth = window.innerWidth;
     if(screenWidth < 1301)
     {
-        bsCollapse.toggle();
+        if(!document.getElementById('toggle').classList.contains('collapsed'))
+        {
+            bsCollapse.toggle();
+        }
     }
     console.log(screenWidth);
 }
@@ -68,3 +71,19 @@ function hidePages() {
     }
     closeNav();
 }
+
+function activateNav()
+{   
+    var nav = document.getElementById('navbarCollapse');
+    if(window.getComputedStyle(nav).visibility === "hidden")
+    {
+        console.log("Hello");
+        nav.style.visibility = "visible";
+    }
+}
+
+window.onload = function()
+{
+    bsCollapse.hide();
+}
+

@@ -26,6 +26,10 @@ header img {
     transform: translateX(-50%);
 }
 
+.incentLocation {
+    width: 100px;
+}
+
 .improveLocation {
     position: absolute;
     left: 13%;
