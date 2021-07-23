@@ -75,10 +75,9 @@
                 <img class="image" src="images/Reduce-Cost.png"></img>
                 <h1 class="tileText">Energy-Saving Incentives</h1>
                 <h1 class="tileHeading tileDecriptionVisibility">Energy-Saving Incentives</h1>
-                <h1 class="tileDescription tileDecriptionVisibility">Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Nullam ornare,
-                  nunc sed porttitor rutrum, lectus orci finibus massa, consequat porta metus erat eu magna. In vel
-                  tempor nulla, ut tempor risus.</h1>
+                <h1 class="tileDescription tileDecriptionVisibility">As part of the Government initiative called ECO 
+                  (the Energy Companies Obligation), you could qualify for free energy-saving 
+                  improvements that could make your home warmer and more energy efficient.</h1>
               </div>
             </div>
             <div class="col-sm-4">
@@ -86,11 +85,9 @@
                 <img class="image" src="images/Innovative-Alternatives.png"></img>
                 <h1 class="tileText">Energy Improvements</h1>
                 <h1 class="tileHeading tileDecriptionVisibility">Energy Improvements</h1>
-                <h1 class="tileDescription tileDecriptionVisibility">Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Nullam ornare,
-                  nunc sed porttitor rutrum, lectus orci finibus massa, consequat porta metus erat eu magna. In vel
-                  tempor nulla, ut tempor risus.
-                  Donec eu augue eu ligula interdum dignissim.</h1>
+                <h1 class="tileDescription tileDecriptionVisibility">There are many ways to reduce 
+                  energy consumption within the home.  Follow the helpful hints on how to maximise 
+                  the energy efficiency of your household appliances.</h1>
               </div>
             </div>
             <div class="col-sm-4">
@@ -98,10 +95,9 @@
                 <img class="image" src="images/Protect-Environment.png"></img>
                 <h1 class="tileText">Efficient Products</h1>
                 <h1 class="tileHeading tileDecriptionVisibility">Efficient Products</h1>
-                <h1 class="tileDescription tileDecriptionVisibility">Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Nullam ornare,
-                  nunc sed porttitor rutrum, lectus orci finibus massa, consequat porta metus erat eu magna. In vel
-                  tempor nulla, ut tempor risus.</h1>
+                <h1 class="tileDescription tileDecriptionVisibility">From home insulation, solar 
+                  panels, and smart-home integrated devices, learn about the products that we offer 
+                  that can help reduce your energy bills.</h1>
               </div>
             </div>
           </div>
@@ -122,7 +118,7 @@
                 <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
               </div>
               <div class="col2">
-                <span class="titleBold pull-center">Energy-Saving <br>Incentives</h1>
+                <span class="sectionTitle pull-center">Energy-Saving <br>Incentives</h1>
                 </span>
               </div>
             </div>
@@ -130,7 +126,7 @@
             <p class="esDescription">You could qualify for energy saving improvements like a new boiler, loft insulation
               and cavity or external wall insulation - for free or subsidised.</p>
             <h1 class="esHeading" onclick=elgPage()>Are you eligible ?</h1>
-            <img class="esImage" onclick=elgPage() src="images/round red.png"></img>
+            <object class="esImage" id="piggy" begin="piggy.begin" type="image/svg+xml" onclick=elgPage() data="images/piggy.svg"></object>
             <h1 class="esHeading" onclick=elgPage()>Take the test</h1>
           </div>
         </div>
@@ -145,7 +141,7 @@
                 <i class="backButton fa fa-chevron-left" onclick=esPage()></i>
               </div>
               <div class="col2">
-                <span class="titleBold pull-center">Eligibility Test</h1>
+                <span class="sectionTitle pull-center">Eligibility Test</h1>
                 </span>
               </div>
             </div>
@@ -153,7 +149,7 @@
             <form>
               <div class="rowES">
                 <div class="col1Elig">
-                  <p class="esDescription formText">Household Status</p>
+                  <p class="egDescription formText title-heading"></p>
                 </div>
                 <div class="col2Elig">
                   <select class="egCombo" id="status">
@@ -163,32 +159,52 @@
               </div>
               <div class="rowES">
                 <div class="col1Elig">
-                  <p class="esDescription formText">Combined Income</p>
+                  <p class="egDescription formText title-heading"></p>
                 </div>
                 <div class="col2Elig">
                   <select class="egCombo" id="income">
                   </select>
-                  </span>
                 </div>
               </div>
               <div class="rowES ">
                 <div class="col1Elig">
-                  <p class="esDescription formText">Household Occupants</p>
+                  <p class="egDescription formText title-heading"></p>
                 </div>
                 <div class="col2Elig">
                   <select class="egCombo" id="occupants">
                   </select>
-                  </span>
                 </div>
               </div>
               <div class="rowES ">
                 <div class="col1Elig">
-                  <p class="esDescription formText">Current Installations</p>
+                  <p class="egDescription formText title-heading"></p>
                 </div>
                 <div class="col2Elig">
                 </div>
               </div>
-              <div id="checkBoxes">
+              <div id="checkBoxes"></div>
+              <div class="rowES ">
+                <div class="col1Elig">
+                  <p class="egDescription formText title-heading"></p>
+                </div>
+                <div class="col2Elig" id="radioSection">
+                </div>
+              </div>
+              <div class="rowES ">
+                <div class="col1Elig">
+                  <p class="egDescription formText title-heading"></p>
+                </div>
+                <div class="col2Elig">
+                  <select class="egCombo" id="rating">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                    <option>F</option>
+                    <option>G</option>
+                  </select>
+                </div>
               </div>
               <button class="egButton" type="submit">TEST</button>
             </form>
@@ -204,7 +220,7 @@
                 <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
               </div>
               <div class="col2">
-                <span class="titleBold pull-center">About</h1>
+                <span class="sectionTitle pull-center">About</h1>
                 </span>
               </div>
             </div>
@@ -223,6 +239,7 @@
       </section>
        <!--Section-Support_Page-->
        <section class="supportPage page">
+        <div class="supContainer">
         <div class="jumbotron text-center para">
           <div class="esTitleBox">
             <div class="rowES">
@@ -230,7 +247,7 @@
                 <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
               </div>
               <div class="col2">
-                <span class="titleBold pull-center">Contact & Support</h1>
+                <span class="sectionTitle pull-center">Contact & Support</h1>
                 </span>
               </div>
             </div>
@@ -240,7 +257,7 @@
                 <i class="fa fa-phone fa-3x"></i>
               </div>
               <div class="col2">
-                <a  id="supportEnq"><button class="supportButton1 pull-center">Enquiries</button></a>
+                <a id="supportEnq"><button class="supportButton1 pull-center" id="enqPhoneButton">Enquiries</button></a>
                 </span>
               </div>
             </div>
@@ -249,7 +266,7 @@
                 <i class="fa fa-phone fa-3x"></i>
               </div>
               <div class="col2">
-                <a id="supportFault"><button class="supportButton2 pull-center">Faults/Emergencies</button></a>
+                <a id="supportFault"><button class="supportButton2 pull-center" id="faultPhoneButton">Faults</button></a>
                 </span>
               </div>
             </div>
@@ -258,11 +275,12 @@
                 <i class="fa fa-envelope fa-3x"></i>
               </div>
               <div class="col2">
-                <a id="supportEmail"><button class="supportButton3 pull-center">Message</button></a>
+                <a id="supportEmail"><button class="supportButton3 pull-center" id="messageButton">Message</button></a>
                 </span>
               </div>
             </div>
           </div>
+        </div>
       </section>
     </div>
     <!-- Footer -->
