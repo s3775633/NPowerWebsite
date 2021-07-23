@@ -91,6 +91,7 @@
     width: 120px;
     height: 50px;
     animation: fadeInAnimation ease 4s;
+    margin-bottom: 80px;
 }
 
 .egCombo {
