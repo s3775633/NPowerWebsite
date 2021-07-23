@@ -241,6 +241,10 @@
         font-size: 20px;
     }
 
+    .sectionTitle {
+      font-size: 5vw;
+    }
+
     .para {
         width: 70%;
     }
