@@ -69,6 +69,14 @@
     animation: fadeInAnimation ease 4s
 }
 
+.egDescription {
+    width: 80%;
+    font-size: 1.7vw;
+    margin-bottom: 40px;
+    text-align: left;
+    animation: fadeInAnimation ease 4s
+}
+
 .esDescriptionSmall {
     font-size: 1vw;
     margin-bottom: 40px;
@@ -179,6 +187,10 @@
 
     .esDescriptionSmall {
         font-size: 12px;
+    }
+
+    .egDescription {
+        font-size: 15px;
     }
 
     .esHeading {

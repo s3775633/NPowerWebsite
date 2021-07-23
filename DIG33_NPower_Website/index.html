@@ -130,7 +130,7 @@
             <p class="esDescription">You could qualify for energy saving improvements like a new boiler, loft insulation
               and cavity or external wall insulation - for free or subsidised.</p>
             <h1 class="esHeading" onclick=elgPage()>Are you eligible ?</h1>
-            <img class="esImage" onclick=elgPage() src="images/round red.png"></img>
+            <object class="esImage" id="piggy" begin="piggy.begin" type="image/svg+xml" onclick=elgPage() data="images/piggy.svg"></object>
             <h1 class="esHeading" onclick=elgPage()>Take the test</h1>
           </div>
         </div>
@@ -153,7 +153,7 @@
             <form>
               <div class="rowES">
                 <div class="col1Elig">
-                  <p class="esDescription formText">Household Status</p>
+                  <p class="egDescription formText title-heading"></p>
                 </div>
                 <div class="col2Elig">
                   <select class="egCombo" id="status">
@@ -163,32 +163,52 @@
               </div>
               <div class="rowES">
                 <div class="col1Elig">
-                  <p class="esDescription formText">Combined Income</p>
+                  <p class="egDescription formText title-heading"></p>
                 </div>
                 <div class="col2Elig">
                   <select class="egCombo" id="income">
                   </select>
-                  </span>
                 </div>
               </div>
               <div class="rowES ">
                 <div class="col1Elig">
-                  <p class="esDescription formText">Household Occupants</p>
+                  <p class="egDescription formText title-heading"></p>
                 </div>
                 <div class="col2Elig">
                   <select class="egCombo" id="occupants">
                   </select>
-                  </span>
                 </div>
               </div>
               <div class="rowES ">
                 <div class="col1Elig">
-                  <p class="esDescription formText">Current Installations</p>
+                  <p class="egDescription formText title-heading"></p>
                 </div>
                 <div class="col2Elig">
                 </div>
               </div>
-              <div id="checkBoxes">
+              <div id="checkBoxes"></div>
+              <div class="rowES ">
+                <div class="col1Elig">
+                  <p class="egDescription formText title-heading"></p>
+                </div>
+                <div class="col2Elig" id="radioSection">
+                </div>
+              </div>
+              <div class="rowES ">
+                <div class="col1Elig">
+                  <p class="egDescription formText title-heading"></p>
+                </div>
+                <div class="col2Elig">
+                  <select class="egCombo" id="rating">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                    <option>F</option>
+                    <option>G</option>
+                  </select>
+                </div>
               </div>
               <button class="egButton" type="submit">TEST</button>
             </form>

@@ -31,6 +31,7 @@
     display: flex;
     flex: 70%;
     justify-content: left;
+    justify-content: flex-start;
 }
 
 .col2Elig {
@@ -60,14 +61,15 @@
     margin: auto;
     width: 60%;
     background-color: white;
+    opacity: 0.9;
     min-height: 100vh;
-
+    animation: slideIn ease-out 2s;
 }
 
 .esImage {
     display: block;
     margin: auto;
-    width: 25%;
+    width: 40%;
     animation: fadeInAnimation ease 4s;
     cursor: pointer;
 }
@@ -108,4 +110,14 @@
         width: 80%;
     }
   }
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(1800px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
 

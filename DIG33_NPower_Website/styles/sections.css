@@ -11,14 +11,16 @@
     display: none;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(231, 0, 48, 0.6);
+    background: rgb(231,0,48);
+background: linear-gradient(180deg, rgba(231,0,48,1) 0%, rgba(111,78,167,1) 50%, rgba(0,88,157,1) 100%);
 }
 
 .elegibilityPage {
     display: none;
     width: 100%;
     height: 100%;
-    background-color: rgb(231, 0, 48, 0.6);
+    background: rgb(231,0,48);
+background: linear-gradient(180deg, rgba(231,0,48,1) 0%, rgba(111,78,167,1) 50%, rgba(0,88,157,1) 100%);
 }
 
 .aboutPage {
