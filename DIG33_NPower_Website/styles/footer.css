@@ -4,9 +4,12 @@
 
 footer {
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: transparent;
     bottom: 0;
     width: 100%;
-    box-shadow: 0px 0px 6px 2px #777;
     z-index: 11;
+}
+
+.footerIcon {
+    color: black;
 }

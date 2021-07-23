@@ -78,8 +78,12 @@
     animation: slideIn ease-out 2s;
 }
 
-.supContainer > .jumbotron {
+.supportPage > .supContainer > .jumbotron {
     width: 100%;
+}
+
+.aboutPage > .supContainer > .jumbotron {
+    width: 80%;
 }
 
 @media screen and (max-width: 900px) {
