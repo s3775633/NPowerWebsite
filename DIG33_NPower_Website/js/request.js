@@ -15,7 +15,7 @@ request.onload = function() {
             options[i] = eQuestions[x].options[i];
         }
         // New question object created and added to questions array.
-        q = new Question(eQuestions[x]._id, eQuestions[x].questionNumber, options, eQuestions[x].questionType);
+        q = new Question(eQuestions[x]._id, eQuestions[x].heading, eQuestions[x].questionNumber, options, eQuestions[x].questionType);
         questions.push(q);
     }
     populateEligibity(questions);
@@ -25,14 +25,17 @@ request.onload = function() {
 function populateEligibity(questions)
 {
     // elements obtained and stored in variables
+    var headings = document.getElementsByClassName('title-heading');
     var status = document.getElementById('status');
     var income = document.getElementById('income');
     var occupants = document.getElementById('occupants');
     var checkBoxSection = document.getElementById('checkBoxes');
+    var radioSection = document.getElementById('radioSection');
 
     // for loop used to iterate through all questions
     for(x = 0; x < questions.length; x++)
     {
+        headings[x].innerHTML = questions[x].heading;
         // for loop used to iterate through each option within the question.
         for(i = 0; i < questions[x].options.length; i++)
         {
@@ -68,7 +71,12 @@ function populateEligibity(questions)
                 '</div>'
                 // Code block used to populate checkbox section with nuique data.
                 checkBoxSection.innerHTML += codeBlock;
-
+            }
+            else if(questions[x].number == 5)
+            {
+                var codeBlock = '<input type="radio" name="benefits" id="' + questions[x].options[i] + '" value="' + questions[x].options[i] + '">' +
+                  '<label>&nbsp;' + questions[x].options[i] + '</label>&nbsp;&nbsp;&nbsp;';
+                radioSection.innerHTML += codeBlock;
             }
         }
     }
@@ -94,18 +102,22 @@ function setCompanyInfo(company)
     facebookIcon.href = company.facebook;
     var twitterIcon = document.getElementById('twitter');
     twitterIcon.href = company.twitter;
-    var email = document.getElementById('email');
-    email.innerHTML = "&nbsp" + company.email;
     var emailButton = document.getElementById('emailButton');
     emailButton.href = "mailto:" + company.email;
-    var enqPhone = document.getElementById('enqPhone');
-    enqPhone.innerHTML = "&nbsp" + company.enquiryPhone;
+    var enqButton = document.getElementById('enqButton');
+    enqButton.href = "tel:" + company.enquiryPhone;
     var enqButton = document.getElementById('supportEnq');
     enqButton.href = "tel:" + company.enquiryPhone;
     var supportFault = document.getElementById('supportFault');
     supportFault.href = "tel:" + company.faultPhone;
     var supportEmail = document.getElementById('supportEmail');
     supportEmail.href = "mailto:" + company.email;
+    var supportButton = document.getElementById('enqPhoneButton');
+    supportButton.innerHTML += " - " + company.enquiryPhone;
+    var supportButton = document.getElementById('faultPhoneButton');
+    supportButton.innerHTML += " - " + company.faultPhone;
+    var supportButton = document.getElementById('messageButton');
+    supportButton.innerHTML += " - " + company.email;
 }
 
 compRequest.send();
@@ -113,10 +125,11 @@ request.send();
 
 // Classes and their constructors
 class Question {
-    constructor(id, number, options, type) {
+    constructor(id, heading, number, options, type) {
         this.id = id;
+        this.heading = heading;
         this.number = number;
-        this.options = options,
+        this.options = options;
         this.type = type;
     }
 }

@@ -8,7 +8,7 @@
 
 .supportButton1 {
     display: inline-block;
-    width: 80%;
+    width: 90%;
     height: 80px;
     border-radius: 15px;
     box-shadow: 2px 5px 5px #888888;
@@ -17,7 +17,7 @@
 }
 
 .supportButton1:hover {
-    width: 82%;
+    width: 92%;
 	background: #e70030;
     color: white;
 	letter-spacing: 1px;
@@ -29,7 +29,7 @@
 
 .supportButton2 {
     display: inline-block;
-    width: 80%;
+    width: 90%;
     height: 80px;
     border-radius: 15px;
     box-shadow: 2px 5px 5px #888888;
@@ -38,7 +38,7 @@
 }
 
 .supportButton2:hover {
-    width: 82%;
+    width: 92%;
 	background: #7548ac;
     color: white;
 	letter-spacing: 1px;
@@ -50,7 +50,7 @@
 
 .supportButton3 {
     display: inline-block;
-    width: 80%;
+    width: 90%;
     height: 80px;
     border-radius: 15px;
     box-shadow: 2px 5px 5px #888888;
@@ -59,7 +59,7 @@
 }
 
 .supportButton3:hover {
-    width: 82%;
+    width: 92%;
 	background: #0058a3;
     color: white;
 	letter-spacing: 1px;
@@ -67,6 +67,19 @@
 	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 	transition: all 0.4s ease 0s;
+}
+
+.supContainer {
+    margin: auto;
+    width: 70%;
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 10px 0 15px -4px #777, -10px 0 8px -4px #777;
+    animation: slideIn ease-out 2s;
+}
+
+.supContainer > .jumbotron {
+    width: 100%;
 }
 
 @media screen and (max-width: 900px) {
@@ -104,5 +117,13 @@
 
     .supportButton3 {
         font-size: 4vw;
+    }
+
+    .supContainer {
+        width: 100%;
+    }
+
+    .supContainer > .jumbotron {
+        width: 80%;
     }
 }
