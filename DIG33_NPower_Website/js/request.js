@@ -102,18 +102,22 @@ function setCompanyInfo(company)
     facebookIcon.href = company.facebook;
     var twitterIcon = document.getElementById('twitter');
     twitterIcon.href = company.twitter;
-    var email = document.getElementById('email');
-    email.innerHTML = "&nbsp" + company.email;
     var emailButton = document.getElementById('emailButton');
     emailButton.href = "mailto:" + company.email;
-    var enqPhone = document.getElementById('enqPhone');
-    enqPhone.innerHTML = "&nbsp" + company.enquiryPhone;
+    var enqButton = document.getElementById('enqButton');
+    enqButton.href = "tel:" + company.enquiryPhone;
     var enqButton = document.getElementById('supportEnq');
     enqButton.href = "tel:" + company.enquiryPhone;
     var supportFault = document.getElementById('supportFault');
     supportFault.href = "tel:" + company.faultPhone;
     var supportEmail = document.getElementById('supportEmail');
     supportEmail.href = "mailto:" + company.email;
+    var supportButton = document.getElementById('enqPhoneButton');
+    supportButton.innerHTML += " - " + company.enquiryPhone;
+    var supportButton = document.getElementById('faultPhoneButton');
+    supportButton.innerHTML += " - " + company.faultPhone;
+    var supportButton = document.getElementById('messageButton');
+    supportButton.innerHTML += " - " + company.email;
 }
 
 compRequest.send();

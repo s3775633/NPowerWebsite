@@ -75,10 +75,9 @@
                 <img class="image" src="images/Reduce-Cost.png"></img>
                 <h1 class="tileText">Energy-Saving Incentives</h1>
                 <h1 class="tileHeading tileDecriptionVisibility">Energy-Saving Incentives</h1>
-                <h1 class="tileDescription tileDecriptionVisibility">Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Nullam ornare,
-                  nunc sed porttitor rutrum, lectus orci finibus massa, consequat porta metus erat eu magna. In vel
-                  tempor nulla, ut tempor risus.</h1>
+                <h1 class="tileDescription tileDecriptionVisibility">As part of the Government initiative called ECO 
+                  (the Energy Companies Obligation), you could qualify for free energy-saving 
+                  improvements that could make your home warmer and more energy efficient.</h1>
               </div>
             </div>
             <div class="col-sm-4">
@@ -86,11 +85,9 @@
                 <img class="image" src="images/Innovative-Alternatives.png"></img>
                 <h1 class="tileText">Energy Improvements</h1>
                 <h1 class="tileHeading tileDecriptionVisibility">Energy Improvements</h1>
-                <h1 class="tileDescription tileDecriptionVisibility">Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Nullam ornare,
-                  nunc sed porttitor rutrum, lectus orci finibus massa, consequat porta metus erat eu magna. In vel
-                  tempor nulla, ut tempor risus.
-                  Donec eu augue eu ligula interdum dignissim.</h1>
+                <h1 class="tileDescription tileDecriptionVisibility">There are many ways to reduce 
+                  energy consumption within the home.  Follow the helpful hints on how to maximise 
+                  the energy efficiency of your household appliances.</h1>
               </div>
             </div>
             <div class="col-sm-4">
@@ -98,10 +95,9 @@
                 <img class="image" src="images/Protect-Environment.png"></img>
                 <h1 class="tileText">Efficient Products</h1>
                 <h1 class="tileHeading tileDecriptionVisibility">Efficient Products</h1>
-                <h1 class="tileDescription tileDecriptionVisibility">Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Nullam ornare,
-                  nunc sed porttitor rutrum, lectus orci finibus massa, consequat porta metus erat eu magna. In vel
-                  tempor nulla, ut tempor risus.</h1>
+                <h1 class="tileDescription tileDecriptionVisibility">From home insulation, solar 
+                  panels, and smart-home integrated devices, learn about the products that we offer 
+                  that can help reduce your energy bills.</h1>
               </div>
             </div>
           </div>
@@ -122,7 +118,7 @@
                 <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
               </div>
               <div class="col2">
-                <span class="titleBold pull-center">Energy-Saving <br>Incentives</h1>
+                <span class="sectionTitle pull-center">Energy-Saving <br>Incentives</h1>
                 </span>
               </div>
             </div>
@@ -145,7 +141,7 @@
                 <i class="backButton fa fa-chevron-left" onclick=esPage()></i>
               </div>
               <div class="col2">
-                <span class="titleBold pull-center">Eligibility Test</h1>
+                <span class="sectionTitle pull-center">Eligibility Test</h1>
                 </span>
               </div>
             </div>
@@ -224,26 +220,21 @@
                 <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
               </div>
               <div class="col2">
-                <span class="titleBold pull-center">About</h1>
+                <span class="sectionTitle pull-center">About</h1>
                 </span>
               </div>
             </div>
           </div>
           <h1 class="aboutHeading">Our Mission</h1>
-          <p class="aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Nullam ornare,
-            nunc sed porttitor rutrum, lectus orci finibus massa, consequat porta metus erat eu magna. In vel
-            tempor nulla, ut tempor risus.
-            Donec eu augue eu ligula interdum dignissim.</p>
-          <h1 class="aboutHeading">Your Envolvement</h1>
-          <p class="aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Nullam ornare,
-            nunc sed porttitor rutrum, lectus orci finibus massa, consequat porta metus erat eu magna. In vel
-            tempor nulla, ut tempor risus.</p>
+          <p class="aboutDescription">npower is one of Britain's leading energy companies, serving around 5.1 million residential and business accounts with electricity and gas.
+At npower we take environmental sustainability seriously and target to reduce our carbon emissions in line with the UK's goal of net-zero emissions by 2050.
+Our focus is ensuring that every part of our business is as energy-efficient as possible; we are always looking for new ways to reduce our environmental impact and that of our customers.</p>
+
         </div>
       </section>
        <!--Section-Support_Page-->
        <section class="supportPage page">
+        <div class="supContainer">
         <div class="jumbotron text-center para">
           <div class="esTitleBox">
             <div class="rowES">
@@ -251,7 +242,7 @@
                 <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
               </div>
               <div class="col2">
-                <span class="titleBold pull-center">Contact & Support</h1>
+                <span class="sectionTitle pull-center">Contact & Support</h1>
                 </span>
               </div>
             </div>
@@ -261,7 +252,7 @@
                 <i class="fa fa-phone fa-3x"></i>
               </div>
               <div class="col2">
-                <a  id="supportEnq"><button class="supportButton1 pull-center">Enquiries</button></a>
+                <a id="supportEnq"><button class="supportButton1 pull-center" id="enqPhoneButton">Enquiries</button></a>
                 </span>
               </div>
             </div>
@@ -270,7 +261,7 @@
                 <i class="fa fa-phone fa-3x"></i>
               </div>
               <div class="col2">
-                <a id="supportFault"><button class="supportButton2 pull-center">Faults/Emergencies</button></a>
+                <a id="supportFault"><button class="supportButton2 pull-center" id="faultPhoneButton">Faults</button></a>
                 </span>
               </div>
             </div>
@@ -279,11 +270,12 @@
                 <i class="fa fa-envelope fa-3x"></i>
               </div>
               <div class="col2">
-                <a id="supportEmail"><button class="supportButton3 pull-center">Message</button></a>
+                <a id="supportEmail"><button class="supportButton3 pull-center" id="messageButton">Message</button></a>
                 </span>
               </div>
             </div>
           </div>
+        </div>
       </section>
     </div>
     <!-- Footer -->
