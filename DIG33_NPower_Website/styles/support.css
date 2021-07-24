@@ -1,5 +1,6 @@
 .rowSup {
     width: 60%;
+    margin: auto;
     display: flex; 
     margin-left: 17%;
     margin-top: 80px;
@@ -107,8 +108,7 @@
 
 @media screen and (max-width: 575px) {
     .rowSup {
-        width: 100%;
-        margin-left: 0; 
+        width: 80%;
     }
 
     .supportButton1 {

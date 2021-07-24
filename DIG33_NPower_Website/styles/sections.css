@@ -1,5 +1,5 @@
 .homePage {
-    display: none;
+    display: block;
     height: 100%;
     width: 100%;
     background-image: url("../images/homepage_background.png");
@@ -20,13 +20,21 @@
 }
 
 .productsPage {
-    display: block;
+    display: none;
     width: 100vw;
     height: 100vh;
 }
 
+.improvementsPage {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
 .aboutPage {
     display: none;
+    width: 100%;
+    height: 100%;
 }
 
 .supportPage {
