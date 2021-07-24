@@ -29,6 +29,7 @@ function populateEligibity(questions)
     var status = document.getElementById('status');
     var income = document.getElementById('income');
     var occupants = document.getElementById('occupants');
+    var rating = document.getElementById('rating');
     var checkBoxSection = document.getElementById('checkBoxes');
     var radioSection = document.getElementById('radioSection');
 
@@ -77,6 +78,10 @@ function populateEligibity(questions)
                 var codeBlock = '<input type="radio" name="benefits" id="' + questions[x].options[i] + '" value="' + questions[x].options[i] + '">' +
                   '<label>&nbsp;' + questions[x].options[i] + '</label>&nbsp;&nbsp;&nbsp;';
                 radioSection.innerHTML += codeBlock;
+            }
+            else if(questions[x].number == 6)
+            {
+                rating.appendChild(option);
             }
         }
     }

@@ -39,6 +39,15 @@ function homePage() {
     home.style.display = "block";
 }
 
+// Function used to display the products page.
+function prodPage() {
+    hidePages();
+    var prodPage = document.querySelector(".productsPage");
+    var prodNav = document.getElementById("prodNav");
+    prodPage.style.display = "block";
+    prodNav.classList.add("active");
+}
+
 // Function used to display about page.
 function aboutPage() {
     hidePages();

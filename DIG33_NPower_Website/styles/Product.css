@@ -1,0 +1,19 @@
+.rowProd {
+    width: 100%;
+    display: flex; 
+    margin-top: 10%;
+}
+
+.rowProd > .col1 {
+    display: flex;
+    flex: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.rowProd >.col2 {
+    display: flex;
+    flex: 70%;
+    align-items: center;
+    justify-content: center;
+}

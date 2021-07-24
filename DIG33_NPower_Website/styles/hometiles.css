@@ -234,5 +234,9 @@
     .environment:hover {
         transform: scale(1.2);
     }
+
+    .cardImage {
+        display: none;
+    }
   }
 

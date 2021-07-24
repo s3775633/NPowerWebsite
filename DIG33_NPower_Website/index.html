@@ -24,9 +24,10 @@
         <!--Navbar-->
         <nav class="navbar navbar-light bg-light navbar-style fixed-top">
           <div class="container-fluid">
-            <button class="navbar-toggler collapsed" id="toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-            aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation" onclick=activateNav()>
-              <input class="hamburger" type="image" src="./images/Hamburger.png"/>
+            <button class="navbar-toggler collapsed" id="toggle" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse" aria-expanded="false" aria-controls="navbar"
+              aria-label="Toggle navigation" onclick=activateNav()>
+              <input class="hamburger" type="image" src="./images/Hamburger.png" />
             </button>
             <a href="#"><img class="homeLogo" onclick=homePage() src="./images/Logo.png" alt=""></a>
             <div class="navbar-collapse bg-light collapse" id="navbarCollapse">
@@ -38,7 +39,7 @@
                   <a class="nav-link navText" aria-current="page" href="#">Improvements</a>
                 </li>
                 <li class="nav-item productLocation">
-                  <a class="nav-link navText" aria-current="page" href="#">Products</a>
+                  <a class="nav-link navText" id="prodNav" aria-current="page" onclick=prodPage()>Products</a>
                 </li>
                 <li class="nav-item supportLocation">
                   <a class="nav-link navText" id="supportNav" aria-current="page" onclick=supportPage()>Support</a>
@@ -76,33 +77,33 @@
                 <img class="image" src="images/Reduce-Cost.png"></img>
                 <h1 class="tileText">Energy-Saving Incentives</h1>
                 <h1 class="tileHeading tileDecriptionVisibility">Energy-Saving Incentives</h1>
-                <h1 class="tileDescription tileDecriptionVisibility">As part of the Government initiative called ECO 
-                  (the Energy Companies Obligation), you could qualify for free energy-saving 
+                <h1 class="tileDescription tileDecriptionVisibility">As part of the Government initiative called ECO
+                  (the Energy Companies Obligation), you could qualify for free energy-saving
                   improvements that could make your home warmer and more energy efficient.</h1>
-                  <img class="cardImage tileDecriptionVisibility" src="images/energy-incentives-card-image.png">
-                </div>
+                <img class="cardImage tileDecriptionVisibility" src="images/energy-incentives-card-image.png">
+              </div>
             </div>
             <div class="col-sm-4">
               <div class="alternatives" onmouseover=mouseOver(this) onmouseout=mouseOut(this)>
                 <img class="image" src="images/Innovative-Alternatives.png"></img>
                 <h1 class="tileText">Energy Improvements</h1>
                 <h1 class="tileHeading tileDecriptionVisibility">Energy Improvements</h1>
-                <h1 class="tileDescription tileDecriptionVisibility">There are many ways to reduce 
-                  energy consumption within the home.  Follow the helpful hints on how to maximise 
+                <h1 class="tileDescription tileDecriptionVisibility">There are many ways to reduce
+                  energy consumption within the home. Follow the helpful hints on how to maximise
                   the energy efficiency of your household appliances.</h1>
-                  <img class="cardImage tileDecriptionVisibility" src="images/energy-improvements-card-image.png">
-                </div>
+                <img class="cardImage tileDecriptionVisibility" src="images/energy-improvements-card-image.png">
+              </div>
             </div>
             <div class="col-sm-4">
               <div class="environment" onmouseover=mouseOver(this) onmouseout=mouseOut(this)>
                 <img class="image" src="images/Protect-Environment.png"></img>
                 <h1 class="tileText">Efficient Products</h1>
                 <h1 class="tileHeading tileDecriptionVisibility">Efficient Products</h1>
-                <h1 class="tileDescription tileDecriptionVisibility">From home insulation, solar 
-                  panels, and smart-home integrated devices, learn about the products that we offer 
+                <h1 class="tileDescription tileDecriptionVisibility">From home insulation, solar
+                  panels, and smart-home integrated devices, learn about the products that we offer
                   that can help reduce your energy bills.</h1>
-                  <img class="cardImage tileDecriptionVisibility" src="images/efficient-products-card-image.png">
-                </div>
+                <img class="cardImage tileDecriptionVisibility" src="images/efficient-products-card-image.png">
+              </div>
             </div>
           </div>
         </div>
@@ -116,21 +117,22 @@
       <section class="energySaving page">
         <div class="jumbotron text-center">
           <div class="esContainer">
-          <div class="esTitleBox">
-            <div class="rowES">
-              <div class="col1">
-                <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
-              </div>
-              <div class="col2">
-                <span class="sectionTitle pull-center">Energy-Saving <br>Incentives</h1>
-                </span>
+            <div class="esTitleBox">
+              <div class="rowES">
+                <div class="col1">
+                  <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
+                </div>
+                <div class="col2">
+                  <span class="sectionTitle pull-center">Energy-Saving <br>Incentives</h1>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
             <p class="esDescription">You could qualify for energy saving improvements like a new boiler, loft insulation
               and cavity or external wall insulation - for free or subsidised.</p>
             <h1 class="esHeading" onclick=elgPage()>Are you eligible ?</h1>
-            <object class="esImage" id="piggy" begin="piggy.begin" type="image/svg+xml" onclick=elgPage() data="images/piggy.svg"></object>
+            <object class="esImage" id="piggy" begin="piggy.begin" type="image/svg+xml" onclick=elgPage()
+              data="images/piggy.svg"></object>
             <h1 class="esHeading" onclick=elgPage()>Take the test</h1>
           </div>
         </div>
@@ -139,17 +141,17 @@
       <section class="elegibilityPage page">
         <div class="jumbotron text-center">
           <div class="esContainer">
-          <div class="esTitleBox">
-            <div class="rowES">
-              <div class="col1">
-                <i class="backButton fa fa-chevron-left" onclick=esPage()></i>
-              </div>
-              <div class="col2">
-                <span class="sectionTitle pull-center">Eligibility Test</h1>
-                </span>
+            <div class="esTitleBox">
+              <div class="rowES">
+                <div class="col1">
+                  <i class="backButton fa fa-chevron-left" onclick=esPage()></i>
+                </div>
+                <div class="col2">
+                  <span class="sectionTitle pull-center">Eligibility Test</h1>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
             <form>
               <div class="rowES">
                 <div class="col1Elig">
@@ -186,86 +188,109 @@
                 <div class="col2Elig">
                 </div>
               </div>
-              <div id="checkBoxes"></div>      
+              <div id="checkBoxes"></div>
               <div class="rowES">
-                <div class="tooltip1">  
-                <div class="col1Elig">
-                  <p class="egDescription formText title-heading">
-                  </p>
+                <div class="tooltip1">
+                  <div class="col1Elig">
+                    <p class="egDescription formText title-heading">
+                    </p>
+                  </div>
+                  <div class="col2Elig" id="radioSection">
+                  </div>
+                  <span class="tooltiptext1">Learn about if you are eligible for government benefits at
+                    https://www.eoninstall.com/affordable-warmth/affordable-warmth-landing.html</span>
                 </div>
-                <div class="col2Elig" id="radioSection">
-                </div>
-                <span class="tooltiptext1">Learn about if you are eligible for government benefits at https://www.eoninstall.com/affordable-warmth/affordable-warmth-landing.html</span>
-              </div>  
-              </div>  
+              </div>
               <div class="rowES">
-                <div class="tooltip1">  
-                <div class="col1Elig">
-                  <p class="egDescription formText title-heading">
-                  </p>
+                <div class="tooltip1">
+                  <div class="col1Elig">
+                    <p class="egDescription formText title-heading">
+                    </p>
+                  </div>
+                  <div class="col2Elig">
+                    <select class="egCombo" id="rating">
+                    </select>
+                  </div>
+                  <span class="tooltiptext1">Find out your EPC rating at
+                    https://find-energy-certificate.digital.communities.gov.uk/</span>
                 </div>
-                <div class="col2Elig">
-                  <select class="egCombo" id="rating">
-                    <option>A</option>
-                    <option>B</option>
-                    <option>C</option>
-                    <option>D</option>
-                    <option>E</option>
-                    <option>F</option>
-                    <option>G</option>
-                  </select>
-                </div>
-                <span class="tooltiptext1">Find out your EPC rating at https://find-energy-certificate.digital.communities.gov.uk/</span>
-              </div>  
               </div>
               <button class="egButton" type="submit">TEST</button>
             </form>
           </div>
         </div>
       </section>
+      <!--Section-Products_Page-->
+      <section class="productsPage page">
+        <div class="jumbotron text-center">
+          <div class="esContainer">
+            <div class="esTitleBox">
+              <div class="rowES">
+                <div class="col1">
+                  <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
+                </div>
+                <div class="col2">
+                  <span class="sectionTitle pull-center">Products</h1>
+                  </span>
+                </div>
+              </div>
+              <div class="rowProd">
+                <div class="col1">
+                  <h1 class="esHeading">Product</h1>
+                </div>
+                <div class="col2">
+                  <h1 class="esHeading">Description</h1>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!--Section-About_Page-->
       <section class="aboutPage page">
         <div class="supContainer">
-        <div class="jumbotron text-center para">
-          <div class="esTitleBox">
-            <div class="rowES">
-              <div class="col1">
-                <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
-              </div>
-              <div class="col2">
-                <span class="sectionTitle pull-center">About</h1>
-                </span>
+          <div class="jumbotron text-center para">
+            <div class="esTitleBox">
+              <div class="rowES">
+                <div class="col1">
+                  <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
+                </div>
+                <div class="col2">
+                  <span class="sectionTitle pull-center">About</h1>
+                  </span>
+                </div>
               </div>
             </div>
+            <h1 class="aboutHeading">Our Mission</h1>
+            <p class="aboutDescription">Our core focus is to provide decentralised, green, and
+              interconnected solutions that address the needs of our customers and those of the environment.
+              We aim to lead the global shift towards new technology by working with customers, companies and across
+              communities to make energy simpler,
+              smarter and more sustainable.</p>
+            <h1 class="aboutHeading">Your Involvement</h1>
+            <p class="aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Nullam ornare,
+              nunc sed porttitor rutrum, lectus orci finibus massa, consequat porta metus erat eu magna. In vel
+              tempor nulla, ut tempor risus.</p>
           </div>
-          <h1 class="aboutHeading">Our Mission</h1>
-          <p class="aboutDescription">Our core focus is to provide decentralised, green, and 
-            interconnected solutions that address the needs of our customers and those of the environment. 
-            We aim to lead the global shift towards new technology by working with customers, companies and across communities to make energy simpler, 
-            smarter and more sustainable.</p>
-          <h1 class="aboutHeading">Your Involvement</h1>
-          <p class="aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Nullam ornare,
-            nunc sed porttitor rutrum, lectus orci finibus massa, consequat porta metus erat eu magna. In vel
-            tempor nulla, ut tempor risus.</p>
-        </div>
         </div>
       </section>
-       <!--Section-Support_Page-->
-       <section class="supportPage page">
+      <!--Section-Support_Page-->
+      <section class="supportPage page">
         <div class="supContainer">
-        <div class="jumbotron text-center para">
-          <div class="esTitleBox">
-            <div class="rowES">
-              <div class="col1">
-                <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
-              </div>
-              <div class="col2">
-                <span class="sectionTitle pull-center">Contact & Support</h1>
-                </span>
+          <div class="jumbotron text-center para">
+            <div class="esTitleBox">
+              <div class="rowES">
+                <div class="col1">
+                  <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
+                </div>
+                <div class="col2">
+                  <span class="sectionTitle pull-center">Contact & Support</h1>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
             <div class="rowSup">
               <div class="col1">
                 <i class="fa fa-phone fa-3x"></i>
@@ -280,7 +305,8 @@
                 <i class="fa fa-phone fa-3x"></i>
               </div>
               <div class="col2">
-                <a id="supportFault"><button class="supportButton2 pull-center" id="faultPhoneButton">Faults</button></a>
+                <a id="supportFault"><button class="supportButton2 pull-center"
+                    id="faultPhoneButton">Faults</button></a>
                 </span>
               </div>
             </div>
