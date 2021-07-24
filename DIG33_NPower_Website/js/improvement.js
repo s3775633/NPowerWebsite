@@ -35,7 +35,7 @@ function handleMove(e) {
   
   /* Calculate the rotation along the X-axis */
   const xRotation = 20 * ((yVal - height / 2) / height)
-  
+
   /* Generate string for CSS transform property */
   const string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
   
@@ -46,11 +46,6 @@ function handleMove(e) {
 /* Add listener for mouseout event, remove the rotation */
 house.addEventListener('mouseout', function() {
   house.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
-})
-
-/* Add listener for mousedown event, to simulate click */
-house.addEventListener('mousedown', function() {
-  house.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
 })
 
 /* Add listener for mouseup, simulate release of mouse click */
