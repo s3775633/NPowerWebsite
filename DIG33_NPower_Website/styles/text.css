@@ -45,13 +45,24 @@
 
 .titleBox1 {
     padding-top: 120px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     animation: fadeInAnimation ease 3s
 }
 
 .titleBox2 {
+    animation: fadeInAnimation ease 5s;
+}
+
+.titleBox3 {
     padding-top: 100px;
-    animation: fadeInAnimation ease 6s;
+    animation: fadeInAnimation ease 8s;
+}
+
+.titleBox2 > .titleLight {
+    font-size: 1.5vw;
+    color: #777777;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 .tileText {
@@ -181,10 +192,20 @@
     }
 
     .titleBox2 {
+        width: 70%;
+        margin: auto;
         padding-top: 20px;
-        padding-bottom: 100px;
     }
 
+    .titleBox3 {
+        padding-top: 30px;
+        animation: fadeInAnimation ease 8s;
+        padding-bottom: 70px;
+    }
+
+    .titleBox2 > .titleLight {
+        font-size: 15px;
+    }
 
     .titleLight {
         font-size: 25px;
