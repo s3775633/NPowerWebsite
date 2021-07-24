@@ -80,6 +80,11 @@ function populateEligibity(questions)
             }
         }
     }
+    headings[4].innerHTML = 'Do you or a member of your household receive any ' +
+    '<a href="https://www.eoninstall.com/affordable-warmth/affordable-warmth-landing.html" target="blank">' +
+      'government benefits?</a>';
+    headings[5].innerHTML = 'Dwelling <a href="https://find-energy-certificate.digital.communities.gov.uk/" target="blank">' +
+      'EPC Rating</a>';
 }
 
 var compRequest = new XMLHttpRequest();

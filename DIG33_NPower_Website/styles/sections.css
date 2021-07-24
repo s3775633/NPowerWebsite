@@ -1,7 +1,7 @@
 .homePage {
     display: block;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     background-image: url("../images/homepage_background.png");
     background-size: cover;
     background-repeat: no-repeat;

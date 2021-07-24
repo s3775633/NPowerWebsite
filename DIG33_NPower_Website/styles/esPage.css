@@ -27,6 +27,12 @@
     margin-left: 17%;
 }
 
+.rowEG {
+    width: 60%;
+    display: flex; 
+    margin-left: 17%;
+}
+
 .col1 {
     display: flex;
     flex: 10%;
@@ -41,14 +47,14 @@
 
 .col1Elig {
     display: flex;
-    flex: 70%;
+    flex: 75%;
     justify-content: left;
     justify-content: flex-start;
 }
 
 .col2Elig {
     display: flex;
-    flex: 30%;
+    flex: 25%;
     align-items: center;
     justify-content: center;
     justify-content: flex-end;
