@@ -90,7 +90,7 @@
     float: right;
     padding: 0;
     margin: 0;
-    font-size: 25px;;
+    font-size: 25px;
 }
 
 .esDescription {
@@ -135,12 +135,23 @@
     margin: auto;
 }
 
-.aboutHeading {
+.aboutHeading1 {
     text-transform: uppercase;
     font-size: 2.2vw;
     animation: fadeInAnimation ease 4s;
     padding-top: 40px;
     color: #000000;
+    width: 70%;
+}
+
+.aboutHeading2 {
+    text-transform: uppercase;
+    font-size: 2.2vw;
+    animation: fadeInAnimation ease 4s;
+    padding-top: 40px;
+    color: #000000;
+    float: right;
+    width: 70%;
 }
 
 .aboutDescription {
@@ -171,7 +182,9 @@
 
     .titleBox2 {
         padding-top: 20px;
+        padding-bottom: 100px;
     }
+
 
     .titleLight {
         font-size: 25px;
@@ -231,6 +244,12 @@
         font-size: 20px;
     }
 
+    .esHeadingAlt {
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-bottom: 100px;
+    }
+
     .sectionTitle {
       font-size: 5vw;
     }
@@ -245,6 +264,16 @@
     
     .aboutDescription {
         font-size: 3vw;
+    }
+
+    .aboutHeading1 {
+        font-size: 2.8vw;
+        width: 55%;
+    }
+    
+    .aboutHeading2 {
+        font-size: 2.8vw;
+        width: 55%;
     }
   }
 

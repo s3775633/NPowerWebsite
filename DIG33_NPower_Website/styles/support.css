@@ -3,8 +3,52 @@
     margin: auto;
     display: flex; 
     margin-left: 17%;
-    margin-top: 80px;
     animation: fadeInAnimation ease 4s
+}
+
+.rowSup > .col1 {
+    display: flex;
+    flex: 10%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.rowSup > .col2 {
+    float: left;
+    flex: 90%;
+    margin-bottom: 100px;
+}
+
+.aboutImg1 {
+    height: auto;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.aboutRow {
+    width: 100%;
+    display: flex; 
+}
+
+
+.aboutCol1 {
+    display: flex;
+    flex: 70%;
+    align-items: center;
+    justify-content: center;
+}
+
+.spaceCol {
+    display: flex;
+    flex: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutCol2 {
+    float: left;
+    flex: 25%;
 }
 
 .supportButton1 {
@@ -57,6 +101,7 @@
     box-shadow: 2px 5px 5px #888888;
     font-size: 2vw;
     transition: all 0.4s ease 0s;
+
 }
 
 .supportButton3:hover {
@@ -77,6 +122,22 @@
     min-height: 100vh;
     box-shadow: 10px 0 15px -4px #777, -10px 0 8px -4px #777;
     animation: slideIn ease-out 2s;
+}
+
+.aboutContainer {
+    margin: auto;
+    width: 70%;
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 10px 0 15px -4px #777, -10px 0 8px -4px #777;
+    padding-bottom: 100px;
+    animation: slideIn ease-out 2s;
+}
+
+.contactImage {
+    width: 40%;
+    height: auto;
+    margin-bottom: 80px;
 }
 
 .supportPage > .supContainer > .jumbotron {
@@ -129,5 +190,49 @@
 
     .supContainer > .jumbotron {
         width: 80%;
+    }
+
+    .aboutContainer {
+        width: 100%;
+    }
+
+    .aboutContainer > .jumbotron {
+        width: 80%;
+    }
+
+    .contactImage {
+        width: 60%;
+        height: auto;
+        margin-bottom: 80px;
+    }
+
+    .esImage1 {
+        width: 60%;
+        height: auto;
+        margin-bottom: 60px;
+    }
+
+    .aboutCol1 {
+        display: flex;
+        flex: 55%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .spaceCol {
+        display: flex;
+        flex: 5%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .aboutCol2 {
+        float: left;
+        flex: 40%;
+        padding-top: 20px;
+    }
+
+    .aboutImg1 {
+        margin-top: 0;
     }
 }

@@ -81,6 +81,16 @@
     background-color: white;
     min-height: 100vh;
     box-shadow: 10px 0 15px -4px #777, -10px 0 8px -4px #777;
+    padding-bottom: 100px;
+    animation: slideIn ease-out 2s;
+}
+
+.egContainer {
+    margin: auto;
+    width: 60%;
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 10px 0 15px -4px #777, -10px 0 8px -4px #777;
     animation: slideIn ease-out 2s;
 }
 
@@ -90,6 +100,12 @@
     width: 40%;
     animation: fadeInAnimation ease 4s;
     cursor: pointer;
+}
+
+.esImage1 {
+    width: 40%;
+    height: auto;
+    margin-bottom: 60px;
 }
 
 .egButton {
@@ -129,6 +145,17 @@
         width: 80%;
     }
   }
+
+@media screen and (max-width: 575px) {
+  .egContainer {
+    margin: auto;
+    width: 100%;
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 10px 0 15px -4px #777, -10px 0 8px -4px #777;
+    animation: slideIn ease-out 2s;
+}
+}
 
 @keyframes slideIn {
     0% {
