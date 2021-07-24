@@ -59,6 +59,17 @@
     transform: skew(10deg) translateY(-40%) translateX(-45%);
 }
 
+.cardImage {
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 55%;
+    left: 5%;
+    width: 90%;
+    height: 40%;
+    box-shadow: 0 0 10px;
+}
+
 .fade-out {
     visibility: hidden;
     opacity: 0;
