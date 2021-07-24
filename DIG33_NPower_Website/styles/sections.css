@@ -20,6 +20,12 @@
 }
 
 .productsPage {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+.improvementsPage {
     display: block;
     width: 100vw;
     height: 100vh;
