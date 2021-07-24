@@ -95,7 +95,6 @@ function activateNav()
     var nav = document.getElementById('navbarCollapse');
     if(window.getComputedStyle(nav).visibility === "hidden")
     {
-        console.log("Hello");
         nav.style.visibility = "visible";
     }
 }
