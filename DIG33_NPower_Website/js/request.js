@@ -97,7 +97,6 @@ compRequest.open('GET', 'https://npower-s1.herokuapp.com/company');
 compRequest.onload = function() {
     // JSON string parsed and stores
     var companyInfo = JSON.parse(compRequest.responseText);
-    console.log(companyInfo);
     address = new Address(companyInfo.address.street1, companyInfo.address.street2,
         companyInfo.address.city, companyInfo.address.postcode);
     company = new Company(companyInfo._id, companyInfo.tradingName, companyInfo.companyName,

@@ -13,7 +13,6 @@ const width = house.clientWidth
   */
 house.addEventListener('mousemove', handleMove)
 
-console.log("Hello");
 /* Define function a */
 function handleMove(e) {
   /*
@@ -32,10 +31,10 @@ function handleMove(e) {
     * Control the rotation
     * You can change the value and see the results
     */
-  const yRotation = 20 * ((xVal - width / 2) / width)
+  const yRotation = -18 * ((xVal - width / 2) / width)
   
   /* Calculate the rotation along the X-axis */
-  const xRotation = -20 * ((yVal - height / 2) / height)
+  const xRotation = 18 * ((yVal - height / 2) / height)
   
   /* Generate string for CSS transform property */
   const string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
@@ -49,10 +48,6 @@ house.addEventListener('mouseout', function() {
     house.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
 })
 
-/* Add listener for mousedown event, to simulate click */
-house.addEventListener('mousedown', function() {
-    house.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
-})
 
 /* Add listener for mouseup, simulate release of mouse click */
 house.addEventListener('mouseup', function() {

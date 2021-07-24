@@ -40,6 +40,15 @@ function homePage() {
 }
 
 // Function used to display the products page.
+function impPage() {
+    hidePages();
+    var impPage = document.querySelector(".improvementsPage");
+    var impNav = document.getElementById("impNav");
+    impPage.style.display = "block";
+    impNav.classList.add("active");
+}
+
+// Function used to display the products page.
 function prodPage() {
     hidePages();
     var prodPage = document.querySelector(".productsPage");
