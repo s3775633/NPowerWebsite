@@ -50,12 +50,8 @@
 }
 
 .titleBox2 {
+    padding-bottom: 100px;
     animation: fadeInAnimation ease 5s;
-}
-
-.titleBox3 {
-    padding-top: 100px;
-    animation: fadeInAnimation ease 8s;
 }
 
 .titleBox2 > .titleLight {
@@ -130,7 +126,27 @@
     text-transform: uppercase;
     font-size: 2.2vw;
     animation: fadeInAnimation ease 4s;
+}
+
+.esHeading1 {
+    text-transform: uppercase;
+    font-size: 2.2vw;
+    animation: fadeInAnimation ease 4s;
+}
+
+.esHeading2 {
+    text-transform: uppercase;
+    font-size: 2.2vw;
+    margin: auto;
+    width: 30%;
+    padding-top: 40px;
+    animation: fadeInAnimation ease 4s;
     cursor: pointer;
+}
+
+.esHeading2:hover {
+    color: blue;
+    text-decoration: underline;
 }
 
 .esTitleBox {
@@ -191,6 +207,12 @@
         margin-top: -20px;
     }
 
+    .esHeading {
+        margin: auto;
+        width: 80%;
+        font-size: 3.5vw;
+    }
+
     .titleBox2 {
         width: 70%;
         margin: auto;
@@ -228,12 +250,15 @@
 
     .tileDescription {
         position: absolute;
-        top: 60px;
+        width: 80%;
+        left: 5%;
+        top: 70px;
         text-transform: uppercase;
         color: white;
-        font-size: 1.8vw;
+        font-size: 1.9vw;
         margin: 10px;
         text-align: center;
+        align-items: center;
     }
     
     .tileHeading {
@@ -260,9 +285,15 @@
         font-size: 15px;
     }
 
-    .esHeading {
+    .esHeading1 {
         text-transform: uppercase;
-        font-size: 20px;
+        font-size: 30px;
+    }
+
+    .esHeading2 {
+        text-transform: uppercase;
+        font-size: 30px;
+        width: 50%;
     }
 
     .esHeadingAlt {
@@ -288,18 +319,49 @@
     }
 
     .aboutHeading1 {
-        font-size: 2.8vw;
+        font-size: 3.2vw;
         width: 55%;
     }
     
     .aboutHeading2 {
-        font-size: 2.8vw;
+        font-size: 3.2vw;
         width: 55%;
+    }
+
+    .titleBox2 {
+        padding-bottom: 0;
     }
   }
 
-  @media (max-width: 992px) {
-    .iconLabel {
-        display: none;
+@media (max-width: 900px) and (min-width: 578px) {
+    .esHeading1 {
+        font-size: 3vw;
+    }
+
+    .esHeading2 {
+        font-size: 3vw;
+        width: 30%;
+    }
+
+    .esDescription {
+        font-size: 2.5vw;
+    }
+    
+    .aboutDescription {
+        font-size: 3vw;
+    }
+
+    .esDescriptionSmall {
+        font-size: 1.5vw;
+    }
+
+    .aboutHeading1 {
+        font-size: 3.5vw;
+        width: 55%;
+    }
+    
+    .aboutHeading2 {
+        font-size: 3.5vw;
+        width: 55%;
     }
 }

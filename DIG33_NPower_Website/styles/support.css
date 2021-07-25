@@ -11,13 +11,17 @@
     flex: 10%;
     align-items: center;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .rowSup > .col2 {
     float: left;
     flex: 90%;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+}
+
+.imgShadow {
+    box-shadow: 5px 5px 20px;
 }
 
 .aboutImg1 {
@@ -135,9 +139,9 @@
 }
 
 .contactImage {
-    width: 40%;
+    width: 30%;
     height: auto;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 .supportPage > .supContainer > .jumbotron {
@@ -165,9 +169,14 @@
     .supportButton3 {
         font-size: 3vw;
     }
-  }
 
-@media screen and (max-width: 575px) {
+    .supContainer {
+        width: 100%;
+    }
+
+    .aboutContainer {
+        width: 100%;
+    }
     .rowSup {
         width: 80%;
     }
@@ -184,16 +193,8 @@
         font-size: 4vw;
     }
 
-    .supContainer {
-        width: 100%;
-    }
-
     .supContainer > .jumbotron {
         width: 80%;
-    }
-
-    .aboutContainer {
-        width: 100%;
     }
 
     .aboutContainer > .jumbotron {
@@ -235,4 +236,8 @@
     .aboutImg1 {
         margin-top: 0;
     }
+  }
+
+@media screen and (max-width: 575px) {
+
 }

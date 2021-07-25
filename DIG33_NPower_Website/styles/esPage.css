@@ -102,6 +102,10 @@
     cursor: pointer;
 }
 
+.test{
+    z-index: 20;
+}
+
 .esImage1 {
     width: 40%;
     height: auto;
@@ -139,6 +143,16 @@
         width: 100%;
     }
 
+    .egContainer {
+        width: 100%;
+    }
+
+    .supContainer {
+        padding-top: 0;
+        margin: auto;
+        width: 100%;
+    }
+
     .esImage {
         display: block;
         margin: auto;
@@ -149,11 +163,13 @@
 @media screen and (max-width: 575px) {
   .egContainer {
     margin: auto;
-    width: 100%;
     background-color: white;
     min-height: 100vh;
     box-shadow: 10px 0 15px -4px #777, -10px 0 8px -4px #777;
     animation: slideIn ease-out 2s;
+}
+.backButton {
+    font-size: 9vw;
 }
 }
 
