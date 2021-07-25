@@ -102,6 +102,10 @@
     cursor: pointer;
 }
 
+#radioSection {
+    animation: fadeInAnimation ease 4s;
+}
+
 .test{
     z-index: 20;
 }
