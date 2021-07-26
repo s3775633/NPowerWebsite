@@ -114,6 +114,14 @@
     animation: fadeInAnimation ease 4s
 }
 
+.egDescriptionAlt {
+    width: 80%;
+    font-size: 1vw;
+    margin-bottom: 40px;
+    text-align: left;
+    animation: fadeInAnimation ease 4s
+}
+
 .esDescriptionSmall {
     font-size: 1vw;
     margin-bottom: 40px;
@@ -328,6 +336,10 @@
     .titleBox2 {
         padding-bottom: 0;
     }
+
+    .egDescriptionAlt {
+        font-size: 2.5vw;
+    }
   }
 
 @media (max-width: 900px) and (min-width: 578px) {
@@ -360,5 +372,9 @@
     .aboutHeading2 {
         font-size: 3.5vw;
         width: 55%;
+    }
+
+    .egDescriptionAlt {
+        font-size: 1.7vw;
     }
 }
