@@ -154,3 +154,10 @@ class Address {
             this.postcode = postcode;
     }
 }
+
+function resetTiles() {
+    var tiles = document.getElementsByClassName('tile');
+    for (tile of tiles) {
+      removeHover(tile);
+    }
+  }

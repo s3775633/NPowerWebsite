@@ -52,3 +52,10 @@ house.addEventListener('mouseout', function () {
 house.addEventListener('mouseup', function () {
   house.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
 })
+
+function resetTiles() {
+  var tiles = document.getElementsByClassName('tile');
+  for (tile of tiles) {
+    removeHover(tile);
+  }
+}

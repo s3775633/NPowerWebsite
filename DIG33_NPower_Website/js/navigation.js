@@ -106,3 +106,10 @@ window.onload = function () {
     bsCollapse.hide();
 }
 
+function resetTiles() {
+    var tiles = document.getElementsByClassName('tile');
+    for (tile of tiles) {
+      removeHover(tile);
+    }
+  }
+
