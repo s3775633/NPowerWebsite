@@ -166,7 +166,7 @@
     animation: fadeInAnimation ease 4s;
     padding-top: 40px;
     color: #000000;
-    width: 70%;
+    width: 55%;
 }
 
 .aboutHeading2 {
@@ -176,7 +176,7 @@
     padding-top: 40px;
     color: #000000;
     float: right;
-    width: 70%;
+    width: 55%;
 }
 
 .aboutDescription {
@@ -300,7 +300,7 @@
     }
 
     .sectionTitle {
-      font-size: 5vw;
+      font-size: 6vw;
     }
 
     .para {

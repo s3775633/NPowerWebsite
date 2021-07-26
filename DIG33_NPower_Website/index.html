@@ -76,7 +76,7 @@
         <div class="container-fluid tileSection">
           <div class="row">
             <div class="col-sm-4">
-              <div class="reduceCost" onmouseover=mouseOver(this) onmouseout=mouseOut(this) onclick=esPage()>
+              <div class="reduceCost tile" onmouseover=mouseOver(this) onmouseout=mouseOut(this) onclick=tileClick(this)>
                 <img class="image" src="images/Reduce-Cost.png"></img>
                 <h1 class="tileText">Energy-Saving Incentives</h1>
                 <h1 class="tileHeading tileDecriptionVisibility">Energy-Saving Incentives</h1>
@@ -87,7 +87,7 @@
               </div>
             </div>
             <div class="col-sm-4">
-              <div class="alternatives" onmouseover=mouseOver(this) onmouseout=mouseOut(this) onclick=impPage()>
+              <div class="alternatives tile" onmouseover=mouseOver(this) onmouseout=mouseOut(this) onclick=tileClick(this)>
                 <img class="image" src="images/Innovative-Alternatives.png"></img>
                 <h1 class="tileText">Energy Improvements</h1>
                 <h1 class="tileHeading tileDecriptionVisibility">Energy Improvements</h1>
@@ -98,7 +98,7 @@
               </div>
             </div>
             <div class="col-sm-4">
-              <div class="environment" onmouseover=mouseOver(this) onmouseout=mouseOut(this) onclick=prodPage()>
+              <div class="environment tile" onmouseover=mouseOver(this) onmouseout=mouseOut(this) onclick=tileClick(this)>
                 <img class="image" src="images/Protect-Environment.png"></img>
                 <h1 class="tileText">Efficient Products</h1>
                 <h1 class="tileHeading tileDecriptionVisibility">Efficient Products</h1>
@@ -292,7 +292,7 @@
             <div class="aboutCol1">
             <p class="aboutDescription">Our core focus is to provide decentralised, green, and
               interconnected solutions that address the needs of our customers and those of the environment.
-              We aim to lead the global shift towards new technology by working with customers, companies and across
+              We aim to lead the global shift towards <a class="aboutLink" onclick=prodPage()>new technology</a> by working with customers, companies and across
               communities to make energy simpler,
               smarter and more sustainable.</p>
             </div>
@@ -311,7 +311,7 @@
               </div>
               <div class="aboutCol1">
             <p class="aboutDescription">At npower, we believe in empowering the individual to make global change. 
-              We aim to connect our customers to our tried-and-true tips for saving money, electricity, 
+              We aim to connect our customers to our tried-and-true <a class="aboutLink" onclick=impPage()>tips</a> for saving money, electricity, 
               and in turn, the planet. Whether through offering 100% renewable energy tariffs, 
               keeping our customers updated on the latest green technology, or by educating households 
               on how they can minimise not just their energy bills but their carbon footprint, 
@@ -393,8 +393,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
-  <script src="js/tiles.js"></script>
   <script src="js/navigation.js"></script>
+  <script src="js/tiles.js"></script>
   <script src="js/request.js"></script>
   <script src="js/improvement.js"></script>
 </body>

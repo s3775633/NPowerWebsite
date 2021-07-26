@@ -95,6 +95,7 @@ function hidePages() {
     {
         navItem.classList.remove("active");
     }
+    resetTiles()
     closeNav();
 }
 
