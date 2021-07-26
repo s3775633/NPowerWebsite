@@ -47,6 +47,10 @@
     cursor: pointer;
 }
 
+.tileSection {
+    padding-bottom: 200px;
+}
+
 .image {
     position: absolute;
     height: 38%;
@@ -237,6 +241,10 @@
 
     .cardImage {
         display: none;
+    }
+
+    .tileSection {
+        padding-bottom: 0;
     }
   }
 

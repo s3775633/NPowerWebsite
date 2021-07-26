@@ -9,8 +9,8 @@
 
 .energySaving {
     display: none;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .elegibilityPage {
@@ -21,8 +21,8 @@
 
 .productsPage {
     display: none;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .improvementsPage {
@@ -39,6 +39,6 @@
 
 .supportPage {
     display: none;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }

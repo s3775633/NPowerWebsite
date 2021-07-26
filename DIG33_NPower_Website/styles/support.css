@@ -27,7 +27,7 @@
 .aboutImg1 {
     height: auto;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .aboutRow {
@@ -35,10 +35,13 @@
     display: flex; 
 }
 
+.aboutLink {
+    cursor: pointer;
+}
 
 .aboutCol1 {
     display: flex;
-    flex: 70%;
+    flex: 55%;
     align-items: center;
     justify-content: center;
 }
@@ -52,7 +55,7 @@
 
 .aboutCol2 {
     float: left;
-    flex: 25%;
+    flex: 40%;
 }
 
 .supportButton1 {

@@ -78,6 +78,7 @@ function tileClick(div)
     }
     else
     {
+      resetTiles();
       addHover(div);
     }
   }
