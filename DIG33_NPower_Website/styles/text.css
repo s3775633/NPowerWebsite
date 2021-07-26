@@ -250,9 +250,9 @@
         position: absolute;
         width: 80%;
         left: 6%;
-        top: 30%;
+        top: 20%;
         color: white;
-        font-size: 13px;
+        font-size: 14px;
         margin: 10px;
         text-align: center;
         align-items: center;
@@ -260,7 +260,7 @@
     
     .tileHeading {
         position: absolute;
-        top: 15px;
+        top: 16px;
         text-transform: uppercase;
         left: 50%;
         color: white;
