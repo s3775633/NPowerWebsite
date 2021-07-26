@@ -1,3 +1,4 @@
+/* Code obtained from https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_left */
 .tooltip1 {
     position: relative;
     display: inline-block;
@@ -15,7 +16,6 @@
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    top: 20%;
     left: 110%;
 }
   
