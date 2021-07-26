@@ -116,7 +116,7 @@
 
 .egDescriptionAlt {
     width: 80%;
-    font-size: 1vw;
+    font-size: 1.2vw;
     margin-bottom: 40px;
     text-align: left;
     animation: fadeInAnimation ease 4s
@@ -338,7 +338,7 @@
     }
 
     .egDescriptionAlt {
-        font-size: 2.5vw;
+        font-size: 2.7vw;
     }
   }
 
@@ -375,6 +375,6 @@
     }
 
     .egDescriptionAlt {
-        font-size: 1.7vw;
+        font-size: 1.8vw;
     }
 }
