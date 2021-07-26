@@ -60,6 +60,21 @@
     justify-content: flex-end;
 }
 
+.col1Elig1 {
+    display: flex;
+    flex: 100%;
+    justify-content: left;
+    justify-content: flex-start;
+}
+
+.col2Elig1 {
+    display: flex;
+    flex: 0%;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-end;
+}
+
 .col3Elig {
     display: flex;
     flex: 30%;
