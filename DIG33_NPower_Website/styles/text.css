@@ -74,12 +74,10 @@
 .tileDescription {
     position: absolute;
     top: 20%;
-    text-transform: uppercase;
     color: white;
     font-size: 0.7vw;
     margin: 10px;
     text-align: center;
-    text-align: justify;
 }
 
 .tileHeading {
@@ -251,11 +249,10 @@
     .tileDescription {
         position: absolute;
         width: 80%;
-        left: 5%;
-        top: 70px;
-        text-transform: uppercase;
+        left: 6%;
+        top: 80px;
         color: white;
-        font-size: 1.9vw;
+        font-size: 3vw;
         margin: 10px;
         text-align: center;
         align-items: center;
@@ -267,10 +264,10 @@
         text-transform: uppercase;
         left: 50%;
         color: white;
-        font-size: 2.4vw;
+        font-size: 3.5vw;
         margin: 10px;
         text-align: center;
-        transform: translateX(-65%);
+        transform: translateX(-60%);
     }
 
     .esDescription {

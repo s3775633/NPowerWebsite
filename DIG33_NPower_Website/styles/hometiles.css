@@ -195,8 +195,8 @@
         height: 0;
         border-radius: 1000px;
         transform: skew(0);
-        width: 25vh;
-        height: 25vh;
+        width: 30vh;
+        height: 30vh;
     }
 
     .alternatives {
@@ -204,8 +204,8 @@
         padding-bottom: 0%;
         border-radius: 1000px;
         transform: skew(0);
-        width: 25vh;
-        height: 25vh;
+        width: 30vh;
+        height: 30vh;
     }
 
     .environment {
@@ -213,8 +213,8 @@
         padding-bottom: 0%;
         border-radius: 1000px;
         transform: skew(0);
-        width: 25vh;
-        height: 25vh;
+        width: 30vh;
+        height: 30vh;
     }
 
     .image {
