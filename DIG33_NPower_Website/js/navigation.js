@@ -6,11 +6,9 @@ function closeNav() {
     // Screen width obtained
     var screenWidth = window.innerWidth;
     // If screen width is less than desktop mode size
-    if(screenWidth < 1301)
-    {
+    if (screenWidth < 1301) {
         // nav toggled if not already collapsed.
-        if(!document.getElementById('toggle').classList.contains('collapsed'))
-        {
+        if (!document.getElementById('toggle').classList.contains('collapsed')) {
             bsCollapse.toggle();
         }
     }
@@ -40,7 +38,7 @@ function elgPage() {
 // Function used to display home page.
 function homePage() {
     hidePages();
-    var home = document.querySelector(".homePage"); 
+    var home = document.querySelector(".homePage");
     home.style.display = "block";
 }
 
@@ -65,7 +63,7 @@ function prodPage() {
 // Function used to display about page.
 function aboutPage() {
     hidePages();
-    var about = document.querySelector(".aboutPage"); 
+    var about = document.querySelector(".aboutPage");
     var aboutNav = document.getElementById("aboutNav");
     about.style.display = "block";
     aboutNav.classList.add("active");
@@ -74,42 +72,37 @@ function aboutPage() {
 // Function used to display support page.
 function supportPage() {
     hidePages();
-    var support = document.querySelector(".supportPage"); 
+    var support = document.querySelector(".supportPage");
     var supportNav = document.getElementById("supportNav");
     support.style.display = "block";
     supportNav.classList.add("active");
 }
 
 // Function used to hide all pages on the site and make all nav options inactive.
-function hidePages() {   
+function hidePages() {
     // All pages obtained
     var pages = document.getElementsByClassName("page");
     // For loop used to loop through all pages and hide them
-    for(page of pages)
-    {
+    for (page of pages) {
         page.style.display = "none";
     }
     // Nav links captured and deactivated.
     var navItems = document.getElementsByClassName("nav-link");
-    for(navItem of navItems)
-    {
+    for (navItem of navItems) {
         navItem.classList.remove("active");
     }
     resetTiles()
     closeNav();
 }
 
-function activateNav()
-{   
+function activateNav() {
     var nav = document.getElementById('navbarCollapse');
-    if(window.getComputedStyle(nav).visibility === "hidden")
-    {
+    if (window.getComputedStyle(nav).visibility === "hidden") {
         nav.style.visibility = "visible";
     }
 }
 
-window.onload = function()
-{
+window.onload = function () {
     bsCollapse.hide();
 }
 

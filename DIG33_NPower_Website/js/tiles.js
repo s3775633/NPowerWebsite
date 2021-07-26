@@ -4,8 +4,7 @@ function mouseOver(div) {
   // Screen width obtained
   var screenWidth = window.innerWidth;
   // If screen width is less than desktop mode size
-  if(!(screenWidth < 576))
-  {
+  if (!(screenWidth < 576)) {
     addHover(div);
   }
 }
@@ -16,14 +15,12 @@ function mouseOut(div) {
   // Screen width obtained
   var screenWidth = window.innerWidth;
   // If screen width is less than desktop mode size
-  if(!(screenWidth < 576))
-  {
+  if (!(screenWidth < 576)) {
     removeHover(div);
   }
 }
 
-function addHover(div)
-{
+function addHover(div) {
   var image = div.querySelector(".image");
   var text = div.querySelector(".tileText");
   var heading = div.querySelector(".tileHeading");
@@ -44,8 +41,7 @@ function addHover(div)
   tileImage.classList.remove("tileDecriptionVisibility");
 }
 
-function removeHover(div)
-{
+function removeHover(div) {
   var image = div.querySelector(".image");
   var text = div.querySelector(".tileText");
   var heading = div.querySelector(".tileHeading");
@@ -63,52 +59,41 @@ function removeHover(div)
   tileImage.classList.remove("fade-in-description");
 }
 
-function tileClick(div)
-{
+function tileClick(div) {
   var description = div.querySelector(".tileDescription");
   // Screen width obtained
   var screenWidth = window.innerWidth;
   // If screen width is less than desktop mode size
-  if(screenWidth < 576)
-  {
-    if(description.classList.contains("fade-in-description"))
-    {
+  if (screenWidth < 576) {
+    if (description.classList.contains("fade-in-description")) {
       navigate(div);
       resetTiles();
     }
-    else
-    {
+    else {
       resetTiles();
       addHover(div);
     }
   }
-  else
-  {
+  else {
     navigate(div)
   }
 }
 
-function navigate(div)
-{
-  if(div.classList.contains("reduceCost"))
-  {
+function navigate(div) {
+  if (div.classList.contains("reduceCost")) {
     esPage();
   }
-  else if(div.classList.contains("alternatives"))
-  {
+  else if (div.classList.contains("alternatives")) {
     impPage();
   }
-  else if(div.classList.contains("environment"))
-  {
+  else if (div.classList.contains("environment")) {
     prodPage();
   }
 }
 
-function resetTiles()
-{
+function resetTiles() {
   var tiles = document.getElementsByClassName('tile');
-  for(tile of tiles)
-  {
+  for (tile of tiles) {
     removeHover(tile);
   }
 }

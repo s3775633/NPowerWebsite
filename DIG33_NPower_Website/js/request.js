@@ -1,17 +1,15 @@
 var request = new XMLHttpRequest();
 // eligibility API accessed.
 request.open('GET', 'https://npower-s1.herokuapp.com/eligibility');
-request.onload = function() {
+request.onload = function () {
     // JSON string parsed and stores
     var eQuestions = JSON.parse(request.responseText);
     var questions = new Array();
     // for loop used to loop through each question obtained from the JSON.
-    for(x = 0; x < eQuestions.length; x++)
-    {
+    for (x = 0; x < eQuestions.length; x++) {
         // Options array created with options iterated and added.
         options = new Array();
-        for(i = 0; i < eQuestions[x].options.length; i++)
-        {
+        for (i = 0; i < eQuestions[x].options.length; i++) {
             options[i] = eQuestions[x].options[i];
         }
         // New question object created and added to questions array.
@@ -22,8 +20,7 @@ request.onload = function() {
 };
 
 // function used to populate all questions within the eligibility page
-function populateEligibity(questions)
-{
+function populateEligibity(questions) {
     // elements obtained and stored in variables
     var headings = document.getElementsByClassName('title-heading');
     var status = document.getElementById('status');
@@ -34,67 +31,59 @@ function populateEligibity(questions)
     var radioSection = document.getElementById('radioSection');
 
     // for loop used to iterate through all questions
-    for(x = 0; x < questions.length; x++)
-    {
+    for (x = 0; x < questions.length; x++) {
         headings[x].innerHTML = questions[x].heading;
         // for loop used to iterate through each option within the question.
-        for(i = 0; i < questions[x].options.length; i++)
-        {
+        for (i = 0; i < questions[x].options.length; i++) {
             // option element created and populated with question option.
             var option = document.createElement('option');
             option.value = questions[x].options[i];
             option.innerHTML = questions[x].options[i];
-            
+
             // Option assigned to dom element depending on question number.
-            if(questions[x].number == 1)
-            {
+            if (questions[x].number == 1) {
                 status.appendChild(option);
             }
-            else if(questions[x].number == 2)
-            {
+            else if (questions[x].number == 2) {
                 income.appendChild(option);
             }
-            else if(questions[x].number == 3)
-            {
+            else if (questions[x].number == 3) {
                 occupants.appendChild(option);
             }
-            else if(questions[x].number == 4)
-            {
+            else if (questions[x].number == 4) {
                 // Code block created with appropriate styles.
                 var codeBlock = ' <div class="rowES ">' +
-                '<div class="col3Elig">' +
-                  '<input type="checkbox" class="egCheck" id="' + questions[x].options[i] + '">' +
-                '</div>' +
-                '<div class="col1Elig">' +
-                  '<p class="esDescriptionSmall formText">'
-                  + questions[x].options[i] +
-                  '</p></div>' +
-                '</div>'
+                    '<div class="col3Elig">' +
+                    '<input type="checkbox" class="egCheck" id="' + questions[x].options[i] + '">' +
+                    '</div>' +
+                    '<div class="col1Elig">' +
+                    '<p class="esDescriptionSmall formText">'
+                    + questions[x].options[i] +
+                    '</p></div>' +
+                    '</div>'
                 // Code block used to populate checkbox section with nuique data.
                 checkBoxSection.innerHTML += codeBlock;
             }
-            else if(questions[x].number == 5)
-            {
+            else if (questions[x].number == 5) {
                 var codeBlock = '<input type="radio" name="benefits" id="' + questions[x].options[i] + '" value="' + questions[x].options[i] + '">' +
-                  '<label>&nbsp;' + questions[x].options[i] + '</label>&nbsp;&nbsp;&nbsp;';
+                    '<label>&nbsp;' + questions[x].options[i] + '</label>&nbsp;&nbsp;&nbsp;';
                 radioSection.innerHTML += codeBlock;
             }
-            else if(questions[x].number == 6)
-            {
+            else if (questions[x].number == 6) {
                 rating.appendChild(option);
             }
         }
     }
     headings[4].innerHTML = 'Do you or a member of your household receive any ' +
-    '<a href="https://www.eoninstall.com/affordable-warmth/affordable-warmth-landing.html" target="blank">' +
-      'government benefits?</a>';
+        '<a href="https://www.eoninstall.com/affordable-warmth/affordable-warmth-landing.html" target="blank">' +
+        'government benefits?</a>';
     headings[5].innerHTML = 'Dwelling <a href="https://find-energy-certificate.digital.communities.gov.uk/" target="blank">' +
-      'EPC Rating</a>';
+        'EPC Rating</a>';
 }
 
 var compRequest = new XMLHttpRequest();
 compRequest.open('GET', 'https://npower-s1.herokuapp.com/company');
-compRequest.onload = function() {
+compRequest.onload = function () {
     // JSON string parsed and stores
     var companyInfo = JSON.parse(compRequest.responseText);
     address = new Address(companyInfo.address.street1, companyInfo.address.street2,
@@ -105,8 +94,7 @@ compRequest.onload = function() {
     setCompanyInfo(company);
 };
 
-function setCompanyInfo(company)
-{
+function setCompanyInfo(company) {
     var facebookIcon = document.getElementById('facebook');
     facebookIcon.href = company.facebook;
     var twitterIcon = document.getElementById('twitter');
@@ -148,11 +136,11 @@ class Company {
         this.id = id;
         this.tradingName = tradingName;
         this.companyName = companyName,
-        this.address = address;
+            this.address = address;
         this.webAddress = webAddress;
         this.enquiryPhone = enquiryPhone;
         this.faultPhone = faultPhone,
-        this.email = email;
+            this.email = email;
         this.facebook = facebook;
         this.twitter = twitter;
     }
@@ -163,6 +151,6 @@ class Address {
         this.street1 = street1;
         this.street2 = street2;
         this.city = city,
-        this.postcode = postcode;
+            this.postcode = postcode;
     }
 }
