@@ -54,7 +54,7 @@ function populateEligibity(questions) {
                 // Code block created with appropriate styles.
                 var codeBlock = ' <div class="rowES ">' +
                     '<div class="col3Elig">' +
-                    '<input type="checkbox" class="egCheck" id="' + questions[x].options[i] + '">' +
+                    '<input type="checkbox" class="egCheck" id="' + questions[x].options[i] + '"name=installations value="' + questions[x].options[i] + '">' +
                     '</div>' +
                     '<div class="col1Elig">' +
                     '<p class="esDescriptionSmall formText">'
@@ -117,6 +117,39 @@ function setCompanyInfo(company) {
     supportButton.innerHTML += " - " + company.email;
 }
 
+
+function elgTest()
+{
+    var formData = new FormData(document.getElementById('elgForm'));
+    var elgPageTrue = document.getElementById('incentiveResult');
+    const params = new URLSearchParams(formData);
+    var query = "?" + params.toString();
+    console.log(params.toString());
+    const response = fetch('https://npower-s2.herokuapp.com/incentive/result/' + query)
+    .then(response => response.text())
+    .then((response) => {
+        var incent = JSON.parse(response);
+        elgPageTrue.innerHTML = "";
+        for(x = 0; x < incent.length; x++)
+        {
+            elgPageTrue.innerHTML += '<div class="elgResultHeading">' + incent[x].heading + '</div>' +
+            '<div class="elgResultDescription">' + incent[x].description + '</div>' +
+            '<div class="elgResultDescription">' + "To find out more phone: " + incent[x].phone + '</div>' +
+            '<div class="elgResultDescription">' + "Or click " + '<a href="' + incent[x].link + '">here</a> for more information</div>'
+        }
+        console.log(response);
+        if(response == "false")
+        {
+            elgFalsePage();
+        }
+        else
+        {
+            elgTruePage();
+        }
+    })
+}
+
+
 compRequest.send();
 request.send();
 
@@ -152,6 +185,15 @@ class Address {
         this.street2 = street2;
         this.city = city,
             this.postcode = postcode;
+    }
+}
+
+class Incentive {
+    constructor(id, description, link, phone) {
+        this.id = id;
+        this.description = description;
+        this.link = link;
+        this.phone = phone;
     }
 }
 
