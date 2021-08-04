@@ -165,13 +165,13 @@
                 </div>
               </div>
             </div>
-            <form>
+            <form id="elgForm">
               <div class="rowEG">
                 <div class="col1Elig">
                   <p class="egDescription formText title-heading"></p>
                 </div>
                 <div class="col2Elig">
-                  <select class="egCombo" id="status">
+                  <select class="egCombo" id="status" name="status">
                   </select>
                   </span>
                 </div>
@@ -181,7 +181,7 @@
                   <p class="egDescription formText title-heading"></p>
                 </div>
                 <div class="col2Elig">
-                  <select class="egCombo" id="income">
+                  <select class="egCombo" id="income" name="income">
                   </select>
                 </div>
               </div>
@@ -190,7 +190,7 @@
                   <p class="egDescription formText title-heading"></p>
                 </div>
                 <div class="col2Elig">
-                  <select class="egCombo" id="occupants">
+                  <select class="egCombo" id="occupants" name="occupants">
                   </select>
                 </div>
               </div>
@@ -208,7 +208,7 @@
                     <p class="egDescriptionAlt formText title-heading">
                     </p>
                   </div>
-                  <div class="col2Elig1" id="radioSection">
+                  <div class="col2Elig1" id="radioSection" name="benefits">
                   </div>
                   <span class="tooltiptext1">Learn about if you are eligible for government benefits at
                     https://www.eoninstall.com/affordable-warmth/affordable-warmth-landing.html</span>
@@ -221,15 +221,51 @@
                     </p>
                   </div>
                   <div class="col2Elig">
-                    <select class="egCombo" id="rating">
+                    <select class="egCombo" id="rating" name="rating">
                     </select>
                   </div>
                   <span class="tooltiptext1">Find out your EPC rating at
                     https://find-energy-certificate.digital.communities.gov.uk/</span>
                 </div>
               </div>
-              <button class="egButton" type="submit">TEST</button>
             </form>
+            <button class="egButton" onclick=elgTest()>TEST</button>
+          </div>
+        </div>
+      </section>
+      <section class="resultsPageTrue page">
+        <div class="jumbotron text-center">
+          <div class="esContainer">
+            <div class="esTitleBox">
+              <div class="rowImp">
+                <div class="col1">
+                  <i class="backButton fa fa-chevron-left" onclick=elgPage()></i>
+                </div>
+                <div class="col2">
+                  <span class="sectionTitle pull-center">congratulations</h1>
+                  </span>
+                </div>
+              </div>
+              <div id="incentiveResult">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="resultsPageFalse page">
+        <div class="jumbotron text-center">
+          <div class="esContainer">
+            <div class="esTitleBox">
+              <div class="rowImp">
+                <div class="col1">
+                  <i class="backButton fa fa-chevron-left" onclick=elgPage()></i>
+                </div>
+                <div class="col2">
+                  <span class="sectionTitle pull-center">False</h1>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

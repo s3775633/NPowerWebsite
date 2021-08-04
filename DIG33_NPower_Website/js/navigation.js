@@ -78,6 +78,22 @@ function supportPage() {
     supportNav.classList.add("active");
 }
 
+function elgTruePage() {
+    hidePages();
+    var elgTruePage = document.querySelector(".resultsPageTrue");
+    var esNav = document.getElementById("esNav");
+    elgTruePage.style.display = "block";
+    esNav.classList.add("active");
+}
+
+function elgFalsePage() {
+    hidePages();
+    var elgFalsePage = document.querySelector(".resultsPageFalse");
+    var esNav = document.getElementById("esNav");
+    elgFalsePage.style.display = "block";
+    esNav.classList.add("active");
+}
+
 // Function used to hide all pages on the site and make all nav options inactive.
 function hidePages() {
     // All pages obtained
