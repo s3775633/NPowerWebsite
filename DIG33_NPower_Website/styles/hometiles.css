@@ -151,6 +151,20 @@
 	}
 }
 
+@keyframes pulse1-1 {
+	0% {
+		box-shadow: 0 0 0 0 #e70030;
+	}
+
+	70% {
+		box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
 @keyframes pulse2 {
 	0% {
 		box-shadow: 0 0 0 0 #6f4ea7;

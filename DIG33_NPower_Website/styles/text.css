@@ -43,6 +43,80 @@
     0 20px 20px rgba(0,0,0,.15);
 }
 
+.sideNav {
+    position: fixed;
+    z-index: 3;
+    top: 27%;
+    left: 40%;
+    width: 70%;
+    height: 50%;
+    transform: skew(10deg);
+}
+
+.elgSideNav {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 10%;
+    color: #ffffff;
+    font-size: 2.3vw;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.resultsPageTrue .elgSideNav {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 10%;
+    color: #ffffff;
+    opacity: 0.5;
+    font-size: 2.3vw;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.resultsPageFalse .elgSideNav {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 10%;
+    color: #ffffff;
+    opacity: 0.5;
+    font-size: 2.3vw;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.elgSideNav2 {
+    display: none;
+    z-index: 3;
+    position: fixed;
+    top: 13%;
+    left: 10%;
+    color: #ffffff;
+    font-size: 2.3vw;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.elegibilityPage > .largeIncetiveTile > .sideNav > .elgSideNav2 {
+    z-index: 3;
+    position: fixed;
+    top: 13%;
+    left: 10%;
+    color: #ffffff;
+    opacity: 0.5;
+    font-size: 2.3vw;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px #000000;
+}
+
 .titleBox1 {
     padding-top: 120px;
     padding-bottom: 50px;
@@ -173,11 +247,12 @@
 }
 
 .esTitleBox {
-    width: 80%;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
     margin: auto;
     padding-top: 120px;
     padding-bottom: 40px;
-    animation: fadeInAnimation ease 4s
 }
 
 .para {
@@ -296,7 +371,7 @@
     }
 
     .esDescription {
-        font-size: 15px;
+        font-size: 4.5vw;
     }
 
     .esDescriptionSmall {

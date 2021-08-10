@@ -20,6 +20,7 @@ function esPage() {
     hidePages();
     // energysaving section and nav obtained
     var esPage = document.querySelector(".energySaving");
+    esPage.scrollTo(0, 0);
     var esNav = document.getElementById("esNav");
     // energyseving section displayed and nav set to active.
     esPage.style.display = "block";
@@ -30,6 +31,7 @@ function esPage() {
 function elgPage() {
     hidePages();
     var egPage = document.querySelector(".elegibilityPage");
+    egPage.scrollTo(0, 0);
     var esNav = document.getElementById("esNav");
     egPage.style.display = "block";
     esNav.classList.add("active");
@@ -39,6 +41,7 @@ function elgPage() {
 function homePage() {
     hidePages();
     var home = document.querySelector(".homePage");
+    home.scrollTo(0, 0);
     home.style.display = "block";
 }
 
@@ -46,6 +49,7 @@ function homePage() {
 function impPage() {
     hidePages();
     var impPage = document.querySelector(".improvementsPage");
+    impPage.scrollTo(0, 0);
     var impNav = document.getElementById("impNav");
     impPage.style.display = "block";
     impNav.classList.add("active");
@@ -55,6 +59,7 @@ function impPage() {
 function prodPage() {
     hidePages();
     var prodPage = document.querySelector(".productsPage");
+    prodPage.scrollTo(0, 0);
     var prodNav = document.getElementById("prodNav");
     prodPage.style.display = "block";
     prodNav.classList.add("active");
@@ -64,6 +69,7 @@ function prodPage() {
 function aboutPage() {
     hidePages();
     var about = document.querySelector(".aboutPage");
+    about.scrollTo(0, 0);
     var aboutNav = document.getElementById("aboutNav");
     about.style.display = "block";
     aboutNav.classList.add("active");
@@ -73,6 +79,7 @@ function aboutPage() {
 function supportPage() {
     hidePages();
     var support = document.querySelector(".supportPage");
+    support.scrollTo(0, 0);
     var supportNav = document.getElementById("supportNav");
     support.style.display = "block";
     supportNav.classList.add("active");
@@ -80,16 +87,28 @@ function supportPage() {
 
 function elgTruePage() {
     hidePages();
+    var sideNav = document.getElementsByClassName("elgSideNav2");
     var elgTruePage = document.querySelector(".resultsPageTrue");
+    elgTruePage.scrollTo(0, 0);
     var esNav = document.getElementById("esNav");
+    for(nav of sideNav)
+    {
+        nav.style.display = "block";
+    }
     elgTruePage.style.display = "block";
     esNav.classList.add("active");
 }
 
 function elgFalsePage() {
     hidePages();
+    var sideNav = document.getElementsByClassName("elgSideNav2");
     var elgFalsePage = document.querySelector(".resultsPageFalse");
+    elgFalsePage.scrollTo(0, 0);
     var esNav = document.getElementById("esNav");
+    for(nav of sideNav)
+    {
+        nav.style.display = "block";
+    }
     elgFalsePage.style.display = "block";
     esNav.classList.add("active");
 }

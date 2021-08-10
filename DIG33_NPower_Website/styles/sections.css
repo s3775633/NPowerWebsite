@@ -1,5 +1,5 @@
 .homePage {
-    display: none;
+    display: block;
     min-height: 100%;
     width: 100%;
     background-image: url("../images/homepage_background.png");
@@ -8,7 +8,7 @@
 }
 
 .energySaving {
-    display: block;
+    display: none;
     width: 100%;
     height: 100%;
 }
