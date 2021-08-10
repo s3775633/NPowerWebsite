@@ -592,7 +592,7 @@
     height: 20vh;
     left: 50%;
     transform: translate(-50%, 0);
-    animation: slideInButton2 ease-out 2.3s;
+    animation: slideInButton2 ease-out 2.3s pulse1-1 3s infinite;
 }
 
 .elegibilityPage .sectionTitle {
@@ -681,7 +681,7 @@
     height: 18vh;
     left: 50%;
     transform: translate(-50%, 0);
-    animation: none;
+    animation: pulse1-1 3s infinite;
     animation-fill-mode: forwards;
 }
 
