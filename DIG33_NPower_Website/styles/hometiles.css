@@ -47,6 +47,10 @@
     cursor: pointer;
 }
 
+.homePage .jumbotron {
+    z-index: 3;
+}
+
 .tileSection {
     padding-bottom: 200px;
 }

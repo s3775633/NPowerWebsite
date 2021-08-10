@@ -1,4 +1,5 @@
 .titleLight {
+    z-index: 3;
     font-size: 3vw;
     color: #777777;
     font-weight:400;
@@ -6,6 +7,7 @@
 }
 
 .titleBold {
+    z-index: 3;
     font-size: 3vw;
     color: black;
     font-weight: bold;
@@ -118,14 +120,16 @@
 }
 
 .titleBox1 {
+    z-index: 3;
     padding-top: 120px;
     padding-bottom: 50px;
-    animation: fadeInAnimation ease 3s
+    animation: fadeInAnimation ease 3s forwards
 }
 
 .titleBox2 {
+    z-index: 3;
     padding-bottom: 100px;
-    animation: fadeInAnimation ease 5s;
+    animation: fadeInAnimation ease 5s forwards;
 }
 
 .titleBox2 > .titleLight {

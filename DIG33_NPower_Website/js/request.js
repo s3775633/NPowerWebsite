@@ -65,7 +65,7 @@ function populateEligibity(questions) {
                 checkBoxSection.innerHTML += codeBlock;
             }
             else if (questions[x].number == 5) {
-                var codeBlock = '<input type="radio" name="benefits" id="' + questions[x].options[i] + '" value="' + questions[x].options[i] + '">' +
+                var codeBlock = '<input type="radio" checked="true" name="benefits" id="' + questions[x].options[i] + '" value="' + questions[x].options[i] + '">' +
                     '<label>&nbsp;' + questions[x].options[i] + '</label>&nbsp;&nbsp;&nbsp;';
                 radioSection.innerHTML += codeBlock;
             }
@@ -122,6 +122,10 @@ function elgTest()
 {
     var formData = new FormData(document.getElementById('elgForm'));
     var elgPageTrue = document.querySelector('.incentiveResult');
+    var loader = document.querySelector('.loader');
+    var buttonTest = document.getElementById('testButton');
+    loader.style.display = "block";
+    buttonTest.style.display = "none";
     const params = new URLSearchParams(formData);
     var query = "?" + params.toString();
     console.log(params.toString());
@@ -173,10 +177,14 @@ function elgTest()
         console.log(response);
         if(response == "false")
         {
+            loader.style.display = "none";
+            buttonTest.style.display = "block";
             elgFalsePage();
         }
         else
         {
+            loader.style.display = "none";
+            buttonTest.style.display = "block";
             elgTruePage();
         }
     })
