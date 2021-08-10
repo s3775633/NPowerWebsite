@@ -124,43 +124,54 @@
       </section>
       <!--Section-Energy_saving_Page-->
       <section class="energySaving page">
+        <div class=largeIncetiveTile>
+          <img class="imageLarge" src="images/Reduce-Cost.png"></img>        
+        </div>
         <div class="jumbotron text-center">
           <div class="esContainer">
+            <div class="esTitleImage"></div>
             <div class="esTitleBox">
               <div class="rowES">
                 <div class="col1">
                   <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
                 </div>
                 <div class="col2">
-                  <span class="sectionTitle pull-center">Energy-Saving <br>Incentives</h1>
+                  <span class="sectionTitle pull-center">Energy-Saving Incentives</h1>
                   </span>
                 </div>
               </div>
             </div>
-            <!-- Reference: Shkraba, A. 2021. "A Couple Using a Laptop". Pexels. https://www.pexels.com/photo/a-couple-using-a-laptop-8374288/ -->
-            <img class="esImage1 imgShadow" src="images/eligibility-image.png">
+            <div class="esText">
             <p class="esDescription">You could qualify for energy saving improvements like a new boiler, loft insulation
               and cavity or external wall insulation - for free or subsidised.</p>
-            <div class="test">
-              <h1 class="esHeading1">Are you eligible ?</h1>
-              <object class="esImage" id="piggy" begin="piggy.begin" type="image/svg+xml"
-                data="images/piggy.svg"></object>
-              <h1 class="esHeading2" onclick=elgPage() type="link">Take the test</h1>
-            </div>
           </div>
         </div>
+        </div>
+        <div class="buttonPanel">
+          <h1 class="panelText1">Are you eligible?</h1>
+          <h2 class="panelText2">Take the Test</h2>
+        </div>
+        <div class="testButton" onclick=elgPage()><h1 class="buttonText">START</h1></div>
       </section>
       <!--Section-Eligibility_Page-->
       <section class="elegibilityPage page">
+        <div class=largeIncetiveTile>
+          <div class="sideNav">
+          <h1 class="elgSideNav" onclick=elgPage()>Eligibility Test</h1>
+          <h1 class="elgSideNav2" onclick=elgTest()>Results</h1>
+          </div>
+          <img class="imageLarge" src="images/Reduce-Cost.png"></img>        
+        </div>
         <div class="jumbotron text-center">
-          <div class="egContainer">
+          <div class="esContainer">
+            <div class="esTitleImage"></div>
             <div class="esTitleBox">
-              <div class="rowES">
+              <div class="rowES1">
                 <div class="col1">
                   <i class="backButton fa fa-chevron-left" onclick=esPage()></i>
                 </div>
                 <div class="col2">
-                  <span class="sectionTitle pull-center">Eligibility Test</h1>
+                  <span class="sectionTitle pull-center">Energy-Saving Incentives</h1>
                   </span>
                 </div>
               </div>
@@ -229,44 +240,93 @@
                 </div>
               </div>
             </form>
-            <button class="egButton" onclick=elgTest()>TEST</button>
+            <div class="elgButtonPanel">
+            </div>
+            <div class="elgtestButton" onclick=elgTest()><h1 class="buttonText">TEST</h1></div>
           </div>
         </div>
       </section>
       <section class="resultsPageTrue page">
+        <div class="largeIncetiveTile">
+          <div class="sideNav">
+          <h1 class="elgSideNav" onclick=elgPage()>Eligibility Test</h1>
+          <h1 class="elgSideNav2">Results</h1>
+        </div>
+          <img class="imageLarge" src="images/Reduce-Cost.png"></img>        
+        </div>
         <div class="jumbotron text-center">
           <div class="esContainer">
             <div class="esTitleBox">
-              <div class="rowImp">
+              <div class="rowES1">
                 <div class="col1">
                   <i class="backButton fa fa-chevron-left" onclick=elgPage()></i>
                 </div>
                 <div class="col2">
-                  <span class="sectionTitle pull-center">congratulations</h1>
+                  <span class="sectionTitle pull-center">Energy-Saving Incentives</h1>
                   </span>
                 </div>
-              </div>
-              <div id="incentiveResult">
-              </div>
+              </div>                
+            </div>
+            <div class="incentiveResult">
             </div>
           </div>
         </div>
       </section>
       <section class="resultsPageFalse page">
+        <div class="largeIncetiveTile">
+          <div class="sideNav">
+          <h1 class="elgSideNav" onclick=elgPage()>Eligibility Test</h1>
+          <h1 class="elgSideNav2">Results</h1>
+        </div>
+          <img class="imageLarge" src="images/Reduce-Cost.png"></img>        
+        </div>
         <div class="jumbotron text-center">
           <div class="esContainer">
             <div class="esTitleBox">
-              <div class="rowImp">
+              <div class="rowES1">
                 <div class="col1">
                   <i class="backButton fa fa-chevron-left" onclick=elgPage()></i>
                 </div>
                 <div class="col2">
-                  <span class="sectionTitle pull-center">False</h1>
+                  <span class="sectionTitle pull-center">Energy-Saving Incentives</h1>
                   </span>
                 </div>
               </div>
             </div>
-          </div>
+            <div class="incentiveResult">
+            <h1 class="resultsTitle">From what you told us, you may not be eligible, 
+              but you might be interested in the energy efficiency measures that we provide.</h1>
+              <div class="container-fluid tileSection">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="alternatives tile" onmouseover=mouseOver(this) onmouseout=mouseOut(this)
+                      onclick=tileClick(this)>
+                      <img class="image" src="images/Innovative-Alternatives.png"></img>
+                      <h1 class="tileText">Energy Improvements</h1>
+                      <h1 class="tileHeading tileDecriptionVisibility">Energy Improvements</h1>
+                      <h1 class="tileDescription tileDecriptionVisibility">There are many ways to reduce
+                        energy consumption within the home. Follow the helpful hints on how to maximise
+                        the energy efficiency of your household appliances.</h1>
+                      <!-- Reference: Pixabay. 2017. "Blue Solar Panel Board". Pexels. https://www.pexels.com/photo/blue-solar-panel-board-356036/-->
+                      <img class="cardImage tileDecriptionVisibility" src="images/energy-improvements-card-image.png">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="environment tile" onmouseover=mouseOver(this) onmouseout=mouseOut(this)
+                      onclick=tileClick(this)>
+                      <img class="image" src="images/Protect-Environment.png"></img>
+                      <h1 class="tileText">Efficient Products</h1>
+                      <h1 class="tileHeading tileDecriptionVisibility">Efficient Products</h1>
+                      <h1 class="tileDescription tileDecriptionVisibility">From home insulation, solar
+                        panels, and smart-home integrated devices, learn about the products that we offer
+                        that can help reduce your energy bills.</h1>
+                      <!-- Reference: PhotoMIX Company. 2016. "Gray Gas Range Oven in Kitchen". Pexels. https://www.pexels.com/photo/gray-gas-range-oven-in-kitchen-213162/ -->
+                      <img class="cardImage tileDecriptionVisibility" src="images/efficient-products-card-image.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </section>
       <!--Section-Improvements_Page-->
@@ -428,8 +488,7 @@
             <a class="btn btn-link btn-floating btn-lg text-dark m-1 mb-0" id="twitter" target="blank" role="button"
               data-mdb-ripple-color="dark"><img class="footerIcon" src="images/twitter.png"></img></a>
             <a class="btn btn-link btn-floating btn-lg text-dark m-1 pull-right" id="emailButton" role="button"
-              data-mdb-ripple-color="dark"><img class="footerIcon" src="images/mail.png"></img>
-            </a>
+              data-mdb-ripple-color="dark"><img class="footerIcon" src="images/mail.png"></img></a>
             <a class="btn btn-link btn-floating btn-lg text-dark m-1 pull-right" id="enqButton" role="button"
               data-mdb-ripple-color="dark"><img class="footerIcon" src="images/phone.png"></img>
             </a>

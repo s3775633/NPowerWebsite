@@ -22,15 +22,35 @@
     0 20px 20px rgba(0,0,0,.15);
 }
 .rowES {
-    width: 80%;
+    position: absolute;
+    width: 70%;
+    padding: 20px;
+    padding-left: 100px;
     display: flex; 
-    margin-left: 8%;
+    background-color: white;
+    border-radius: 100px;
+    transform: translateX(-8%);
+    opacity: 0.9;
+    animation: slideIn ease-out 2s;
+}
+
+.rowES1 {
+    position: absolute;
+    width: 70%;
+    padding: 20px;
+    padding-left: 100px;
+    display: flex; 
+    background-color: white;
+    border-radius: 100px;
+    transform: translateX(-8%);
+    opacity: 0.9;
 }
 
 .rowEG {
-    width: 60%;
+    z-index: 1;
+    width: 40%;
     display: flex; 
-    margin-left: 17%;
+    margin-left: 30%;
 }
 
 .col1 {
@@ -43,6 +63,135 @@
 .col2 {
     float: left;
     flex: 90%;
+}
+
+.rowResult {
+    display: flex; 
+    margin: auto;
+    width: 90%;
+    height: 100%;
+}
+
+.col1Result {
+    display: flex;
+    padding-top: 3%;
+    flex: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.col2Result {
+    float: left;
+    flex: 70%;
+    padding-left: 7%;
+}
+
+.eco .resultDescription {
+    margin-top: 3%;
+    font-size: 0.7vw;
+    text-align: left;
+}
+
+.eco .resultHeading {
+    padding-top: 5%;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.eco .contact {
+    position: relative;
+    font-size: 0.8vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #66a8eb;
+    top: 15%;
+}
+
+.eco .apply {
+    margin-top: 2%;
+    font-size: 1vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #66a8eb;
+}
+
+.warm .contact {
+    position: relative;
+    font-size: 0.8vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ce4222;
+    top: 15%;
+}
+
+.warm .apply {
+    margin-top: 2%;
+    font-size: 1vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ce4222;
+}
+
+.resultHeading {
+    padding-top: 5%;
+    font-size: 1.8vw;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.resultDescription {
+    margin-top: 3%;
+    font-size: 0.9vw;
+    text-align: left;
+}
+
+.apply {
+    margin-top: 2%;
+    font-size: 1vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #4ab93f;
+}
+
+.contactsRow {
+    display: flex; 
+    margin: auto;
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.col1Contact {
+    display: flex;
+    flex: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.col2Contact {
+    display: flex;
+    flex: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact {
+    position: relative;
+    font-size: 0.8vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #4ab93f;
+    top: 15%;
+}
+
+#elgForm {
+    position: absolute;
+    right: 0%;
+    width: 100%;
+    padding-top: 330px;
+    padding-bottom: 100px;
 }
 
 .col1Elig {
@@ -91,12 +240,180 @@
 }
 
 .esContainer {
-    margin: auto;
     width: 100%;
     background-color: white;
     min-height: 100vh;
-    box-shadow: 10px 0 15px -4px #777, -10px 0 8px -4px #777;
-    padding-bottom: 100px;
+    background-image: url("../images/energy-incentives-card-image.png");
+    background-size: 100% 300px;
+    background-repeat: no-repeat;
+}
+
+.incentiveResult {
+    position: absolute;
+    right: 10%;
+    height: auto;
+    padding-top: 350px;
+    width: 60%;
+}
+
+.esText {
+    margin-left: 25%;
+    width: 70%;
+    padding-top: 400px;
+}
+
+.buttonPanel {
+    position: fixed;
+    right: 0;
+    bottom: 10%;
+    width: 45%;
+    height: 10vw;
+    background-color: #e70030;
+    animation: slideInButton ease-out 2.3s;
+}
+
+.elgButtonPanel {
+    position: fixed;
+    right: 0px;
+    bottom: 10%;
+    width: 45vw;
+    height: 10vw;
+    background-color: #e70030;
+    animation: slideInButtonChange ease-out 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.panelText1 {
+    position: absolute;
+    top: 23%;
+    font-size: 2.3vw;
+    left: 25%;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+    text-transform: uppercase;
+}
+
+.panelText2 {
+    position: absolute;
+    top: 58%;
+    left: 25%;
+    font-size: 1.8vw;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+    text-transform: uppercase;
+}
+
+.resultsTitle {
+    font-size: 2.5vw;
+    margin-bottom: 50px;
+}
+
+.resultsPageFalse .tileSection {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 25px;
+}
+
+.testButton {
+    position: fixed;
+    right: 36%;
+    bottom: 6%;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 400px;
+    background-color: white;
+    border: #e70030 solid 2px;
+    text-align: center;
+    cursor: pointer;
+    animation: slideInButton ease-out 2.3s, pulse1-1 3s infinite;
+}
+
+.elgtestButton {
+    position: fixed;
+    right: 36%;
+    bottom: 6%;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 400px;
+    background-color: white;
+    border: #e70030 solid 2px;
+    text-align: center;
+    cursor: pointer;
+    animation: slideInButtonChange ease-out 1.5s, pulse1-1 3s infinite;
+    animation-fill-mode: forwards;
+}
+
+.buttonText {
+    position: relative;
+    top: 40%;
+    cursor: pointer;
+}
+
+.largeIncetiveTile {
+    display: block;
+    position: fixed;
+    background-color: #e70030;
+    z-index: 1;
+    height: 0;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px 1px #777;
+    transform: skew(-10deg) translateX(-40%);
+    animation: slideInTile ease-out 2s;
+}
+
+.elegibilityPage .largeIncetiveTile {
+    display: block;
+    position: fixed;
+    background-color: #e70030;
+    z-index: 1;
+    height: 0;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px 1px #777;
+    transform: skew(-10deg) translateX(-40%);
+    animation: none;
+}
+
+.resultsPageFalse .largeIncetiveTile {
+    display: block;
+    position: fixed;
+    background-color: #e70030;
+    z-index: 1;
+    height: 0;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px 1px #777;
+    transform: skew(-10deg) translateX(-40%);
+    animation: none;
+}
+
+.resultsPageTrue .largeIncetiveTile {
+    display: block;
+    position: fixed;
+    background-color: #e70030;
+    z-index: 1;
+    height: 0;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px 1px #777;
+    transform: skew(-10deg) translateX(-40%);
+    animation: none;
+}
+
+.imageLarge {
+    position: absolute;
+    opacity: 0.3;
+    height: 70%;
+    width: 80%;
+    top: 45%;
+    left: 55%;
+    z-index: 2;
+    transform: skew(10deg) translateY(-40%) translateX(-45%);
 }
 
 .egContainer {
@@ -114,6 +431,47 @@
     width: 40%;
     animation: fadeInAnimation ease 4s;
     cursor: pointer;
+}
+
+.eco {
+    width: 70%;
+    margin: auto;
+    height: auto;
+    padding-bottom: 3%;
+    border-radius: 40px;
+    background-color: #ccdde3;
+    margin-bottom: 50px;
+    vertical-align: middle;
+}
+
+.green {
+    width: 70%;
+    margin: auto;
+    height: auto;
+    padding-bottom: 3%;
+    border-radius: 40px;
+    background-color: #dceeca;
+    margin-bottom: 50px;
+    vertical-align: middle;
+}
+
+.warm {
+    width: 70%;
+    margin: auto;
+    height: auto;
+    padding-bottom: 3%;
+    border-radius: 40px;
+    background-color: #f9ce86;
+    margin-bottom: 50px;
+    vertical-align: middle;
+}
+
+.col-left {
+    height: 100%;
+}
+
+.col-right {
+    height: 100%;
 }
 
 #radioSection {
@@ -150,9 +508,25 @@
 }
 
 @media screen and (max-width: 900px) {
+
     .rowES {
-        width: 80%;
-        margin-left: 8%;
+        width: 90%;
+        left: 12%;
+        padding-left: 30px;
+    }
+
+    .rowES1 {
+        width: 90%;
+        left: 12%;
+        padding-left: 30px;
+    }
+
+    .col1 {
+        flex: 5%;
+    }
+    
+    .col2 {
+        flex: 95%;
     }
 
     .esContainer {
@@ -189,15 +563,248 @@
 .backButton {
     font-size: 9vw;
 }
+
+.largeIncetiveTile {
+    display: none;
+}
+
+.elegibilityPage .largeIncetiveTile {
+    display: none;
+}
+
+.resultsPageFalse .largeIncetiveTile {
+    display: none;
+}
+
+.resultsPageTrue .largeIncetiveTile {
+    display: none;
+}
+
+.esText {
+    width: 100%;
+    margin: auto;
+    padding-top: 340px;
+}
+
+.testButton {
+    margin: auto;
+    width: 20vh;
+    height: 20vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation: slideInButton2 ease-out 2.3s;
+}
+
+.elegibilityPage .sectionTitle {
+    visibility: hidden;
+    position: relative;
+}
+
+.elegibilityPage .sectionTitle::after {
+    visibility: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "Eligibility Test";
+    transform: translate(-50%, -50%);
+}
+
+.resultsPageTrue .sectionTitle {
+    visibility: hidden;
+    position: relative;
+}
+
+.resultsPageTrue .sectionTitle::after {
+    visibility: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "Results";
+    transform: translate(-50%, -50%);
+}
+
+.resultsPageFalse .sectionTitle {
+    visibility: hidden;
+    position: relative;
+}
+
+.resultsPageFalse .sectionTitle::after {
+    visibility: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "Results";
+    transform: translate(-50%, -50%);
+}
+
+.buttonPanel {
+    position: fixed;
+    right: 0;
+    bottom: 25%;
+    width: 100%;
+    height: 15%;
+}
+
+.panelText1 {
+    font-size: 6vw;
+    width: 62%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.panelText2 {
+    font-size: 5vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.rowEG {
+    width: 80%;
+    margin: auto;
+}
+
+.elgButtonPanel {
+    right: 0;
+    bottom: 0%;
+    width: 100%;
+    height: 10%;
+    animation: none;
+    animation-fill-mode: forwards;
+}
+
+.elgtestButton {
+    z-index: 10;
+    position: fixed;
+    right: 36%;
+    bottom: 2%;
+    width: 18vh;
+    height: 18vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation: none;
+    animation-fill-mode: forwards;
+}
+
+#elgForm {
+    padding-bottom: 200px;
+}
+
+.eco {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.green {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.warm {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.incentiveResult {
+    width: 90%;
+    right: 5%;
+}
+
+.resultHeading {
+    font-size: 3.5vw;
+}
+
+.resultDescription {
+    font-size: 2.4vw;
+}
+
+.resultsTitle {
+    font-size: 4.5vw;
+    margin-bottom: 20px;
+}
+
+.incentiveResult {
+    padding-bottom: 70px;
+}
+
+.apply {
+    font-size: 2.4vw;
+}
+
+.contact {
+    font-size: 1.8vw;
+}
+
+.eco .resultDescription {
+    font-size: 1.7vw;
+}
+
+.eco .resultHeading {
+    font-size: 3vw;
+}
+
+.eco .contact {
+    font-size: 1.8vw;
+}
+
+.eco .apply {
+    font-size: 2.4vw;
+}
+
+.resultsPageFalse .tileSection {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 50px;
+}
+
 }
 
 @keyframes slideIn {
     0% {
-        transform: translateX(1800px);
+        transform: translateX(-1500px);
     }
 
     100% {
-        transform: translateX(0px);
+        transform: translateX(-8%);
+    }
+}
+
+@keyframes slideInTile {
+    0% {
+        transform: translateX(-120%) skew(-10deg);
+    }
+
+    100% {
+        transform: translateX(-40%) skew(-10deg);
+    }
+}
+
+@keyframes slideInButton {
+    0% {
+        transform: translateX(3000px);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideInButton2 {
+    0% {
+        transform: translateX(3000px);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slideInButtonChange {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(500px);
     }
 }
 
