@@ -107,7 +107,7 @@
             </div>
             <div class="col-sm-4">
               <div class="environment tile" onmouseover=mouseOver(this) onmouseout=mouseOut(this)
-                onclick=tileClick(this)>
+                onclick="tileClick(this); displayAppliance(null);">
                 <img class="image" src="images/Protect-Environment.png"></img>
                 <h1 class="tileText">Efficient Products</h1>
                 <h1 class="tileHeading tileDecriptionVisibility">Efficient Products</h1>
@@ -128,7 +128,7 @@
       <!--Section-Energy_saving_Page-->
       <section class="energySaving page">
         <div class=largeIncetiveTile>
-          <img class="imageLarge" src="images/Reduce-Cost.png"></img>        
+          <img class="imageLarge" src="images/Reduce-Cost.png"></img>
         </div>
         <div class="jumbotron text-center">
           <div class="esContainer">
@@ -145,25 +145,28 @@
               </div>
             </div>
             <div class="esText">
-            <p class="esDescription">You could qualify for energy saving improvements like a new boiler, loft insulation
-              and cavity or external wall insulation - for free or subsidised.</p>
+              <p class="esDescription">You could qualify for energy saving improvements like a new boiler, loft
+                insulation
+                and cavity or external wall insulation - for free or subsidised.</p>
+            </div>
           </div>
-        </div>
         </div>
         <div class="buttonPanel">
           <h1 class="panelText1">Are you eligible?</h1>
           <h2 class="panelText2">Take the Test</h2>
         </div>
-        <div class="testButton" onclick=elgPage()><h1 class="buttonText">START</h1></div>
+        <div class="testButton" onclick=elgPage()>
+          <h1 class="buttonText">START</h1>
+        </div>
       </section>
       <!--Section-Eligibility_Page-->
       <section class="elegibilityPage page">
         <div class=largeIncetiveTile>
           <div class="sideNav">
-          <h1 class="elgSideNav" onclick=elgPage()>Eligibility Test</h1>
-          <h1 class="elgSideNav2" onclick=elgTest()>Results</h1>
+            <h1 class="elgSideNav" onclick=elgPage()>Eligibility Test</h1>
+            <h1 class="elgSideNav2" onclick=elgTest()>Results</h1>
           </div>
-          <img class="imageLarge" src="images/Reduce-Cost.png"></img>        
+          <img class="imageLarge" src="images/Reduce-Cost.png"></img>
         </div>
         <div class="jumbotron text-center">
           <div class="esContainer">
@@ -245,45 +248,19 @@
             </form>
             <div class="elgButtonPanel">
             </div>
-            <div class="elgtestButton" onclick=elgTest()><h1 class="buttonText" id="testButton">TEST</h1>
+            <div class="elgtestButton" onclick=elgTest()>
+              <h1 class="buttonText" id="testButton">TEST</h1>
               <div class="loader"></div>
+            </div>
           </div>
-        </div>
       </section>
       <section class="resultsPageTrue page">
         <div class="largeIncetiveTile">
           <div class="sideNav">
-          <h1 class="elgSideNav" onclick=elgPage()>Eligibility Test</h1>
-          <h1 class="elgSideNav2">Results</h1>
-        </div>
-          <img class="imageLarge" src="images/Reduce-Cost.png"></img>        
-        </div>
-        <div class="jumbotron text-center">
-          <div class="esContainer">
-            <div class="esTitleImage"></div>
-            <div class="esTitleBox">
-              <div class="rowES1">
-                <div class="col1">
-                  <i class="backButton fa fa-chevron-left" onclick=elgPage()></i>
-                </div>
-                <div class="col2">
-                  <span class="sectionTitle pull-center">Energy-Saving Incentives</h1>
-                  </span>
-                </div>
-              </div>                
-            </div>
-            <div class="incentiveResult">
-            </div>
+            <h1 class="elgSideNav" onclick=elgPage()>Eligibility Test</h1>
+            <h1 class="elgSideNav2">Results</h1>
           </div>
-        </div>
-      </section>
-      <section class="resultsPageFalse page">
-        <div class="largeIncetiveTile">
-          <div class="sideNav">
-          <h1 class="elgSideNav" onclick=elgPage()>Eligibility Test</h1>
-          <h1 class="elgSideNav2">Results</h1>
-        </div>
-          <img class="imageLarge" src="images/Reduce-Cost.png"></img>        
+          <img class="imageLarge" src="images/Reduce-Cost.png"></img>
         </div>
         <div class="jumbotron text-center">
           <div class="esContainer">
@@ -300,8 +277,35 @@
               </div>
             </div>
             <div class="incentiveResult">
-            <h1 class="resultsTitle">From what you told us, you may not be eligible, 
-              but you might be interested in the energy efficiency measures that we provide.</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="resultsPageFalse page">
+        <div class="largeIncetiveTile">
+          <div class="sideNav">
+            <h1 class="elgSideNav" onclick=elgPage()>Eligibility Test</h1>
+            <h1 class="elgSideNav2">Results</h1>
+          </div>
+          <img class="imageLarge" src="images/Reduce-Cost.png"></img>
+        </div>
+        <div class="jumbotron text-center">
+          <div class="esContainer">
+            <div class="esTitleImage"></div>
+            <div class="esTitleBox">
+              <div class="rowES1">
+                <div class="col1">
+                  <i class="backButton fa fa-chevron-left" onclick=elgPage()></i>
+                </div>
+                <div class="col2">
+                  <span class="sectionTitle pull-center">Energy-Saving Incentives</h1>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="incentiveResult">
+              <h1 class="resultsTitle">From what you told us, you may not be eligible,
+                but you might be interested in the energy efficiency measures that we provide.</h1>
               <div class="container-fluid tileSection">
                 <div class="row">
                   <div class="col-sm-6">
@@ -319,7 +323,7 @@
                   </div>
                   <div class="col-sm-6">
                     <div class="environment tile" onmouseover=mouseOver(this) onmouseout=mouseOut(this)
-                      onclick=tileClick(this)>
+                      onclick="tileClick(this); displayAppliance(null);">
                       <img class="image" src="images/Protect-Environment.png"></img>
                       <h1 class="tileText">Efficient Products</h1>
                       <h1 class="tileHeading tileDecriptionVisibility">Efficient Products</h1>
@@ -333,7 +337,7 @@
                 </div>
               </div>
             </div>
-        </div>
+          </div>
       </section>
       <!--Section-Improvements_Page-->
       <section class="improvementsPage page">
@@ -357,25 +361,86 @@
       </section>
       <!--Section-Products_Page-->
       <section class="productsPage page">
+        <div class="largeProductTile">
+          <img class="imageLarge" src="images/Protect-Environment.png"></img>
+        </div>
         <div class="jumbotron text-center">
-          <div class="esContainer">
+          <div class="prodContainer">
+            <div class="prodTitleImage"></div>
             <div class="esTitleBox">
               <div class="rowES">
                 <div class="col1">
                   <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
                 </div>
                 <div class="col2">
-                  <span class="sectionTitle pull-center">Products</h1>
+                  <span class="sectionTitle pull-center">Efficient Products</h1>
                   </span>
                 </div>
               </div>
-              <div class="rowProd">
-                <div class="col1">
-                  <h1 class="esHeading">Product</h1>
+            </div>
+            <div class="prodArea">
+              <div class="row buttonRow justify-content-center">
+                <div class="col-auto">
+                  <button class="topButton" onclick=displayAppliance(null)>All</button>
                 </div>
-                <div class="col2">
-                  <h1 class="esHeading">Description</h1>
-                  </span>
+                <div class="col-auto">
+                  <button class="topButton" onclick=displayAppliance(this)>Kitchen</button>
+                </div>
+                <div class="col-auto">
+                  <button class="topButton" onclick=displayAppliance(this)>Living</button>
+                </div>
+                <div class="col-auto">
+                  <button class="topButton" onclick=displayAppliance(this)>Bedroom</button>
+                </div>
+                <div class="col-auto">
+                  <button class="topButton" onclick=displayAppliance(this)>Bathroom</button>
+                </div>
+                <div class="col-auto">
+                  <button class="topButton" onclick=displayAppliance(this)>Laundry</button>
+                </div>
+                <div class="col-auto">
+                  <button class="topButton" onclick=displayAppliance(this)>Study</button>
+                </div>
+              </div>
+              <div class="row productGrid justify-content-center">
+                <div class="prodCol col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="prodTile">
+                    <div class="prodTileType">
+                      <h2 class="prodTileTypeText">Kitchen</h2>
+                    </div>
+                    <img class="consumptionSymbol" src="images/consumption-low.svg">
+                    <div class="productTiles">
+                    <div class="row productGrid productNameGrid">
+                      <div class="col-sm-6 prodName">
+                        <h1 class="productName">Fridge<br>Freezer</h1>
+                      </div>
+                      <div class="col-sm-6">
+                        <img class="productImage" src="images/product 4.png">
+                      </div>
+                    </div>
+                    </div>
+                    <p class="productDescription">Praesent tempor faucibus vehicula. Donec eu elementum urna. Cras consectetur massa in sem laoreet pretium. Etiam fringilla neque purus, hendrerit auctor leo egestas a. Maecenas varius mauris sed lectus convallis, a gravida augue aliquam. Duis fermentum sapien libero, ac fringilla ante hendrerit ut. Class aptent taciti sociosqu ad litora torquent</p>
+                  </div>
+                </div>
+                <div class="prodCol col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="prodTile">
+
+                  </div>
+                </div>
+                <div class="prodCol col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="prodTile">
+
+                  </div>
+                </div>
+                <div class="prodCol col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="prodTile">
+
+                  </div>
+                </div>
+                <div class="prodCol col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="prodTile">
+
+                  </div>
                 </div>
               </div>
             </div>
@@ -503,8 +568,8 @@
       </div>
     </footer>
   </div>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
   <script src="js/improvement.js"></script>
