@@ -777,6 +777,22 @@
     font-size: 2.4vw;
 }
 
+.warm .resultDescription {
+    font-size: 1.7vw;
+}
+
+.warm .resultHeading {
+    font-size: 3vw;
+}
+
+.warm .contact {
+    font-size: 1.8vw;
+}
+
+.warm .apply {
+    font-size: 2.4vw;
+}
+
 .resultsPageFalse .tileSection {
     padding-left: 0;
     padding-right: 0;
@@ -788,6 +804,13 @@
     height: 300px;
     /** Image from https://www.designairmt.com/learn/istock-639009204-couple-kitchen-laptop/ **/
     background-image: url("../images/IncentivesImage2Mobile.png");
+}
+
+.loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #e70030;
+    width: 15vw;
+    height: 15vw;
 }
 }
 
