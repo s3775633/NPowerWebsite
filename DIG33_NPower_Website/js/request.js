@@ -1,3 +1,5 @@
+var screenSmall;
+
 var request = new XMLHttpRequest();
 // eligibility API accessed.
 request.open('GET', 'https://npower-s1.herokuapp.com/eligibility');
@@ -184,32 +186,65 @@ function elgTest() {
 }
 
 function displayAppliance(button) {
+    var buttons = document.getElementsByClassName("poductButton");
+    for(btn of buttons)
+    {
+        btn.classList.remove("topButtonPressed");
+        btn.classList.add("topButton");
+    }
     var tileArea = document.querySelector('.productGrid');
-    tileArea.innerHTML = "";
-    if (button == null) {
+    var mobileTileArea = document.querySelector('.swiper-wrapper');
+    if (button == null || button.innerHTML == "All") {
         query = "";
+        button = document.querySelector(".allButton");
+        button.classList.remove("topButton");
+        button.classList.add("topButtonPressed");
     }
     else
     {
         var query = button.innerHTML;
+        button.classList.remove("topButton");
+        button.classList.add("topButtonPressed");
     }
         const response = fetch('https://npower-s2.herokuapp.com/appliance/' + query.toLowerCase())
             .then(response => response.text())
             .then((response) => {
                 var appliances = JSON.parse(response);
+                tileArea.innerHTML = "";
+                mobileTileArea.innerHTML = "";
                 for (x = 0; x < appliances.length; x++) {
+                    var comsumpImg;
+                    if(appliances[x].consumption < 100)
+                    {
+                        comsumpImg = 'images/consumption-low.svg';
+                    }
+                    else if(appliances[x].consumption < 200)
+                    {
+                        comsumpImg = 'images/consumption-mid.svg';
+                    }
+                    else if(appliances[x].consumption < 300)
+                    {
+                        comsumpImg = 'images/consumption-mid-high.svg';
+                    }
+                    else
+                    {
+                        comsumpImg = 'images/consumption-high.svg';
+                    }
+                    if(!screenSmall)
+                    {
                     tileArea.innerHTML += '<div class="prodCol col-lg-3 col-md-4 col-sm-6 col-xs-12">' +
                         '<div class="prodTile">' +
                         '<div class="prodTileType">' +
                         '<h2 class="prodTileTypeText">' + appliances[x].room + '</h2>' +
                         '</div>' +
-                        '<img class="consumptionSymbol" src="images/consumption-low.svg">' +
+                        '<h2 class="consumption">' + appliances[x].consumption + '<p class="consumptionText">kWh/year</p></h2>' +
+                        '<img class="consumptionSymbol" src="' + comsumpImg + '">' +
                         '<div class="productTiles">' +
                         '<div class="row productGrid productNameGrid">' +
-                        '<div class="col-sm-6 prodName">' +
+                        '<div class="col-sm-8 prodName">' +
                         '<h1 class="productName">' + appliances[x].applianceName + '</h1>' +
                         '</div>' +
-                        '<div class="col-sm-6">' +
+                        '<div class="col-sm-4">' +
                         '<img class="productImage" src="images/product 4.png">' +
                         '</div>' +
                         '</div>' +
@@ -217,8 +252,33 @@ function displayAppliance(button) {
                         '<p class="productDescription">' + appliances[x].description + '</p>' +
                         '</div>' +
                         '</div>'
+                    }
+                    else
+                    {
+                        mobileTileArea.innerHTML += '<div class="prodCol swiper-slide">' +
+                        '<div class="prodTile">' +
+                        '<div class="prodTileType">' +
+                        '<h2 class="prodTileTypeText">' + appliances[x].room + '</h2>' +
+                        '</div>' +
+                        '<h2 class="consumption">' + appliances[x].consumption + '<p class="consumptionText">kWh/year</p></h2>' +
+                        '<img class="consumptionSymbol" src="' + comsumpImg + '">' +
+                        '<div class="productTiles">' +
+                        '<div class="row productGrid productNameGrid">' +
+                        '<div class="col-sm-8 prodName">' +
+                        '<h1 class="productName">' + appliances[x].applianceName + '</h1>' +
+                        '</div>' +
+                        '<div class="col-sm-4">' +
+                        '<img class="productImage" src="images/product 4.png">' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '<p class="productDescription">' + appliances[x].description + '</p>' +
+                        '</div>' +
+                        '</div>'
+                    }
                 }
-            })
+                refreshSwiper();
+            });
 }
 
 
@@ -283,5 +343,32 @@ function resetTiles() {
     var tiles = document.getElementsByClassName('tile');
     for (tile of tiles) {
         removeHover(tile);
+    }
+}
+
+window.addEventListener("resize", function() {
+    var screenWidth = window.innerWidth;
+    // If screen width is less than desktop mode size
+    if (screenWidth < 576 && !screenSmall) {
+        screenSmall = true;
+        console.log("Screen is now Small");
+        displayAppliance(null)
+    }
+    else if (screenWidth >= 576 && screenSmall) {
+        screenSmall = false;
+        console.log("Screen is now Large");
+        displayAppliance(null)
+    }
+})
+
+window.onload = function () {
+    var screenWidth = window.innerWidth;
+    if(screenWidth < 576)
+    {
+        screenSmall = true;
+    }
+    else
+    {
+        screenSmall = false;
     }
 }
