@@ -10,6 +10,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -381,67 +382,37 @@
             <div class="prodArea">
               <div class="row buttonRow justify-content-center">
                 <div class="col-auto">
-                  <button class="topButton" onclick=displayAppliance(null)>All</button>
+                  <button class="topButton poductButton allButton" onclick=displayAppliance(this)>All</button>
                 </div>
                 <div class="col-auto">
-                  <button class="topButton" onclick=displayAppliance(this)>Kitchen</button>
+                  <button class="topButton poductButton" onclick=displayAppliance(this)>Kitchen</button>
                 </div>
                 <div class="col-auto">
-                  <button class="topButton" onclick=displayAppliance(this)>Living</button>
+                  <button class="topButton poductButton" onclick=displayAppliance(this)>Living</button>
                 </div>
                 <div class="col-auto">
-                  <button class="topButton" onclick=displayAppliance(this)>Bedroom</button>
+                  <button class="topButton poductButton" onclick=displayAppliance(this)>Bedroom</button>
                 </div>
                 <div class="col-auto">
-                  <button class="topButton" onclick=displayAppliance(this)>Bathroom</button>
+                  <button class="topButton poductButton" onclick=displayAppliance(this)>Bathroom</button>
                 </div>
                 <div class="col-auto">
-                  <button class="topButton" onclick=displayAppliance(this)>Laundry</button>
+                  <button class="topButton poductButton" onclick=displayAppliance(this)>Laundry</button>
                 </div>
                 <div class="col-auto">
-                  <button class="topButton" onclick=displayAppliance(this)>Study</button>
+                  <button class="topButton poductButton" onclick=displayAppliance(this)>Study</button>
                 </div>
               </div>
               <div class="row productGrid justify-content-center">
-                <div class="prodCol col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="prodTile">
-                    <div class="prodTileType">
-                      <h2 class="prodTileTypeText">Kitchen</h2>
-                    </div>
-                    <img class="consumptionSymbol" src="images/consumption-low.svg">
-                    <div class="productTiles">
-                    <div class="row productGrid productNameGrid">
-                      <div class="col-sm-6 prodName">
-                        <h1 class="productName">Fridge<br>Freezer</h1>
-                      </div>
-                      <div class="col-sm-6">
-                        <img class="productImage" src="images/product 4.png">
-                      </div>
-                    </div>
-                    </div>
-                    <p class="productDescription">Praesent tempor faucibus vehicula. Donec eu elementum urna. Cras consectetur massa in sem laoreet pretium. Etiam fringilla neque purus, hendrerit auctor leo egestas a. Maecenas varius mauris sed lectus convallis, a gravida augue aliquam. Duis fermentum sapien libero, ac fringilla ante hendrerit ut. Class aptent taciti sociosqu ad litora torquent</p>
-                  </div>
+              </div>
+              <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
                 </div>
-                <div class="prodCol col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                  <div class="prodTile">
-
-                  </div>
-                </div>
-                <div class="prodCol col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                  <div class="prodTile">
-
-                  </div>
-                </div>
-                <div class="prodCol col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                  <div class="prodTile">
-
-                  </div>
-                </div>
-                <div class="prodCol col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                  <div class="prodTile">
-
-                  </div>
-                </div>
+                <div class="swiperContainer">
+                  <h1 class="swiperText">Swipe</h1>
+                <div class="swiper-button-next swiperBtn"></div>
+                <div class="swiper-button-prev swiperBtn"></div>
+              </div>
               </div>
             </div>
           </div>
@@ -572,6 +543,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
   <script src="js/improvement.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/request.js"></script>

@@ -37,6 +37,20 @@
     width: auto;
 }
 
+.topButtonPressed {
+    position: relative;
+    text-transform: uppercase;
+    background-color: lightgrey;
+    margin-left: 2vw;
+    font-size: 0.7vw;
+    height: 2.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border: 1px solid grey;
+    border-radius: 50px;
+    width: auto;
+}
+
 .topButton:hover 
 {
     background-color: lightgrey;
@@ -58,6 +72,7 @@
     padding-top: 340px;
     width: 67%;
     margin-left: 30%;
+    padding-bottom: 100px;
     align-items: center;
     align-content: center;
     float: center;
@@ -100,14 +115,30 @@
     right: -10px;
 }
 
+.consumption {
+    position: absolute;
+    width: 25%;
+    font-size: 15px;
+    padding-bottom: 25%;
+    top: 10px;
+    right: -10px;
+}
+
+.consumptionText {
+    font-size: 8px;
+}
+
 .productName {
-    font-size: 30px;
-    margin-top: 129px;
+    position: absolute;
+    width: 50%;
+    font-size: 23px;
+    bottom: -5px;
     text-align: left;
     text-transform: uppercase;
 }
 
 .productGrid {
+    position: relative;
     align-items: center;
     align-content: center;
     float: center;
@@ -115,7 +146,9 @@
 
 .productImage {
     margin-top: 30px;
-    width: 110px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    width: 80px;
     height: auto;
     float: right;
 }
@@ -124,6 +157,30 @@
     font-size: 10px;
     text-align: left;
 }
+
+.swiperContainer {
+    position: relative;
+    background-color: #0058a3;
+    width: 100%;
+    height: 70px;
+}
+
+.swiperBtn {
+    padding-top: -40px;
+    color: #ffffff;
+}
+
+.swiperText {
+    position: absolute;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 
 @media screen and (max-width: 900px) {
     .largeProductTile {
@@ -159,8 +216,65 @@
 }
 
 @media screen and (max-width: 576px) {
-    .productTiles .row .col-sm-6 {
+    .productTiles .row .col-sm-7 {
         flex: 0 0 auto;
         width: 50%;
+    }
+
+    .mySwiper .col-sm-7 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .prodTile {
+        position: relative;
+        width: 310px;
+        height: 100%;
+        background-color: white;
+        border-radius: 20px;
+        margin-bottom: 30px;
+        margin-right: 0;
+        padding: 10px;
+        box-shadow: 1px 1px 4px #000000;
+    }
+
+    .buttonRow {
+        margin-bottom: 0;
+    }
+
+    .topButton {
+        position: relative;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        margin-left: 2vw;
+        font-size: 3vw;
+        height: 5vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        border-radius: 50px;
+        border: none;
+        box-shadow: 1px 1px 4px #000000;
+        width: auto;
+    }
+
+    .topButtonPressed {
+        margin-bottom: 10px;
+        margin-left: 2vw;
+        font-size: 3vw;
+        height: 5vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        border-radius: 50px;
+        border: 1px solid grey;
+        width: auto;
+    }
+
+    .prodArea {
+        padding-top: 270px;
+        padding-bottom: 40px;
+    }
+
+    .prodTitleImage {
+        height: 250px;
     }
 }
