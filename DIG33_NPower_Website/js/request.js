@@ -194,6 +194,7 @@ function displayAppliance(button) {
     }
     var tileArea = document.querySelector('.productGrid');
     var mobileTileArea = document.querySelector('.swiper-wrapper');
+    var swiper = document.querySelector('.mySwiper');
     if (button == null || button.innerHTML == "All") {
         query = "";
         button = document.querySelector(".allButton");
@@ -232,6 +233,7 @@ function displayAppliance(button) {
                     }
                     if(!screenSmall)
                     {
+                    swiper.style.display = "none";
                     tileArea.innerHTML += '<div class="prodCol col-lg-3 col-md-4 col-sm-6 col-xs-12">' +
                         '<div class="prodTile">' +
                         '<div class="prodTileType">' +
@@ -255,6 +257,7 @@ function displayAppliance(button) {
                     }
                     else
                     {
+                        swiper.style.display = "block";
                         mobileTileArea.innerHTML += '<div class="prodCol swiper-slide">' +
                         '<div class="prodTile">' +
                         '<div class="prodTileType">' +
@@ -351,12 +354,10 @@ window.addEventListener("resize", function() {
     // If screen width is less than desktop mode size
     if (screenWidth < 576 && !screenSmall) {
         screenSmall = true;
-        console.log("Screen is now Small");
         displayAppliance(null)
     }
     else if (screenWidth >= 576 && screenSmall) {
         screenSmall = false;
-        console.log("Screen is now Large");
         displayAppliance(null)
     }
 })
