@@ -1,0 +1,297 @@
+.largeImprovementTile {
+    display: block;
+    position: fixed;
+    background-color: #7548ac;
+    z-index: 1;
+    height: 0;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px 1px #777;
+    transform: skew(-10deg) translateX(-40%);
+    animation: slideInTile ease-out 2s;
+}
+
+/* Code obtained from https://codepen.io/technokami/pen/abojmZa */
+#house {
+    display: block;
+    height: 31vw;
+    width: 30vw;
+    background-image: url("../images/House\ Layout.png");
+    margin: auto;
+    margin-top: 220px;
+    
+    /*
+      * Adding image to the background
+      * No relation to the hover effect.
+      */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rowImp {
+    width: 80%;
+    display: flex; 
+    margin-left: 8%;
+    margin-bottom: 20px;
+}
+
+.impTitleImage {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    /** Image from https://www.designairmt.com/learn/istock-639009204-couple-kitchen-laptop/ **/
+    background-image: url("../images/impTitleImage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.impPanel {
+    position: absolute;
+    bottom: 5%;
+    right: -150px;
+    width: 40%;
+    height: 20%;
+    background-color: #7548ac;
+    border-radius: 100px;
+}
+
+.impPanelText {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    text-transform: uppercase;
+    font-size: 2.3vw;
+    color: #ffffff;
+    transform: translateY(-50%);
+}
+
+.impRoomPanel {
+  position: absolute;
+  bottom: 5%;
+  right: -150px;
+  width: 40%;
+  height: 20%;
+  background-color: #7548ac;
+  border-radius: 100px;
+}
+
+.impRoomPanelText {
+  position: absolute;
+  left: -10%;
+  top: 50%;
+  text-transform: uppercase;
+  font-size: 2.3vw;
+  color: #ffffff;
+  transform: translateY(-50%);
+}
+
+.bedroom {
+  position: absolute;
+  top: 5%;
+  left: 9%;
+  width: 38%;
+  height: 34%;
+  cursor: pointer;
+}
+
+.bathroom {
+  position: absolute;
+  top: 56%;
+  left: 5%;
+  width: 20%;
+  height: 43%;
+  cursor: pointer;
+}
+
+.laundry {
+  position: absolute;
+  top: 38.5%;
+  left: 37%;
+  width: 10%;
+  height: 19%;
+  cursor: pointer;
+}
+
+.study {
+  position: absolute;
+  top: 68%;
+  left: 24.5%;
+  width: 19.5%;
+  height: 10%;
+  cursor: pointer;
+}
+
+.living {
+  position: absolute;
+  top: 19%;
+  left: 46.5%;
+  width: 39%;
+  height: 38.5%;
+  cursor: pointer;
+}
+
+.kitchen1 {
+  position: absolute;
+  top: 77.5%;
+  left: 24.5%;
+  width: 40%;
+  height: 21.5%;
+  cursor: pointer;
+}
+
+.kitchen2 {
+  position: absolute;
+  top: 68%;
+  left: 43.5%;
+  width: 21%;
+  height: 31%;
+  cursor: pointer;
+}
+
+.bedroomImg {
+  position: relative;
+  width: 82%;
+  height: 100vh;
+  background-image: url("../images/bedroom.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 19%;
+}
+
+.kitchenImg {
+  position: absolute;
+  left: 19%;
+  width: 82%;
+  height: 100vh;
+  background-image: url("../images/kitchen.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.infoDotKitchen1 {
+  position: absolute;
+  top: 75%;
+  left: 20.5%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
+}
+
+.infoDotKitchen2 {
+  position: absolute;
+  top: 52%;
+  left: 28.1%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
+}
+
+.infoDotKitchen3 {
+  position: absolute;
+  top: 51%;
+  left: 58.5%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
+}
+
+.infoDotKitchen4 {
+  position: absolute;
+  top: 54%;
+  left: 70%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
+}
+
+.infoDotKitchen5 {
+  position: absolute;
+  top: 58%;
+  left: 85%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
+}
+
+.bathroomImg {
+  position: relative;
+  width: 82%;
+  height: 100vh;
+  background-image: url("../images/bathroom.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 19%;
+}
+
+.livingImg {
+  position: relative;
+  width: 82%;
+  height: 100vh;
+  background-image: url("../images/living_room.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 19%;
+}
+
+.studyImg {
+  position: relative;
+  width: 82%;
+  height: 100vh;
+  background-image: url("../images/study.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 19%;
+}
+
+.laundryImg {
+  position: relative;
+  width: 82%;
+  height: 100vh;
+  background-image: url("../images/laundry.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 19%;
+}
+
+.impContainer {
+  width: 100%;
+  background-color: white;
+  min-height: 100%;
+}
+
+@media screen and (max-width: 900px) {
+ .impContainer {
+      padding-top: 0;
+      margin: auto;
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #house {
+    height: 82vw;
+    width: 80vw;
+  }
+}

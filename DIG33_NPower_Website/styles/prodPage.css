@@ -96,6 +96,20 @@
     box-shadow: 1px 1px 4px #000000;
 }
 
+.impProdTile {
+    position: relative;
+    margin-top: -190px;
+    margin-left: -155px;
+    width: 310px;
+    height: 380px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    margin-right: 60px;
+    padding: 10px;
+    box-shadow: 1px 1px 4px #000000;
+}
+
 .prodTileType {
     width: 100%;
     height: auto;  
@@ -180,7 +194,9 @@
     transform: translate(-50%, -50%);
 }
 
-
+.mySwiper {
+    display: none;
+}
 
 @media screen and (max-width: 900px) {
     .largeProductTile {
