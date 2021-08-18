@@ -3,8 +3,8 @@
 let house = document.getElementById('house')
 
 /* Get the height and width of the element */
-const height = house.height
-const width = house.width
+const height = house.offsetHeight;
+const width = house.offsetWidth;
 
 /*
   * Add a listener for mousemove event
@@ -20,21 +20,19 @@ function handleMove(e) {
     * With respect to the element
     * On mouseover
     */
-  /* Store the x position */
-  const xVal = e.layerX
-  /* Store the y position */
-  const yVal = e.layerY
 
+  var xVal = e.clientX - house.offsetLeft; //x position within the element.
+  var yVal = e.clientY - house.offsetTop;  //y position within the element.
   /*
     * Calculate rotation valuee along the Y-axis
     * Here the multiplier 20 is to
     * Control the rotation
     * You can change the value and see the results
     */
-  const yRotation = -20 * ((xVal - width / 2) / width)
+  const yRotation = -20 * ((xVal - house.offsetWidth / 2) / house.offsetWidth)
 
   /* Calculate the rotation along the X-axis */
-  const xRotation = 20 * ((yVal - height / 2) / height)
+  const xRotation = 20 * ((yVal - house.offsetHeight / 2) / house.offsetHeight)
 
   /* Generate string for CSS transform property */
   const string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'

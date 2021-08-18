@@ -39,6 +39,42 @@
     height: 100%;
 }
 
+.bedroomPage {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.kitchenPage {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.bathroomPage {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.livingPage {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.laundryPage {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.studyPage {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
 .aboutPage {
     display: none;
     width: 100%;

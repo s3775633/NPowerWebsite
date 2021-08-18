@@ -1,5 +1,7 @@
 var screenSmall;
 
+var appliances = new Array();
+
 var request = new XMLHttpRequest();
 // eligibility API accessed.
 request.open('GET', 'https://npower-s1.herokuapp.com/eligibility');
@@ -20,6 +22,75 @@ request.onload = function () {
     }
     populateEligibity(questions);
 };
+
+var requestAppliance = new XMLHttpRequest();
+// eligibility API accessed.
+request.open('GET', 'https://npower-s2.herokuapp.com/appliance');
+request.onload = function () {
+    // JSON string parsed and stores
+    var eAppliance = JSON.parse(request.responseText);
+    for (x = 0; x < eAppliance.length; x++) {
+        // New question object created and added to questions array.
+        a = new Appliance(eAppliance[x]._id, eAppliance[x].applianceName, eAppliance[x].description, eAppliance[x].room, eAppliance[x].consumption);
+        appliances.push(a);
+    }
+};
+
+function getTile(appliance)
+{
+    for(x = 0; x < appliances.length; x++)
+    {
+        if(appliance.id == appliances[x].name)
+        {
+            removeTiles();
+            appliance.classList.add("impProdTile")
+            appliance.classList.remove("infoDotKithen1");
+            var comsumpImg;
+            if(appliances[x].consumption < 100)
+            {
+                comsumpImg = 'images/consumption-low.svg';
+            }
+            else if(appliances[x].consumption < 200)
+            {
+                comsumpImg = 'images/consumption-mid.svg';
+            }
+            else if(appliances[x].consumption < 300)
+            {
+                comsumpImg = 'images/consumption-mid-high.svg';
+            }
+            else
+            {
+                comsumpImg = 'images/consumption-high.svg';
+            }
+            appliance.innerHTML = '<div class="prodTileType">' +
+            '<h2 class="prodTileTypeText">' + appliances[x].room + '</h2>' +
+            '</div>' +
+            '<h2 class="consumption">' + appliances[x].consumption + '<p class="consumptionText">kWh/year</p></h2>' +
+            '<img class="consumptionSymbol" src="' + comsumpImg + '">' +
+            '<div class="productTiles">' +
+            '<div class="row productGrid productNameGrid">' +
+            '<div class="col-sm-8 prodName">' +
+            '<h1 class="productName">' + appliances[x].name + '</h1>' +
+            '</div>' +
+            '<div class="col-sm-4">' +
+            '<img class="productImage" src="images/product 4.png">' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '<p class="productDescription">' + appliances[x].description + '</p>'
+        }
+    }
+}
+
+function removeTiles()
+{
+    var dots = document.getElementsByClassName("infoDot");
+    for(dot of dots)
+    { 
+        dot.classList.remove("impProdTile");
+        dot.innerHTML = "";
+    }
+}
 
 // function used to populate all questions within the eligibility page
 function populateEligibity(questions) {
@@ -283,7 +354,6 @@ function displayAppliance(button) {
                 refreshSwiper();
             });
 }
-
 
 compRequest.send();
 request.send();

@@ -56,6 +56,66 @@ function impPage() {
 }
 
 // Function used to display the products page.
+function impBedroom() {
+    hidePages();
+    var bedroomPage = document.querySelector(".bedroomPage");
+    bedroomPage.scrollTo(0, 0);
+    var impNav = document.getElementById("impNav");
+    bedroomPage.style.display = "block";
+    impNav.classList.add("active");
+}
+
+// Function used to display the products page.
+function impBathroom() {
+    hidePages();
+    var bathroomPage = document.querySelector(".bathroomPage");
+    bathroomPage.scrollTo(0, 0);
+    var impNav = document.getElementById("impNav");
+    bathroomPage.style.display = "block";
+    impNav.classList.add("active");
+}
+
+// Function used to display the products page.
+function impLiving() {
+    hidePages();
+    var livingPage = document.querySelector(".livingPage");
+    livingPage.scrollTo(0, 0);
+    var impNav = document.getElementById("impNav");
+    livingPage.style.display = "block";
+    impNav.classList.add("active");
+}
+
+// Function used to display the products page.
+function impStudy() {
+    hidePages();
+    var studyPage = document.querySelector(".studyPage");
+    studyPage.scrollTo(0, 0);
+    var impNav = document.getElementById("impNav");
+    studyPage.style.display = "block";
+    impNav.classList.add("active");
+}
+
+// Function used to display the products page.
+function impLaundry() {
+    hidePages();
+    var laundryPage = document.querySelector(".laundryPage");
+    laundryPage.scrollTo(0, 0);
+    var impNav = document.getElementById("impNav");
+    laundryPage.style.display = "block";
+    impNav.classList.add("active");
+}
+
+// Function used to display the products page.
+function impKitchen() {
+    hidePages();
+    var kitchenPage = document.querySelector(".kitchenPage");
+    kitchenPage.scrollTo(0, 0);
+    var impNav = document.getElementById("impNav");
+    kitchenPage.style.display = "block";
+    impNav.classList.add("active");
+}
+
+// Function used to display the products page.
 function prodPage() {
     hidePages();
     var prodPage = document.querySelector(".productsPage");
