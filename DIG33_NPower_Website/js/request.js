@@ -1,5 +1,7 @@
 var screenSmall;
 
+var productPageOpen = false;
+
 var appliances = new Array();
 
 var request = new XMLHttpRequest();
@@ -422,11 +424,11 @@ function resetTiles() {
 window.addEventListener("resize", function() {
     var screenWidth = window.innerWidth;
     // If screen width is less than desktop mode size
-    if (screenWidth < 576 && !screenSmall) {
+    if (screenWidth < 576 && !screenSmall && productPageOpen) {
         screenSmall = true;
         displayAppliance(null)
     }
-    else if (screenWidth >= 576 && screenSmall) {
+    else if (screenWidth >= 576 && screenSmall && productPageOpen) {
         screenSmall = false;
         displayAppliance(null)
     }

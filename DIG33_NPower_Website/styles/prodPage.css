@@ -8,7 +8,7 @@
     height: 100%;
     overflow: hidden;
     box-shadow: 0px 4px 6px 1px #777;
-    transform: skew(-10deg) translateX(-40%);
+    transform: skew(-10deg) translateX(-50%);
     animation: slideInTile ease-out 2s;
 }
 
@@ -114,11 +114,13 @@
     width: 100%;
     height: auto;  
     text-align: left;
+
 }
 
 .prodTileTypeText {
     text-transform: uppercase;
     font-size: 15px;
+    animation: fadeIn 1.4s;
 }
 
 .consumptionSymbol {
@@ -127,6 +129,7 @@
     padding-bottom: 25%;
     top: -10px;
     right: -10px;
+    animation: fadeIn 1.4s;
 }
 
 .consumption {
@@ -136,10 +139,12 @@
     padding-bottom: 25%;
     top: 10px;
     right: -10px;
+    animation: fadeIn 1.4s;
 }
 
 .consumptionText {
     font-size: 8px;
+    animation: fadeIn 1.4s;
 }
 
 .productName {
@@ -149,6 +154,7 @@
     bottom: -5px;
     text-align: left;
     text-transform: uppercase;
+    animation: fadeIn 1.4s;
 }
 
 .productGrid {
@@ -158,6 +164,15 @@
     float: center;
 }
 
+.prodTitleBox {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    margin: auto;
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+
 .productImage {
     margin-top: 30px;
     margin-right: 20px;
@@ -165,11 +180,15 @@
     width: 80px;
     height: auto;
     float: right;
+    animation: fadeIn 1.4s;
+
 }
 
 .productDescription {
     font-size: 10px;
     text-align: left;
+    animation: fadeIn 1.4s;
+
 }
 
 .swiperContainer {
