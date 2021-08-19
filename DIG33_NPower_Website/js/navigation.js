@@ -118,6 +118,7 @@ function impKitchen() {
 // Function used to display the products page.
 function prodPage() {
     hidePages();
+    productPageOpen = true;
     var prodPage = document.querySelector(".productsPage");
     prodPage.scrollTo(0, 0);
     var prodNav = document.getElementById("prodNav");
@@ -175,6 +176,7 @@ function elgFalsePage() {
 
 // Function used to hide all pages on the site and make all nav options inactive.
 function hidePages() {
+    productPageOpen = false;
     // All pages obtained
     var pages = document.getElementsByClassName("page");
     // For loop used to loop through all pages and hide them

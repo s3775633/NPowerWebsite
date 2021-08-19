@@ -386,7 +386,7 @@
     height: 100%;
     overflow: hidden;
     box-shadow: 0px 4px 6px 1px #777;
-    transform: skew(-10deg) translateX(-40%);
+    transform: skew(-10deg) translateX(-50%);
     animation: slideInTile ease-out 2s;
 }
 
@@ -400,7 +400,7 @@
     height: 100%;
     overflow: hidden;
     box-shadow: 0px 4px 6px 1px #777;
-    transform: skew(-10deg) translateX(-40%);
+    transform: skew(-10deg) translateX(-50%);
     animation: none;
 }
 
@@ -414,7 +414,7 @@
     height: 100%;
     overflow: hidden;
     box-shadow: 0px 4px 6px 1px #777;
-    transform: skew(-10deg) translateX(-40%);
+    transform: skew(-10deg) translateX(-50%);
     animation: none;
 }
 
@@ -829,7 +829,7 @@
     }
 
     100% {
-        transform: translateX(-40%) skew(-10deg);
+        transform: translateX(-50%) skew(-10deg);
     }
 }
 
