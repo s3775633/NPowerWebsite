@@ -18,7 +18,7 @@
     width: 100%;
     height: 300px;
     /** Image from https://www.designairmt.com/learn/istock-639009204-couple-kitchen-laptop/ **/
-    background-image: url("../images/efficient-products-card-image.png");
+    background-image: url("../images/efficient-products-image.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -313,9 +313,3 @@
         height: 250px;
     }
 }
-
-@keyframes fadeIn {
-    0% {opacity:0;}
-    50% {opacity:0;}
-    100% {opacity:1;}
-  }
