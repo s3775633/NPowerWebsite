@@ -280,6 +280,7 @@
     right: 10%;
     height: auto;
     padding-top: 350px;
+    padding-bottom: 70px;
     width: 60%;
 }
 
@@ -292,17 +293,16 @@
 .buttonPanel {
     position: fixed;
     right: 0;
-    bottom: 10%;
+    bottom: 15%;
     width: 45%;
     height: 10vw;
     background-color: #e70030;
-    animation: slideInButton ease-out 2.3s;
 }
 
 .elgButtonPanel {
     position: fixed;
     right: 0px;
-    bottom: 10%;
+    bottom: 15%;
     width: 45vw;
     height: 10vw;
     background-color: #e70030;
@@ -332,7 +332,7 @@
 
 .resultsTitle {
     font-size: 2.5vw;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .resultsPageFalse .tileSection {
@@ -344,7 +344,7 @@
 .testButton {
     position: fixed;
     right: 36%;
-    bottom: 6%;
+    bottom: 10%;
     width: 15vw;
     height: 15vw;
     border-radius: 400px;
@@ -352,13 +352,12 @@
     border: #e70030 solid 2px;
     text-align: center;
     cursor: pointer;
-    animation: slideInButton ease-out 2.3s, pulse1-1 3s infinite;
 }
 
 .elgtestButton {
     position: fixed;
     right: 36%;
-    bottom: 6%;
+    bottom: 10%;
     width: 15vw;
     height: 15vw;
     border-radius: 400px;
@@ -388,48 +387,6 @@
     box-shadow: 0px 4px 6px 1px #777;
     transform: skew(-10deg) translateX(-50%);
     animation: slideInTile ease-out 2s;
-}
-
-.elegibilityPage .largeIncetiveTile {
-    display: block;
-    position: fixed;
-    background-color: #e70030;
-    z-index: 1;
-    height: 0;
-    width: 40%;
-    height: 100%;
-    overflow: hidden;
-    box-shadow: 0px 4px 6px 1px #777;
-    transform: skew(-10deg) translateX(-50%);
-    animation: none;
-}
-
-.resultsPageFalse .largeIncetiveTile {
-    display: block;
-    position: fixed;
-    background-color: #e70030;
-    z-index: 1;
-    height: 0;
-    width: 40%;
-    height: 100%;
-    overflow: hidden;
-    box-shadow: 0px 4px 6px 1px #777;
-    transform: skew(-10deg) translateX(-50%);
-    animation: none;
-}
-
-.resultsPageTrue .largeIncetiveTile {
-    display: block;
-    position: fixed;
-    background-color: #e70030;
-    z-index: 1;
-    height: 0;
-    width: 40%;
-    height: 100%;
-    overflow: hidden;
-    box-shadow: 0px 4px 6px 1px #777;
-    transform: skew(-10deg) translateX(-40%);
-    animation: none;
 }
 
 .imageLarge {
@@ -614,11 +571,13 @@
 }
 
 .testButton {
+    position: absolute;
     margin: auto;
     width: 20vh;
     height: 20vh;
-    left: 32%;
-    animation: slideInButton2 ease-out 2.3s pulse1-1 3s infinite;
+    left: 50%;
+    bottom: 8%;
+    transform: translateX(-50%);
 }
 
 .elegibilityPage .sectionTitle {
@@ -691,7 +650,7 @@
 
 .elgButtonPanel {
     right: 0;
-    bottom: 0%;
+    bottom: 7%;
     width: 100%;
     height: 10%;
     animation: none;
@@ -702,7 +661,7 @@
     z-index: 10;
     position: fixed;
     right: 36%;
-    bottom: 2%;
+    bottom: 9%;
     width: 18vh;
     height: 18vh;
     left: 50%;
@@ -712,7 +671,7 @@
 }
 
 #elgForm {
-    padding-bottom: 200px;
+    padding-bottom: 280px;
 }
 
 .eco {
@@ -799,10 +758,11 @@
 }
 
 .esTitleImage {
-    width: 575px;
+    width: 100%;
     height: 300px;
     /** Image from https://www.designairmt.com/learn/istock-639009204-couple-kitchen-laptop/ **/
     background-image: url("../images/IncentivesImage2Mobile.png");
+    overflow: hidden;
 }
 
 .loader {
@@ -836,6 +796,16 @@
 @keyframes slideInButton {
     0% {
         transform: translateX(3000px);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideInPanel {
+    0% {
+        transform: translateX(1000px);
     }
 
     100% {

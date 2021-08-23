@@ -2,6 +2,8 @@ var screenSmall;
 
 var productPageOpen = false;
 
+var prodTileOpen = false;
+
 var appliances = new Array();
 
 var request = new XMLHttpRequest();
@@ -27,73 +29,66 @@ request.onload = function () {
 
 var requestAppliance = new XMLHttpRequest();
 // eligibility API accessed.
-request.open('GET', 'https://npower-s2.herokuapp.com/appliance');
-request.onload = function () {
+requestAppliance.open('GET', 'https://npower-s2.herokuapp.com/appliance');
+requestAppliance.onload = function () {
     // JSON string parsed and stores
-    var eAppliance = JSON.parse(request.responseText);
+    var eAppliance = JSON.parse(requestAppliance.responseText);
     for (x = 0; x < eAppliance.length; x++) {
         // New question object created and added to questions array.
-        a = new Appliance(eAppliance[x]._id, eAppliance[x].applianceName, eAppliance[x].description, eAppliance[x].room, eAppliance[x].consumption);
+        var img = 'images/' + encodeURI(eAppliance[x].applianceName) + '.png';
+        a = new Appliance(eAppliance[x]._id, eAppliance[x].applianceName, eAppliance[x].description, eAppliance[x].room, eAppliance[x].consumption, img);
         appliances.push(a);
     }
 };
 
-function getTile(appliance)
-{
-    for(x = 0; x < appliances.length; x++)
-    {
-        if(appliance.id == appliances[x].name)
-        {
+function getTile(appliance) {
+    for (x = 0; x < appliances.length; x++) {
+        if (appliance.id == appliances[x].name && !appliance.classList.contains('impProdTile')) {
+            appliance.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center',
+                inline: 'center'
+            });
+            prodTileOpen = true;
             removeTiles();
             appliance.classList.add("impProdTile")
             appliance.classList.remove("infoDotKithen1");
             var comsumpImg;
-            if(appliances[x].consumption < 100)
-            {
+            if (appliances[x].consumption < 100) {
                 comsumpImg = 'images/consumption-low.svg';
             }
-            else if(appliances[x].consumption < 200)
-            {
+            else if (appliances[x].consumption < 200) {
                 comsumpImg = 'images/consumption-mid.svg';
             }
-            else if(appliances[x].consumption < 300)
-            {
+            else if (appliances[x].consumption < 300) {
                 comsumpImg = 'images/consumption-mid-high.svg';
             }
-            else
-            {
+            else {
                 comsumpImg = 'images/consumption-high.svg';
             }
-            appliance.innerHTML = '<div class="prodTileType">' +
-            '<h2 class="prodTileTypeText">' + appliances[x].room + '</h2>' +
-            '</div>' +
-            '<h2 class="consumption">' + appliances[x].consumption + '<p class="consumptionText">kWh/year</p></h2>' +
-            '<img class="consumptionSymbol" src="' + comsumpImg + '">' +
-            '<div class="productTiles">' +
-            '<div class="row productGrid productNameGrid">' +
-            '<div class="col-sm-8 prodName">' +
-            '<h1 class="productName">' + appliances[x].name + '</h1>' +
-            '</div>' +
-            '<div class="col-sm-4">' +
-            '<img class="productImage" src="images/product 4.png">' +
-            '</div>' +
-            '</div>' +
-            '</div>' +
-            '<p class="productDescription">' + appliances[x].description + '</p>'
-        }
+            appliance.innerHTML = '<div class="impTileExit" onclick=removeTiles()></div><h2 class="impConsumption">' + appliances[x].consumption + '<p class="impConsumptionText">kWh/year</p></h2>' +
+                '<img class="impConsumptionSymbol" src="' + comsumpImg + '">' +
+                '<div class="impProductTiles">' +
+                '<h1 class="impProductName">' + appliances[x].name + '</h1>' +
+                '<div class="col-sm-4">' +
+                '<img class="impProductImage" src=' + appliances[x].img + '>' +
+                '</div>' +
+                '<p class="impProductDescription">' + appliances[x].description + '</p>'
+            var exitButton = document.querySelector(".impTileExit");
+            exitButton.addEventListener('click', function(pEvent) {
+                pEvent.stopPropagation();
+            })
+            }
     }
 }
 
-function removeTiles()
-{
+function removeTiles() {
     var dots = document.getElementsByClassName("infoDot");
-    for(dot of dots)
-    { 
+    for (dot of dots) {
         dot.classList.remove("impProdTile");
         dot.innerHTML = "";
     }
 }
-
 // function used to populate all questions within the eligibility page
 function populateEligibity(questions) {
     // elements obtained and stored in variables
@@ -184,12 +179,12 @@ function setCompanyInfo(company) {
     supportFault.href = "tel:" + company.faultPhone;
     var supportEmail = document.getElementById('supportEmail');
     supportEmail.href = "mailto:" + company.email;
-    var supportButton = document.getElementById('enqPhoneButton');
-    supportButton.innerHTML += " - " + company.enquiryPhone;
-    var supportButton = document.getElementById('faultPhoneButton');
-    supportButton.innerHTML += " - " + company.faultPhone;
-    var supportButton = document.getElementById('messageButton');
-    supportButton.innerHTML += " - " + company.email;
+    var supportButton = document.querySelector('.number1');
+    supportButton.innerHTML = company.enquiryPhone;
+    var supportButton = document.querySelector('.number2');
+    supportButton.innerHTML += company.faultPhone;
+    var supportButton = document.querySelector('.number3');
+    supportButton.innerHTML += company.email;
 }
 
 
@@ -202,7 +197,6 @@ function elgTest() {
     buttonTest.style.display = "none";
     const params = new URLSearchParams(formData);
     var query = "?" + params.toString();
-    console.log(params.toString());
     const response = fetch('https://npower-s2.herokuapp.com/incentive/result/' + query)
         .then(response => response.text())
         .then((response) => {
@@ -244,7 +238,6 @@ function elgTest() {
                     '</div>' +
                     '</div>'
             }
-            console.log(response);
             if (response == "false") {
                 loader.style.display = "none";
                 buttonTest.style.display = "block";
@@ -258,107 +251,56 @@ function elgTest() {
         })
 }
 
-function displayAppliance(button) {
-    var buttons = document.getElementsByClassName("poductButton");
-    for(btn of buttons)
-    {
-        btn.classList.remove("topButtonPressed");
-        btn.classList.add("topButton");
-    }
+function displayProducts() {
     var tileArea = document.querySelector('.productGrid');
     var mobileTileArea = document.querySelector('.swiper-wrapper');
     var swiper = document.querySelector('.mySwiper');
-    if (button == null || button.innerHTML == "All") {
-        query = "";
-        button = document.querySelector(".allButton");
-        button.classList.remove("topButton");
-        button.classList.add("topButtonPressed");
-    }
-    else
-    {
-        var query = button.innerHTML;
-        button.classList.remove("topButton");
-        button.classList.add("topButtonPressed");
-    }
-        const response = fetch('https://npower-s2.herokuapp.com/appliance/' + query.toLowerCase())
-            .then(response => response.text())
-            .then((response) => {
-                var appliances = JSON.parse(response);
-                tileArea.innerHTML = "";
-                mobileTileArea.innerHTML = "";
-                for (x = 0; x < appliances.length; x++) {
-                    var comsumpImg;
-                    if(appliances[x].consumption < 100)
-                    {
-                        comsumpImg = 'images/consumption-low.svg';
-                    }
-                    else if(appliances[x].consumption < 200)
-                    {
-                        comsumpImg = 'images/consumption-mid.svg';
-                    }
-                    else if(appliances[x].consumption < 300)
-                    {
-                        comsumpImg = 'images/consumption-mid-high.svg';
-                    }
-                    else
-                    {
-                        comsumpImg = 'images/consumption-high.svg';
-                    }
-                    if(!screenSmall)
-                    {
+    const response = fetch('https://npower-s2.herokuapp.com/product')
+        .then(response => response.text())
+        .then((response) => {
+            var products = JSON.parse(response);
+            tileArea.innerHTML = "";
+            mobileTileArea.innerHTML = "";
+            for (x = 0; x < products.length; x++) {
+                if (!screenSmall) {
                     swiper.style.display = "none";
-                    tileArea.innerHTML += '<div class="prodCol col-lg-3 col-md-4 col-sm-6 col-xs-12">' +
-                        '<div class="prodTile">' +
-                        '<div class="prodTileType">' +
-                        '<h2 class="prodTileTypeText">' + appliances[x].room + '</h2>' +
-                        '</div>' +
-                        '<h2 class="consumption">' + appliances[x].consumption + '<p class="consumptionText">kWh/year</p></h2>' +
-                        '<img class="consumptionSymbol" src="' + comsumpImg + '">' +
-                        '<div class="productTiles">' +
-                        '<div class="row productGrid productNameGrid">' +
-                        '<div class="col-sm-8 prodName">' +
-                        '<h1 class="productName">' + appliances[x].applianceName + '</h1>' +
-                        '</div>' +
-                        '<div class="col-sm-4">' +
-                        '<img class="productImage" src="images/product 4.png">' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>' +
-                        '<p class="productDescription">' + appliances[x].description + '</p>' +
-                        '</div>' +
-                        '</div>'
-                    }
-                    else
-                    {
-                        swiper.style.display = "block";
-                        mobileTileArea.innerHTML += '<div class="prodCol swiper-slide">' +
-                        '<div class="prodTile">' +
-                        '<div class="prodTileType">' +
-                        '<h2 class="prodTileTypeText">' + appliances[x].room + '</h2>' +
-                        '</div>' +
-                        '<h2 class="consumption">' + appliances[x].consumption + '<p class="consumptionText">kWh/year</p></h2>' +
-                        '<img class="consumptionSymbol" src="' + comsumpImg + '">' +
-                        '<div class="productTiles">' +
-                        '<div class="row productGrid productNameGrid">' +
-                        '<div class="col-sm-8 prodName">' +
-                        '<h1 class="productName">' + appliances[x].applianceName + '</h1>' +
-                        '</div>' +
-                        '<div class="col-sm-4">' +
-                        '<img class="productImage" src="images/product 4.png">' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>' +
-                        '<p class="productDescription">' + appliances[x].description + '</p>' +
-                        '</div>' +
-                        '</div>'
-                    }
+                    tileArea.innerHTML += '<div class="flip-card">' +
+                    '<div class="flip-card-inner">' +
+                      '<div class="flip-card-front">' +
+                      '<h1 class="efficientProdHeading">' + products[x].productName + '</h1>' +
+                      '<img class="efficientProdImage" src="' + products[x].productImage.slice(3) + '">' +
+                      '</div>' +
+                      '<div class="flip-card-back">' + 
+                      '<p class="efficientProdDescription">' + products[x].description + '</p>' +
+                      '<button class="purchaseButton">Buy Now</button>' +
+                      '</div>' +
+                    '</div>' +
+                  '</div>'
                 }
-                refreshSwiper();
-            });
+                else {
+                    swiper.style.display = "block";
+                    mobileTileArea.innerHTML += '<div class="prodCol swiper-slide">' +
+                    '<div class="flip-card">' +
+                    '<div class="flip-card-inner">' +
+                      '<div class="flip-card-front">' +
+                      '<h1 class="efficientProdHeading">' + products[x].productName + '</h1>' +
+                      '<img class="efficientProdImage" src="' + products[x].productImage.slice(3) + '">' +
+                      '</div>' +
+                      '<div class="flip-card-back">' + 
+                      '<p class="efficientProdDescription">' + products[x].description + '</p>' +
+                      '<button class="purchaseButton">Buy Now</button>' +
+                      '</div>' +
+                    '</div>' +
+                  '</div>'
+                }
+            }
+            refreshSwiper();
+        });
 }
 
 compRequest.send();
 request.send();
+requestAppliance.send();
 
 // Classes and their constructors
 class Question {
@@ -405,12 +347,13 @@ class Incentive {
 }
 
 class Appliance {
-    constructor(id, name, description, room, consumption) {
+    constructor(id, name, description, room, consumption, img) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.room = room;
         this.consumption = consumption;
+        this.img = img;
     }
 }
 
@@ -421,27 +364,46 @@ function resetTiles() {
     }
 }
 
-window.addEventListener("resize", function() {
+window.addEventListener("resize", function () {
     var screenWidth = window.innerWidth;
     // If screen width is less than desktop mode size
     if (screenWidth < 576 && !screenSmall && productPageOpen) {
         screenSmall = true;
-        displayAppliance(null)
+        displayProducts()
     }
     else if (screenWidth >= 576 && screenSmall && productPageOpen) {
         screenSmall = false;
-        displayAppliance(null)
+        displayProducts()
     }
 })
 
 window.onload = function () {
     var screenWidth = window.innerWidth;
-    if(screenWidth < 576)
-    {
+    if (screenWidth < 576) {
         screenSmall = true;
     }
-    else
-    {
+    else {
         screenSmall = false;
     }
 }
+
+window.addEventListener("resize", function () {
+    var screenWidth = window.innerWidth;
+    var faceIcon = document.querySelector(".facebookIcon")
+    var twitIcon = document.querySelector(".twitterIcon")
+    // If screen width is less than desktop mode size
+    if (screenWidth < 576) {
+        faceIcon.classList.remove("pull-right");
+        twitIcon.classList.remove("pull-right");
+        faceIcon.classList.add("pull-left");
+        twitIcon.classList.add("pull-left");
+        screenSmall = true;
+    }
+    else if (screenWidth >= 576) {
+        faceIcon.classList.remove("pull-left");
+        twitIcon.classList.remove("pull-left");
+        faceIcon.classList.add("pull-right");
+        twitIcon.classList.add("pull-right");
+        screenSmall = false;
+    }
+})

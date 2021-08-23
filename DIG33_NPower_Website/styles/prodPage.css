@@ -17,8 +17,7 @@
     top: 0;
     width: 100%;
     height: 300px;
-    /** Image from https://www.designairmt.com/learn/istock-639009204-couple-kitchen-laptop/ **/
-    background-image: url("../images/efficient-products-image.png");
+    background-image: url("../images/productsTitleImage.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -70,12 +69,34 @@
 
 .prodArea {
     padding-top: 340px;
-    width: 67%;
-    margin-left: 30%;
+    margin-left: 350px;
+    margin-right: 300px;
     padding-bottom: 100px;
     align-items: center;
     align-content: center;
     float: center;
+    animation: fadeIn ease-out 2s;
+}
+
+.prodPanel {
+    position: fixed;
+    bottom: 9%;
+    right: 0px;
+    width: 20%;
+    height: 18%;
+    background-color: #0058a3;
+    border-radius: 100px 0px 0px 100px;
+    animation: slideInPanel ease-out 2s;
+}
+
+.prodPanelText {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    color: #ffffff;
+    transform: translateY(-50%);
 }
 
 .prodCol {
@@ -88,20 +109,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: white;
-    border-radius: 20px;
-    margin-bottom: 30px;
-    margin-right: 60px;
-    padding: 10px;
-    box-shadow: 1px 1px 4px #000000;
-}
-
-.impProdTile {
-    position: relative;
-    margin-top: -190px;
-    margin-left: -155px;
-    width: 310px;
-    height: 380px;
     background-color: white;
     border-radius: 20px;
     margin-bottom: 30px;
@@ -192,8 +199,9 @@
 }
 
 .swiperContainer {
-    position: relative;
+    position: fixed;
     background-color: #0058a3;
+    top: 750px;
     width: 100%;
     height: 70px;
 }
@@ -217,8 +225,92 @@
     display: none;
 }
 
+/** Code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card **/
+.flip-card {
+    width: 330px;
+    height: 400px;
+    background-color: transparent;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 4px #000000;
+    color: black;
+  }
+  
+  .flip-card-back {
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #eeeeee;
+    box-shadow: 1px 1px 4px #000000;
+    color: black;
+    transform: rotateY(180deg);
+  }
+
+  .efficientProdHeading {
+      font-size: 25px;
+  }
+
+.efficientProdImage {
+    position: absolute;
+    width: 60%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.efficientProdDescription {
+    font-size: 13.5px;
+}
+
+.purchaseButton {
+    position: absolute;
+    text-transform: uppercase;
+    border-radius: 100px;
+    background-color: #e70030;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    width: 60%;
+    border: none;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 @media screen and (max-width: 900px) {
     .largeProductTile {
+        display: none;
+    }
+
+    .prodPanel {
         display: none;
     }
 

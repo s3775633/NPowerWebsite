@@ -1,9 +1,33 @@
+.largeSupportTile {
+    display: block;
+    position: fixed;
+    background: rgb(231,0,48);
+    background: linear-gradient(149deg, rgba(231,0,48,1) 40%, rgba(111,78,167,1) 69%, rgba(0,88,157,1) 100%);
+    z-index: 1;
+    height: 0;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px 1px #777;
+    transform: skew(-10deg) translateX(-50%);
+    animation: slideInTile ease-out 2s;
+}
+
 .rowSup {
     width: 60%;
     margin: auto;
     display: flex; 
     margin-left: 17%;
-    animation: fadeInAnimation ease 4s
+}
+
+.supTitleBox {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    margin: auto;
+    z-index: 10;
+    padding-top: 120px;
+    padding-bottom: 40px;
 }
 
 .rowSup > .col1 {
@@ -12,6 +36,12 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
+}
+
+.contacts {
+    padding-top: 330px;
+    margin-left: 200px;
+    animation: slideInContacts ease-out 2s;
 }
 
 .rowSup > .col2 {
@@ -32,8 +62,9 @@
 }
 
 .aboutRow {
-    width: 100%;
-    display: flex; 
+    width: 60%;
+    margin-left: 30%;
+    padding-bottom: 100px;
 }
 
 .aboutLink {
@@ -61,40 +92,74 @@
 
 .supportButton1 {
     display: inline-block;
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+    padding-left: 15vw;
     width: 90%;
-    height: 80px;
-    border-radius: 15px;
+    color: white;
+    height: 150px;
+    background: #e70030;
+    border-radius: 100px;
     box-shadow: 2px 5px 5px #888888;
     font-size: 2vw;
+    border: none;
     transition: all 0.4s ease 0s;
 }
 
 .supportButton1:hover {
     width: 92%;
-	background: #e70030;
-    color: white;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 	transition: all 0.4s ease 0s;
 }
 
+.support1Img {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    padding-right: 100px;
+    height: 100px;
+}
+
+.number1 {
+    opacity: 0.6;   
+    font-size: 2vw;
+}
+
+.number2 {
+    opacity: 0.6;   
+    font-size: 2vw;
+}
+
+.number3 {
+    opacity: 0.6;   
+    font-size: 2vw;
+    text-transform: lowercase;
+}
+
 .supportButton2 {
     display: inline-block;
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+    padding-left: 15vw;
     width: 90%;
-    height: 80px;
-    border-radius: 15px;
+    color: white;
+    height: 150px;
+    background: #7548ac;
+    border-radius: 100px;
     box-shadow: 2px 5px 5px #888888;
     font-size: 2vw;
+    border: none;
     transition: all 0.4s ease 0s;
 }
 
 .supportButton2:hover {
     width: 92%;
-	background: #7548ac;
-    color: white;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
@@ -103,20 +168,24 @@
 
 .supportButton3 {
     display: inline-block;
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+    padding-left: 15vw;
     width: 90%;
-    height: 80px;
-    border-radius: 15px;
+    color: white;
+    height: 150px;
+    background: #0058a3;
+    border-radius: 100px;
     box-shadow: 2px 5px 5px #888888;
     font-size: 2vw;
+    border: none;
     transition: all 0.4s ease 0s;
-
 }
 
 .supportButton3:hover {
     width: 92%;
-	background: #0058a3;
-    color: white;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
@@ -156,10 +225,77 @@
     width: 80%;
 }
 
+.supTitleImage {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    background-image: url("../images/supportImage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.aboutTitleImage {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    background-image: url("../images/AboutUsImage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 @media screen and (max-width: 900px) {
-    .rowSup {
+    .largeSupportTile {
+        display: none;
+    }
+
+    .aboutRow {
         width: 80%;
-        margin-left: 8%;
+        margin-left: 10%;
+        padding-bottom: 50px;
+    }
+
+    .rowSup > .col2 {
+        float: left;
+        flex: 90%;
+        margin-bottom: 20px;
+    }
+
+    .supportButton1 {
+       width: 90%;
+       padding-left: 30vw;
+    }
+
+    .supportButton2 {
+        width: 90%;
+        padding-left: 30vw;
+    }
+
+    .supportButton3 {
+        width: 90%;
+        padding-left: 30vw;
+    }
+
+    .number1 {
+        font-size: 4vw;
+    }
+
+    .number2 {
+        font-size: 4vw;
+    }
+
+    .number3 {
+        font-size: 4vw;
+    }
+
+    .contacts {
+        margin-left: 0;
+    }
+
+    .rowSup {
+        width: 100%;
+        margin-left: 0;
     }
 
     .supportButton1 {
@@ -180,9 +316,6 @@
 
     .aboutContainer {
         width: 100%;
-    }
-    .rowSup {
-        width: 80%;
     }
 
     .supportButton1 {
@@ -240,8 +373,68 @@
     .aboutImg1 {
         margin-top: 0;
     }
+
+    .supTitleImage {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 300px;
+        background-image: url("../images/mobileSupportImage.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
   }
 
 @media screen and (max-width: 575px) {
+    .support1Img {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        height: 60px;
+        transform: translateX(-20%);
+    }
 
+    .supportButton1 {
+        text-align: center;
+        padding-left: 0;
+        font-size: 5vw;
+        padding-top: 60px;
+    }
+
+    .supportButton2 {
+        text-align: center;
+        padding-left: 0;
+        font-size: 5vw;
+        padding-top: 60px;
+    }
+
+    .supportButton3 {
+        text-align: center;
+        padding-left: 0;
+        font-size: 5vw;
+        padding-top: 60px;
+    }
+
+    .number1 {
+        font-size: 5vw;
+    }
+
+    .number2 {
+        font-size: 5vw;
+    }
+
+    .number3 {
+        font-size: 5vw;
+    }
 }
+
+@keyframes slideInContacts {
+    0% {
+        transform: translateX(2000px);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+

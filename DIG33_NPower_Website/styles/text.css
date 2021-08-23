@@ -255,6 +255,7 @@
     width: 100%;
     z-index: 2;
     margin: auto;
+    z-index: 10;
     padding-top: 120px;
     padding-bottom: 40px;
 }
@@ -266,29 +267,30 @@
 
 .aboutHeading1 {
     text-transform: uppercase;
-    font-size: 2.2vw;
+    font-size: 1.7vw;
     animation: fadeInAnimation ease 4s;
     padding-top: 40px;
     color: #000000;
-    width: 55%;
+    width: 100%;
+    padding-top: 330px;
 }
 
 .aboutHeading2 {
     text-transform: uppercase;
-    font-size: 2.2vw;
+    font-size: 1.7vw;
     animation: fadeInAnimation ease 4s;
     padding-top: 40px;
     color: #000000;
     float: right;
-    width: 55%;
+    width: 100%;
 }
 
 .aboutDescription {
-    font-size: 1.7vw;
+    font-size: 1.3vw;
     margin-bottom: 40px;
     padding-top: 10px;    
     animation: fadeInAnimation ease 4s;
-    text-align: justify;
+    text-align: center;
 }
 
 @keyframes fadeInAnimation {
@@ -416,17 +418,16 @@
     }
     
     .aboutDescription {
+        margin-bottom: 0;
         font-size: 3vw;
     }
 
     .aboutHeading1 {
         font-size: 3.2vw;
-        width: 55%;
     }
     
     .aboutHeading2 {
         font-size: 3.2vw;
-        width: 55%;
     }
 
     .titleBox2 {
@@ -462,12 +463,10 @@
 
     .aboutHeading1 {
         font-size: 3.5vw;
-        width: 55%;
     }
     
     .aboutHeading2 {
         font-size: 3.5vw;
-        width: 55%;
     }
 
     .egDescriptionAlt {
