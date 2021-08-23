@@ -31,7 +31,6 @@ var requestAppliance = new XMLHttpRequest();
 // eligibility API accessed.
 requestAppliance.open('GET', 'https://npower-s2.herokuapp.com/appliance');
 requestAppliance.onload = function () {
-    console.log("Hello")
     // JSON string parsed and stores
     var eAppliance = JSON.parse(requestAppliance.responseText);
     for (x = 0; x < eAppliance.length; x++) {
@@ -84,7 +83,6 @@ function getTile(appliance) {
 }
 
 function removeTiles() {
-    console.log("Hello1");
     var dots = document.getElementsByClassName("infoDot");
     for (dot of dots) {
         dot.classList.remove("impProdTile");
@@ -199,7 +197,6 @@ function elgTest() {
     buttonTest.style.display = "none";
     const params = new URLSearchParams(formData);
     var query = "?" + params.toString();
-    console.log(params.toString());
     const response = fetch('https://npower-s2.herokuapp.com/incentive/result/' + query)
         .then(response => response.text())
         .then((response) => {
@@ -241,7 +238,6 @@ function elgTest() {
                     '</div>' +
                     '</div>'
             }
-            console.log(response);
             if (response == "false") {
                 loader.style.display = "none";
                 buttonTest.style.display = "block";

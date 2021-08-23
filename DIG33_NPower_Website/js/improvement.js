@@ -58,26 +58,27 @@ function resetTiles() {
   }
 }
 
-function scrollToLeft(event)
+function scrollToLeft(room)
 {
   var width = window.innerWidth;
-  var kitchenDiv = document.querySelector(".scrollContainer");
-  kitchenDiv.scrollTo({
+  room.scrollTo({
     top: 0,
-    left: (kitchenDiv.scrollLeft - (width - 100)),
+    left: (room.scrollLeft - (width - 100)),
     behavior: 'smooth'
   });
-  console.log("HelloLeft")
 }
 
-function scrollToRight(event)
+function scrollToRight(room)
 {
   var width = window.innerWidth;
-  var kitchenDiv = document.querySelector(".scrollContainer");
-  kitchenDiv.scrollTo({
+  room.scrollTo({
     top: 0,
-    left: (kitchenDiv.scrollLeft + (width - 100)),
+    left: (room.scrollLeft + (width - 100)),
     behavior: 'smooth'
   });
-  console.log("HelloRight")
+}
+
+function getRoom()
+{
+
 }

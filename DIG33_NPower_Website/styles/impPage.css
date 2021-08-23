@@ -197,23 +197,20 @@
   cursor: pointer;
 }
 
-.bedroomImg {
-  position: absolute;
-  left: 15%;
+.scrollContainer > .bedroomImg {
+  position: relative;
   min-width: 1600px;
-  width: 85%;
+  width: 100%;
   height: 100%;
   background-image: url("../images/bedroom.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
 }
 
 .infoDotBedroom1 {
   z-index: 4;
   position: absolute;
-  top: 60%;
+  top: 49%;
   left: 19.5%;
   width: 50px;
   height: 50px;
@@ -227,7 +224,7 @@
 .infoDotBedroom2 {
   z-index: 3;
   position: absolute;
-  top: 43%;
+  top: 36%;
   left: 79%;
   width: 50px;
   height: 50px;
@@ -338,24 +335,21 @@
   animation: pulse1 3s infinite;
 }
 
-.bathroomImg {
-  position: absolute;
-  left: 15%;
+.scrollContainer > .bathroomImg {
+  position: relative;
   min-width: 1600px;
-  width: 85%;
+  width: 100%;
   height: 100%;
   background-image: url("../images/bathroom.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
 }
 
 .infoDotBathroom1 {
   z-index: 4;
   position: absolute;
-  top: 45%;
-  left: 40%;
+  top: 52%;
+  left: 61%;
   width: 50px;
   height: 50px;
   border-radius: 50px;
@@ -365,23 +359,20 @@
   animation: pulse1 3s infinite;
 }
 
-.livingImg {
-  position: absolute;
-  left: 15%;
+.scrollContainer > .livingImg {
+  position: relative;
   min-width: 1600px;
-  width: 85%;
+  width: 100%;
   height: 100%;
   background-image: url("../images/living_room.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
 }
 
 .infoDotLiving1 {
   z-index: 4;
   position: absolute;
-  top: 61%;
+  top: 50%;
   left: 21.5%;
   width: 50px;
   height: 50px;
@@ -395,7 +386,7 @@
 .infoDotLiving2 {
   z-index: 3;
   position: absolute;
-  top: 55%;
+  top: 45%;
   left: 56%;
   width: 50px;
   height: 50px;
@@ -406,17 +397,14 @@
   animation: pulse1 3s infinite;
 }
 
-.studyImg {
-  position: absolute;
-  left: 15%;
+.scrollContainer > .studyImg {
+  position: relative;
   min-width: 1600px;
-  width: 85%;
+  width: 100%;
   height: 100%;
   background-image: url("../images/study.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
 }
 
 .infoDotStudy1 {
@@ -460,17 +448,14 @@
   animation: pulse1 3s infinite;
 }
 
-.laundryImg {
-  position: absolute;
-  left: 15%;
+.scrollContainer > .laundryImg {
+  position: relative;
   min-width: 1600px;
-  width: 85%;
+  width: 100%;
   height: 100%;
   background-image: url("../images/laundry.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
 }
 
 .infoDotLaundry1 {
