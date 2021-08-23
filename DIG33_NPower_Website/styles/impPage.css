@@ -511,7 +511,6 @@
   width: 100%;
   height: auto;  
   text-align: left;
-
 }
 
 .impProdTileTypeText {
@@ -666,6 +665,7 @@
     height: 82vw;
     width: 80vw;
     margin-left: 70px;
+    margin-top: 200px;
   }
 
   .impRoomPanel {

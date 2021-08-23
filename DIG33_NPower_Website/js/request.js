@@ -397,11 +397,13 @@ window.addEventListener("resize", function () {
         twitIcon.classList.remove("pull-right");
         faceIcon.classList.add("pull-left");
         twitIcon.classList.add("pull-left");
+        screenSmall = true;
     }
     else if (screenWidth >= 576) {
         faceIcon.classList.remove("pull-left");
         twitIcon.classList.remove("pull-left");
         faceIcon.classList.add("pull-right");
         twitIcon.classList.add("pull-right");
+        screenSmall = false;
     }
 })

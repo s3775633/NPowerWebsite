@@ -77,8 +77,3 @@ function scrollToRight(room)
     behavior: 'smooth'
   });
 }
-
-function getRoom()
-{
-
-}
