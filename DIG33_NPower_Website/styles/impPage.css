@@ -2,7 +2,7 @@
     display: block;
     position: fixed;
     background-color: #7548ac;
-    z-index: 1;
+    z-index: 7;
     height: 0;
     width: 40%;
     height: 100%;
@@ -12,15 +12,62 @@
     animation: slideInTile ease-out 2s;
 }
 
+.bathroomPage .largeImprovementTile {
+  animation: none;
+}
+
+.bedroomPage .largeImprovementTile {
+  animation: none;
+}
+
+.livingPage .largeImprovementTile {
+  animation: none;
+}
+
+.studyPage .largeImprovementTile {
+  animation: none;
+}
+
+.laundryPage .largeImprovementTile {
+  animation: none;
+}
+
+.kitchenPage .largeImprovementTile {
+  animation: none;
+}
+
+.bathroomPage .rowES {
+  animation: none;
+}
+
+.bedroomPage .rowES {
+  animation: none;
+}
+
+.livingPage .rowES {
+  animation: none;
+}
+
+.studyPage .rowES {
+  animation: none;
+}
+
+.laundryPage .rowES {
+  animation: none;
+}
+
+.kitchenPage .rowES {
+  animation: none;
+}
+
 /* Code obtained from https://codepen.io/technokami/pen/abojmZa */
 #house {
     display: block;
-    height: 31vw;
-    width: 30vw;
+    height: 27vw;
+    width: 26vw;
     background-image: url("../images/House\ Layout.png");
     margin: auto;
-    margin-top: 220px;
-    
+    margin-top: 230px;
     /*
       * Adding image to the background
       * No relation to the hover effect.
@@ -49,7 +96,7 @@
 
 .impPanel {
     position: absolute;
-    bottom: 5%;
+    bottom: 9%;
     right: -150px;
     width: 40%;
     height: 20%;
@@ -68,18 +115,18 @@
 }
 
 .impRoomPanel {
-  position: absolute;
-  bottom: 5%;
-  right: -150px;
-  width: 40%;
+  position: fixed;
+  bottom: 9%;
+  right: 0px;
+  width: 35%;
   height: 20%;
   background-color: #7548ac;
-  border-radius: 100px;
+  border-radius: 100px 0 0 100px;
+  overflow: hidden;
 }
 
 .impRoomPanelText {
   position: absolute;
-  left: -10%;
   top: 50%;
   text-transform: uppercase;
   font-size: 2.3vw;
@@ -151,27 +198,81 @@
 }
 
 .bedroomImg {
-  position: relative;
-  width: 82%;
-  height: 100vh;
-  background-image: url("../images/bedroom.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-left: 19%;
-}
-
-.kitchenImg {
   position: absolute;
   left: 15%;
   min-width: 1600px;
   width: 85%;
-  height: 100vh;
+  height: 100%;
+  background-image: url("../images/bedroom.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.infoDotBedroom1 {
+  z-index: 4;
+  position: absolute;
+  top: 60%;
+  left: 19.5%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
+}
+
+.infoDotBedroom2 {
+  z-index: 3;
+  position: absolute;
+  top: 43%;
+  left: 79%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
+}
+
+.scrollContainer > .kitchenImg {
+  position: relative;
+  min-width: 1600px;
+  width: 100%;
+  height: 100%;
   background-image: url("../images/kitchen.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
+.scrollContainer {
+  height: 100vh;
+  width: 100vw;
+  margin-left: 10%;
+  position: relative;
+  overflow-x: auto;
+}
+
+.impProdTile .infoDotKitchen1 {
+  position: absolute;
+  top: 50%;
+  margin-left: -200px;
+  width: 310px;
+  height: 380px;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  margin-right: 60px;
+  transform: translateY(-50%);
+  box-shadow: 1px 1px 4px #000000;
+  padding: 10px
+}
+
 .infoDotKitchen1 {
+  z-index: 4;
   position: absolute;
   top: 75%;
   left: 20.5%;
@@ -185,6 +286,7 @@
 }
 
 .infoDotKitchen2 {
+  z-index: 3;
   position: absolute;
   top: 52%;
   left: 28.1%;
@@ -237,56 +339,279 @@
 }
 
 .bathroomImg {
-  position: relative;
-  width: 82%;
-  height: 100vh;
+  position: absolute;
+  left: 15%;
+  min-width: 1600px;
+  width: 85%;
+  height: 100%;
   background-image: url("../images/bathroom.png");
   background-size: cover;
   background-repeat: no-repeat;
-  margin-left: 19%;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.infoDotBathroom1 {
+  z-index: 4;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
 }
 
 .livingImg {
-  position: relative;
-  width: 82%;
-  height: 100vh;
+  position: absolute;
+  left: 15%;
+  min-width: 1600px;
+  width: 85%;
+  height: 100%;
   background-image: url("../images/living_room.png");
   background-size: cover;
   background-repeat: no-repeat;
-  margin-left: 19%;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.infoDotLiving1 {
+  z-index: 4;
+  position: absolute;
+  top: 61%;
+  left: 21.5%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
+}
+
+.infoDotLiving2 {
+  z-index: 3;
+  position: absolute;
+  top: 55%;
+  left: 56%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
 }
 
 .studyImg {
-  position: relative;
-  width: 82%;
-  height: 100vh;
+  position: absolute;
+  left: 15%;
+  min-width: 1600px;
+  width: 85%;
+  height: 100%;
   background-image: url("../images/study.png");
   background-size: cover;
   background-repeat: no-repeat;
-  margin-left: 19%;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.infoDotStudy1 {
+  z-index: 4;
+  position: absolute;
+  top: 45%;
+  left: 34%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
+}
+
+.infoDotStudy2 {
+  z-index: 3;
+  position: absolute;
+  top: 40%;
+  left: 69%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
+}
+
+.infoDotStudy3 {
+  position: absolute;
+  top: 51%;
+  left: 58.5%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
 }
 
 .laundryImg {
-  position: relative;
-  width: 82%;
-  height: 100vh;
+  position: absolute;
+  left: 15%;
+  min-width: 1600px;
+  width: 85%;
+  height: 100%;
   background-image: url("../images/laundry.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  margin-left: 19%;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.infoDotLaundry1 {
+  position: absolute;
+  top: 68%;
+  left: 48%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
+}
+
+.infoDotLaundry2 {
+  position: absolute;
+  top: 72%;
+  left: 30%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  animation: pulse1 3s infinite;
 }
 
 .impContainer {
   width: 100%;
   background-color: white;
   min-height: 100%;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
 }
 
-.kitchenContainer {
+.impProdTile {
+  position: absolute;
+  top: 50%;
+  margin-left: -155px;
+  width: 310px;
+  height: 380px;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  margin-right: 60px;
+  transform: translateY(-50%);
+  box-shadow: 10px 10px 10px 10px #000000;
+  padding: 10px
+}
+
+.impProdTileType {
   width: 100%;
-  height: 100vh;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  height: auto;  
+  text-align: left;
+
+}
+
+.impProdTileTypeText {
+  text-transform: uppercase;
+  font-size: 15px;
+  animation: fadeIn 1.4s;
+}
+
+.impConsumptionSymbol {
+  position: absolute;
+  width: 25%;
+  padding-bottom: 25%;
+  top: -10px;
+  right: -10px;
+  z-index: 4;
+  animation: fadeIn 1.4s;
+}
+
+.impConsumption {
+  position: absolute;
+  width: 25%;
+  font-size: 15px;
+  padding-bottom: 25%;
+  top: 10px;
+  right: -10px;
+  animation: fadeIn 1.4s;
+}
+
+.impConsumptionText {
+  font-size: 8px;
+  animation: fadeIn 1.4s;
+}
+
+.impProductName {
+  width: 100%;
+  font-size: 17px;
+  text-transform: uppercase;
+  animation: fadeIn 1.4s;
+}
+
+.impProductGrid {
+  position: relative;
+  align-items: center;
+  align-content: center;
+  float: center;
+}
+
+.impProdTitleBox {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  margin: auto;
+  padding-top: 120px;
+  padding-bottom: 40px;
+}
+
+.impProductImage {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: auto;
+  height: 38%;
+  float: right;
+  transform: translateX(-50%);
+  animation: fadeIn 1.4s;
+}
+
+.impProductDescription {
+  margin-top: 52%;
+  font-size: 11.9px;
+  text-align: center;
+  animation: fadeIn 1.4s;
+}
+
+.impTileExit {
+  position: absolute;
+  background-image: url("../images/close\ icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  animation: fadeIn 1.4s;
 }
 
 @media screen and (max-width: 900px) {
@@ -296,11 +621,55 @@
       width: 100%;
   }
 
+  #house {
+    height: 57vw;
+    width: 54.5vw;
+  }
+
+  .impPanel {
+    display: none;
+}
+
   .kitchenImg {
+    left: 0;
+    overflow-x: visible;
+    overflow-y: hidden;
+  }
+
+  .scrollContainer {
+    margin-left: 0;
+  }
+
+  .laundryImg {
     left: 0;
     overflow-x: auto;
     overflow-y: hidden;
   }
+
+  .studyImg {
+    left: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .bedroomImg {
+    left: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .livingImg {
+    left: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .bathroomImg {
+    left: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
 
   .largeImprovementTile {
     display: none;
@@ -311,6 +680,7 @@
   #house {
     height: 82vw;
     width: 80vw;
+    margin-left: 70px;
   }
 
   .impRoomPanel {
@@ -320,4 +690,52 @@
   .impRoomPanelText {
     display: none;
   }
+
+  .impSwiperContainer {
+    position: fixed;
+    bottom: 8%;
+    left: 0;
+    background-color: #7548ac;
+    width: 100%;
+    height: 70px;
+  }
+
+  .impSwiperText {
+    position: absolute;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .swiperArrowLeft {
+    position: absolute;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 40px;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .swiperArrowRight {
+    position: absolute;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 40px;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
 }
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  50% {opacity:0;}
+  100% {opacity:1;}
+}
+

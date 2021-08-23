@@ -71,11 +71,23 @@
     display: block;
     position: absolute;
     margin: auto;
-    top: 55%;
-    left: 5%;
-    width: 90%;
-    height: 40%;
-    box-shadow: 0 0 10px;
+    top: 50%;
+    left: 6%;
+    width: 86%;
+    height: 35%;
+}
+
+.tileButton {
+    position: absolute;
+    width: 80%;
+    text-transform: uppercase;
+    font-size: 1.3vw;
+    border-radius: 100px;
+    left: 10%;
+    bottom: 15px;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 4px 3px 1px #000000;
 }
 
 .fade-out {
@@ -258,6 +270,10 @@
     }
 
     .cardImage {
+        display: none;
+    }
+
+    .tileButton {
         display: none;
     }
 

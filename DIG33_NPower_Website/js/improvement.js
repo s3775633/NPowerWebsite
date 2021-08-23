@@ -57,3 +57,27 @@ function resetTiles() {
     removeHover(tile);
   }
 }
+
+function scrollToLeft(event)
+{
+  var width = window.innerWidth;
+  var kitchenDiv = document.querySelector(".scrollContainer");
+  kitchenDiv.scrollTo({
+    top: 0,
+    left: (kitchenDiv.scrollLeft - (width - 100)),
+    behavior: 'smooth'
+  });
+  console.log("HelloLeft")
+}
+
+function scrollToRight(event)
+{
+  var width = window.innerWidth;
+  var kitchenDiv = document.querySelector(".scrollContainer");
+  kitchenDiv.scrollTo({
+    top: 0,
+    left: (kitchenDiv.scrollLeft + (width - 100)),
+    behavior: 'smooth'
+  });
+  console.log("HelloRight")
+}

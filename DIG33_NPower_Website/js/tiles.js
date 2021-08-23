@@ -25,12 +25,14 @@ function addHover(div) {
   var text = div.querySelector(".tileText");
   var heading = div.querySelector(".tileHeading");
   var tileImage = div.querySelector(".cardImage");
+  var tileButton = div.querySelector(".tileButton");
   var description = div.querySelector(".tileDescription");
   image.classList.add("fade-out");
   text.classList.add("fade-out");
   heading.classList.remove("fade-out-description");
   description.classList.remove("fade-out-description");
   tileImage.classList.remove("fade-out-description");
+  tileButton.classList.remove("fade-out-description");
   image.classList.remove("fade-in");
   text.classList.remove("fade-in");
   heading.classList.add("fade-in-description");
@@ -39,12 +41,15 @@ function addHover(div) {
   description.classList.remove("tileDecriptionVisibility");
   tileImage.classList.add("fade-in-description");
   tileImage.classList.remove("tileDecriptionVisibility");
+  tileButton.classList.add("fade-in-description");
+  tileButton.classList.remove("tileDecriptionVisibility");
 }
 
 function removeHover(div) {
   var image = div.querySelector(".image");
   var text = div.querySelector(".tileText");
   var heading = div.querySelector(".tileHeading");
+  var tileButton = div.querySelector(".tileButton");
   var description = div.querySelector(".tileDescription");
   var tileImage = div.querySelector(".cardImage");
   image.classList.remove("fade-out");
@@ -52,11 +57,13 @@ function removeHover(div) {
   heading.classList.add("fade-out-description");
   description.classList.add("fade-out-description");
   tileImage.classList.add("fade-out-description");
+  tileButton.classList.add("fade-out-description");
   image.classList.add("fade-in");
   text.classList.add("fade-in");
   heading.classList.remove("fade-in-description");
   description.classList.remove("fade-in-description");
   tileImage.classList.remove("fade-in-description");
+  tileButton.classList.remove("fade-in-description");
 }
 
 function tileClick(div) {
