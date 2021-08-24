@@ -34,10 +34,6 @@
     padding: 0px;
 }
 
-.navbar-collapse {
-    visibility: hidden;
-}
-
 .navbar {
     height: 57px;
 }
@@ -47,6 +43,11 @@
     height: 45px;
     overflow: visible;
 }
+
+.hamburger object {
+    pointer-events:visibleStroke;
+}
+
 
 @media (min-width: 1301px) {
 .navbar-collapse {

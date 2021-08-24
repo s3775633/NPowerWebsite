@@ -28,7 +28,7 @@
           <div class="container-fluid">
             <button class="navbar-toggler collapsed" id="toggle" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarCollapse" aria-expanded="false" aria-controls="navbar"
-              aria-label="Toggle navigation" onclick=activateNav()>
+              aria-label="Toggle navigation">
               <input class="hamburger" type="image" src="./images/Hamburger.png" />
             </button>
             <a href="#"><img class="homeLogo" onclick=homePage() src="./images/Logo_Outline.png" alt=""></a>
@@ -51,11 +51,11 @@
                 </li>
               </ul>
               <!--Search form-->
-              <form class="form-inline my-2 my-lg-0 ml-auto searchLocation">
+              <form class="form-inline my-2 my-lg-0 ml-auto searchLocation" id="searchForm">
                 <div class="input-group search-bar">
-                  <input class="form-control" type="search" placeholder="Search">
+                  <input class="form-control" type="search" placeholder="Search" name="search">
                   <div class="input-group-append">
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i
+                    <button class="btn btn-secondary my-2 my-sm-0" type="button" onclick=searchFind()><i
                         class="fa fa-search fa-lg"></i></button>
                   </div>
                 </div>
@@ -66,9 +66,6 @@
       </header>
       <!--Section-Home_page-->
       <section class="homePage page">
-        <div class="homeSVG">
-          <object type="image/svg+xml" data="./images/Homepage.svg"></object>
-        </div>
         <div class="jumbotron text-center">
           <div class="titleBox1">
             <h1 class="titleLight">As Individuals we are <b class="titleBold">NPower</b>ed</h1>
@@ -119,7 +116,7 @@
                   that can help reduce your energy bills.</h1>
                 <!-- Reference: PhotoMIX Company. 2016. "Gray Gas Range Oven in Kitchen". Pexels. https://www.pexels.com/photo/gray-gas-range-oven-in-kitchen-213162/ -->
                 <img class="cardImage tileDecriptionVisibility" src="images/efficient-products-card-image.png">
-                  <button class="tileButton tileDecriptionVisibility">Buy Now</button>
+                <button class="tileButton tileDecriptionVisibility">Buy Now</button>
               </div>
             </div>
           </div>
@@ -398,16 +395,16 @@
               </div>
             </div>
             <div class="scrollContainer" id="bedroom">
-            <div class="bedroomImg">
-              <div class="infoDotBedroom1 infoDot" id="Lighting" onclick=getTile(this)></div>
-              <div class="infoDotBedroom2 infoDot" id="Space heating" onclick=getTile(this)></div>
-              <div class="impSwiperContainer">
-                <i class="fa fa-chevron-left pull-left swiperArrowLeft" onclick=scrollToLeft(bedroom)></i>
-                <h1 class="impSwiperText">Swipe</h1><i class="fa fa-chevron-right pull-right swiperArrowRight"
-                  onclick=scrollToRight(bedroom)></i>
+              <div class="bedroomImg">
+                <div class="infoDotBedroom1 infoDot" id="Lighting" onclick=getTile(this)></div>
+                <div class="infoDotBedroom2 infoDot" id="Space heating" onclick=getTile(this)></div>
+                <div class="impSwiperContainer">
+                  <i class="fa fa-chevron-left pull-left swiperArrowLeft" onclick=scrollToLeft(bedroom)></i>
+                  <h1 class="impSwiperText">Swipe</h1><i class="fa fa-chevron-right pull-right swiperArrowRight"
+                    onclick=scrollToRight(bedroom)></i>
+                </div>
               </div>
             </div>
-          </div>
             <div class="impRoomPanel">
               <h1 class="impRoomPanelText">Explore Possible Improvements</h1>
             </div>
@@ -435,15 +432,15 @@
               </div>
             </div>
             <div class="scrollContainer" id="bathroom">
-            <div class="bathroomImg">
-              <div class="infoDotBathroom1 infoDot" id="Water heating" onclick=getTile(this)></div>
-              <div class="impSwiperContainer">
-                <i class="fa fa-chevron-left pull-left swiperArrowLeft" onclick=scrollToLeft(bathroom)></i>
-                <h1 class="impSwiperText">Swipe</h1><i class="fa fa-chevron-right pull-right swiperArrowRight"
-                  onclick=scrollToRight(bathroom)></i>
+              <div class="bathroomImg">
+                <div class="infoDotBathroom1 infoDot" id="Water heating" onclick=getTile(this)></div>
+                <div class="impSwiperContainer">
+                  <i class="fa fa-chevron-left pull-left swiperArrowLeft" onclick=scrollToLeft(bathroom)></i>
+                  <h1 class="impSwiperText">Swipe</h1><i class="fa fa-chevron-right pull-right swiperArrowRight"
+                    onclick=scrollToRight(bathroom)></i>
+                </div>
               </div>
             </div>
-          </div>
             <div class="impRoomPanel">
               <h1 class="impRoomPanelText">Explore Possible Improvements</h1>
             </div>
@@ -471,16 +468,16 @@
               </div>
             </div>
             <div class="scrollContainer" id="living">
-            <div class="livingImg">
-              <div class="infoDotLiving1 infoDot" id="Speakers" onclick=getTile(this)></div>
-              <div class="infoDotLiving2 infoDot" id="Television" onclick=getTile(this)></div>
-              <div class="impSwiperContainer">
-                <i class="fa fa-chevron-left pull-left swiperArrowLeft" onclick=scrollToLeft(living)></i>
-                <h1 class="impSwiperText">Swipe</h1><i class="fa fa-chevron-right pull-right swiperArrowRight"
-                  onclick=scrollToRight(living)></i>
+              <div class="livingImg">
+                <div class="infoDotLiving1 infoDot" id="Speakers" onclick=getTile(this)></div>
+                <div class="infoDotLiving2 infoDot" id="Television" onclick=getTile(this)></div>
+                <div class="impSwiperContainer">
+                  <i class="fa fa-chevron-left pull-left swiperArrowLeft" onclick=scrollToLeft(living)></i>
+                  <h1 class="impSwiperText">Swipe</h1><i class="fa fa-chevron-right pull-right swiperArrowRight"
+                    onclick=scrollToRight(living)></i>
+                </div>
               </div>
             </div>
-          </div>
             <div class="impRoomPanel">
               <h1 class="impRoomPanelText">Explore Possible Improvements</h1>
             </div>
@@ -508,16 +505,16 @@
               </div>
             </div>
             <div class="scrollContainer" id="study">
-            <div class="studyImg">
-              <div class="infoDotStudy1 infoDot" id="Printer" onclick=getTile(this)></div>
-              <div class="infoDotStudy2 infoDot" id="Computer - desktop" onclick=getTile(this)></div>
-              <div class="impSwiperContainer">
-                <i class="fa fa-chevron-left pull-left swiperArrowLeft" onclick=scrollToLeft(study)></i>
-                <h1 class="impSwiperText">Swipe</h1><i class="fa fa-chevron-right pull-right swiperArrowRight"
-                  onclick=scrollToRight(study)></i>
+              <div class="studyImg">
+                <div class="infoDotStudy1 infoDot" id="Printer" onclick=getTile(this)></div>
+                <div class="infoDotStudy2 infoDot" id="Computer - desktop" onclick=getTile(this)></div>
+                <div class="impSwiperContainer">
+                  <i class="fa fa-chevron-left pull-left swiperArrowLeft" onclick=scrollToLeft(study)></i>
+                  <h1 class="impSwiperText">Swipe</h1><i class="fa fa-chevron-right pull-right swiperArrowRight"
+                    onclick=scrollToRight(study)></i>
+                </div>
               </div>
             </div>
-          </div>
             <div class="impRoomPanel">
               <h1 class="impRoomPanelText">Explore Possible Improvements</h1>
             </div>
@@ -528,7 +525,7 @@
       <section class="laundryPage page">
         <div class="largeImprovementTile">
           <div class="sideNav">
-            <h1 class="elgSideNav">Study</h1>
+            <h1 class="elgSideNav">Laundry</h1>
           </div>
         </div>
         <div class="jumbotron text-center">
@@ -545,16 +542,16 @@
               </div>
             </div>
             <div class="scrollContainer" id="laundry">
-            <div class="laundryImg">
-              <div class="infoDotLaundry1 infoDot" id="Washing machine" onclick=getTile(this)></div>
-              <div class="infoDotLaundry2 infoDot" id="Tumble dryer" onclick=getTile(this)></div>
-              <div class="impSwiperContainer">
-                <i class="fa fa-chevron-left pull-left swiperArrowLeft" onclick=scrollToLeft(laundry)></i>
-                <h1 class="impSwiperText">Swipe</h1><i class="fa fa-chevron-right pull-right swiperArrowRight"
-                  onclick=scrollToRight(laundry)></i>
+              <div class="laundryImg">
+                <div class="infoDotLaundry1 infoDot" id="Washing machine" onclick=getTile(this)></div>
+                <div class="infoDotLaundry2 infoDot" id="Tumble dryer" onclick=getTile(this)></div>
+                <div class="impSwiperContainer">
+                  <i class="fa fa-chevron-left pull-left swiperArrowLeft" onclick=scrollToLeft(laundry)></i>
+                  <h1 class="impSwiperText">Swipe</h1><i class="fa fa-chevron-right pull-right swiperArrowRight"
+                    onclick=scrollToRight(laundry)></i>
+                </div>
               </div>
             </div>
-          </div>
             <div class="impRoomPanel">
               <h1 class="impRoomPanelText">Explore Possible Improvements</h1>
             </div>
@@ -582,19 +579,19 @@
               </div>
             </div>
             <div class="scrollContainer" id="kitchen">
-            <div class="kitchenImg">
-              <div class="infoDotKitchen1 infoDot" id="Dishwasher" onclick=getTile(this)></div>
-              <div class="infoDotKitchen2 infoDot" id="Kettle" onclick=getTile(this)></div>
-              <div class="infoDotKitchen3 infoDot" id="Microwave" onclick=getTile(this)></div>
-              <div class="infoDotKitchen4 infoDot" id="Fridge-freezer" onclick=getTile(this)></div>
-              <div class="infoDotKitchen5 infoDot" id="Oven" onclick=getTile(this)></div>
-              <div class="impSwiperContainer">
-                <i class="fa fa-chevron-left pull-left swiperArrowLeft" onclick=scrollToLeft(kitchen)></i>
-                <h1 class="impSwiperText">Swipe</h1><i class="fa fa-chevron-right pull-right swiperArrowRight"
-                  onclick=scrollToRight(kitchen)></i>
+              <div class="kitchenImg">
+                <div class="infoDotKitchen1 infoDot" id="Dishwasher" onclick=getTile(this)></div>
+                <div class="infoDotKitchen2 infoDot" id="Kettle" onclick=getTile(this)></div>
+                <div class="infoDotKitchen3 infoDot" id="Microwave" onclick=getTile(this)></div>
+                <div class="infoDotKitchen4 infoDot" id="Fridge-freezer" onclick=getTile(this)></div>
+                <div class="infoDotKitchen5 infoDot" id="Oven" onclick=getTile(this)></div>
+                <div class="impSwiperContainer">
+                  <i class="fa fa-chevron-left pull-left swiperArrowLeft" onclick=scrollToLeft(kitchen)></i>
+                  <h1 class="impSwiperText">Swipe</h1><i class="fa fa-chevron-right pull-right swiperArrowRight"
+                    onclick=scrollToRight(kitchen)></i>
+                </div>
               </div>
             </div>
-          </div>
             <div class="impRoomPanel">
               <h1 class="impRoomPanelText">Explore Possible Improvements</h1>
             </div>
@@ -658,21 +655,21 @@
             </div>
             <div class="aboutRow">
               <h1 class="aboutHeading1">Our Mission</h1>
-                <p class="aboutDescription">Our core focus is to provide decentralised, green, and
-                  interconnected solutions that address the needs of our customers and those of the environment.
-                  We aim to lead the global shift towards <a class="aboutLink" onclick=prodPage()>new technology</a> by
-                  working with customers, companies and across
-                  communities to make energy simpler,
-                  smarter and more sustainable.</p>
+              <p class="aboutDescription">Our core focus is to provide decentralised, green, and
+                interconnected solutions that address the needs of our customers and those of the environment.
+                We aim to lead the global shift towards <a class="aboutLink" onclick=prodPage()>new technology</a> by
+                working with customers, companies and across
+                communities to make energy simpler,
+                smarter and more sustainable.</p>
               <h1 class="aboutHeading2">Your Involvement</h1>
-                <p class="aboutDescription">At npower, we believe in empowering the individual to make global change.
-                  We aim to connect our customers to our tried-and-true <a class="aboutLink" onclick=impPage()>tips</a>
-                  for saving money, electricity,
-                  and in turn, the planet. Whether through offering 100% renewable energy tariffs,
-                  keeping our customers updated on the latest green technology, or by educating households
-                  on how they can minimise not just their energy bills but their carbon footprint,
-                  we’re always looking for ways to do some good together.</p>
-              </div>
+              <p class="aboutDescription">At npower, we believe in empowering the individual to make global change.
+                We aim to connect our customers to our tried-and-true <a class="aboutLink" onclick=impPage()>tips</a>
+                for saving money, electricity,
+                and in turn, the planet. Whether through offering 100% renewable energy tariffs,
+                keeping our customers updated on the latest green technology, or by educating households
+                on how they can minimise not just their energy bills but their carbon footprint,
+                we’re always looking for ways to do some good together.</p>
+            </div>
           </div>
       </section>
       <!--Section-Support_Page-->
@@ -694,64 +691,114 @@
               </div>
             </div>
             <div class="contacts">
-            <div class="rowSup">
-              <div class="col2">
-                <a id="supportEnq">
-                  <button class="supportButton1 pull-center" id="enqPhoneButton">
-                  <img class=support1Img src="images/Phone White.png">Enquiries<br>
-                  <h1 class="number1"></h1>
-                </button>
-              </a>
-                </span>
+              <div class="rowSup">
+                <div class="col2">
+                  <a id="supportEnq">
+                    <button class="supportButton1 pull-center" id="enqPhoneButton">
+                      <img class=support1Img src="images/Phone White.png">Enquiries<br>
+                      <h1 class="number1"></h1>
+                    </button>
+                  </a>
+                  </span>
+                </div>
+              </div>
+              <div class="rowSup">
+                <div class="col2">
+                  <a id="supportFault">
+                    <button class="supportButton2 pull-center" id="faultPhoneButton">
+                      <img class=support1Img src="images/Phone White.png">Faults<br>
+                      <h1 class="number2"></h1>
+                    </button>
+                  </a>
+                  </span>
+                </div>
+              </div>
+              <div class="rowSup">
+                <div class="col2">
+                  <a id="supportEmail">
+                    <button class="supportButton3 pull-center" id="messageButton">
+                      <img class=support1Img src="images/Mail White.png">Faults<br>
+                      <h1 class="number3"></h1>
+                    </button>
+                  </a>
+                  </span>
+                </div>
               </div>
             </div>
-            <div class="rowSup">
-              <div class="col2">
-                <a id="supportFault">
-                  <button class="supportButton2 pull-center" id="faultPhoneButton">
-                    <img class=support1Img src="images/Phone White.png">Faults<br>
-                    <h1 class="number2"></h1>
-                  </button>
-                </a>
-                </span>
-              </div>
-            </div>
-            <div class="rowSup">
-              <div class="col2">
-                <a id="supportEmail">
-                  <button class="supportButton3 pull-center" id="messageButton">
-                    <img class=support1Img src="images/Mail White.png">Faults<br>
-                    <h1 class="number3"></h1>
-                  </button>
-                </a>
-                </span>
-              </div>
-            </div>
-          </div>
           </div>
         </div>
       </section>
-    </div>
-    <!-- Footer -->
-    <footer class="text-white page-footer fixed-bottom">
-      <div class="container-fluid">
-        <!-- Section-Contact icons -->
-        <div class="row">
-          <div class="col-md-12 mb-0">
-            <h1 class="footerMessage pull-left">&copy 2021 Sepia Group</h1>
-            <a class="btn btn-link btn-floating btn-lg text-dark m-1 pull-right" id="emailButton" role="button"
-              data-mdb-ripple-color="dark"><img class="footerIcon" src="images/mailB.png"></img></a>
-            <a class="btn btn-link btn-floating btn-lg text-dark m-1 pull-right" id="enqButton" role="button"
-              data-mdb-ripple-color="dark"><img class="footerIcon" src="images/phoneB.png"></img></a>
-            <a class="btn facebookIcon btn-link btn-floating btn-lg text-dark m-1 pull-right" id="facebook" target="blank"
-              role="button" data-mdb-ripple-color="dark"><img class="footerIcon" src="images/facebookB.png"></img></a>
-            <a class="btn twitterIcon btn-link btn-floating btn-lg text-dark m-1 pull-right" id="twitter" target="blank"
-              role="button" data-mdb-ripple-color="dark"><img class="footerIcon" src="images/twitterB.png"></img></a>
-              <h1 class="footerLink pull-right" onclick=aboutPage()>About Us</h1>
+      <!--Section-Search_No_Result-->
+    <section class="noResultPage page">
+      <div class="largeSupportTile">
+      </div>
+      <div class="esContainer">
+        <div class="jumbotron text-center">
+          <div class="supTitleImage"></div>
+          <div class="supTitleBox">
+            <div class="rowES1">
+              <div class="col1">
+                <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
+              </div>
+              <div class="col2">
+                <span class="sectionTitle pull-center">No Results Found</h1>
+                </span>
+              </div>
             </div>
+          </div>
+          <div class="noResultsContainer">
+            <h2 class="noResultsText">No Results were found, try changing your search term or explore the website via the <a class="homeLink" onclick=homePage()>home page</a></h2>
+          </div>
         </div>
       </div>
-    </footer>
+    </section>
+    <section class="multiResultPage page">
+      <div class="largeSupportTile">
+      </div>
+      <div class="esContainer">
+        <div class="jumbotron text-center">
+          <div class="supTitleImage"></div>
+          <div class="supTitleBox">
+            <div class="rowES1">
+              <div class="col1">
+                <i class="backButton fa fa-chevron-left" onclick=homePage()></i>
+              </div>
+              <div class="col2">
+                <span class="sectionTitle pull-center">Search Results</h1>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="resultsContainer">
+
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="text-white page-footer fixed-bottom">
+    <div class="container-fluid">
+      <!-- Section-Contact icons -->
+      <div class="row">
+        <div class="col-md-12 mb-0">
+          <h1 class="footerMessage pull-left">&copy 2021 Sepia Group</h1>
+          <a class="btn btn-link btn-floating footLink btn-lg text-dark m-1 pull-right" id="emailButton" role="button"
+            data-mdb-ripple-color="dark"><img class="footerIcon" src="images/mailB.png"></img></a>
+          <a class="btn btn-link btn-floating footLink btn-lg text-dark m-1 pull-right" id="enqButton" role="button"
+            data-mdb-ripple-color="dark"><img class="footerIcon" src="images/phoneB.png"></img></a>
+          <a class="btn facebookIcon btn-link footLink btn-floating btn-lg text-dark m-1 pull-right" id="facebook"
+            target="blank" role="button" data-mdb-ripple-color="dark"><img class="footerIcon"
+              src="images/facebookB.png"></img></a>
+          <a class="btn twitterIcon btn-link footLink btn-floating btn-lg text-dark m-1 pull-right" id="twitter"
+            target="blank" role="button" data-mdb-ripple-color="dark"><img class="footerIcon"
+              src="images/twitterB.png"></img></a>
+          <h1 class="footerLink pull-right" onclick=aboutPage()>About Us</h1>
+        </div>
+      </div>
+    </div>
+  </footer>
   </div>
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"

@@ -251,6 +251,136 @@ function elgTest() {
         })
 }
 
+function searchFind() {
+    var formData = new FormData(document.getElementById('searchForm'));
+    var container = document.querySelector(".resultsContainer");
+    const params = new URLSearchParams(formData);
+    var query = "?" + params.toString();
+    console.log(query);
+    const response = fetch('https://npower-s2.herokuapp.com/search' + query)
+        .then(response => response.text())
+        .then((response) => {
+            var results = JSON.parse(response);
+            var pageFunction;
+            var pageCategory;
+            if(results.length == 1)
+            {
+                console.log("one result found");
+                if(results == "support")
+                {
+                    supportPage();
+                }
+                else if(results == "incentives")
+                {
+                    esPage();
+                }
+                else if(results == "kitchen")
+                {
+                    impKitchen();
+                }
+                else if(results == "living")
+                {
+                    impLiving();
+                }
+                else if(results == "bedroom")
+                {
+                    impBedroom();
+                }
+                else if(results == "bathroom")
+                {
+                    impBathroom();
+                }
+                else if(results == "laundry")
+                {
+                    impLaundry();
+                }
+                else if(results == "study")
+                {
+                    impStudy();
+                }
+                else if(results == "products")
+                {
+                    prodPage();
+                }
+            }
+            else if(results.length > 1)
+            { 
+                container.innerHTML = "";
+                var containerNumber = 1;
+                for(x = 0; x < results.length; x++)
+                {
+
+                    pageCategory = "";
+                    if(results[x] == "support")
+                    {
+                        pageFunction = 'supportPage()';
+                    }
+                    else if(results[x] == "incentives")
+                    {
+                        pageFunction = 'esPage()';
+                    }
+                    else if(results[x] == "kitchen")
+                    {
+                        pageCategory = "improvements - ";
+                        pageFunction = 'impKitchen()';
+                    }
+                    else if(results[x] == "living")
+                    {
+                        pageCategory = "improvements - ";
+                        pageFunction = 'impLiving()';
+                    }
+                    else if(results[x] == "bedroom")
+                    {
+                        pageCategory = "improvements - ";
+                        pageFunction = 'impBedroom()';
+                    }
+                    else if(results[x] == "bathroom")
+                    {
+                        pageCategory = "improvements - ";
+                        pageFunction = 'impBathroom()';
+                    }
+                    else if(results[x] == "laundry")
+                    {
+                        pageCategory = "improvements - ";
+                        pageFunction = 'impLaundry()';
+                    }
+                    else if(results[x] == "study")
+                    {
+                        pageCategory = "improvements - ";
+                        pageFunction = 'impStudy()';
+                    }
+                    else if(results[x] == "products")
+                    {
+                        pageFunction = 'prodPage()';
+                    }
+                    container.innerHTML += '<div class="rowSup">' +
+                    '<div class="infoContainer">' +
+                      '<a id="supportEnq">' +
+                        '<button class="resultButton' + containerNumber + ' pull-center" onclick="' + pageFunction + '">' +
+                          '<h1 class="number1">' + pageCategory + results[x] + '</h1>' +
+                        '</button>' +
+                      '</a>' +
+                      '</span>' +
+                    '</div>' +
+                  '</div>'
+                  if(containerNumber == 3)
+                  {
+                      containerNumber = 1;
+                  }
+                  else
+                  {
+                      containerNumber++;
+                  }
+                }
+                multiResultsPage();
+            }
+            else
+            {
+                NoResultsPage();
+            }
+        })
+}
+
 function displayProducts() {
     var tileArea = document.querySelector('.productGrid');
     var mobileTileArea = document.querySelector('.swiper-wrapper');

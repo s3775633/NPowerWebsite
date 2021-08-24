@@ -13,8 +13,8 @@ footer {
 }
 
 .footerIcon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     opacity: 0.8;
 }
 
@@ -30,15 +30,18 @@ footer {
     position: absolute;
     top: 50%;
     color: black;
-    right: 400px;
-    font-size: 30px;
+    right: 280px;
+    font-size: 25px;
     cursor: pointer;
     transform: translateY(-50%);
 }
 
 .footerLink:hover {
     color: blue;
-    font-size: 30px;
+}
+
+.footLink {
+    padding: 5px !important;
 }
 
 @media screen and (max-width: 575px) {
