@@ -52,7 +52,6 @@ function getTile(appliance) {
             prodTileOpen = true;
             removeTiles();
             appliance.classList.add("impProdTile")
-            appliance.classList.remove("infoDotKithen1");
             var comsumpImg;
             if (appliances[x].consumption < 100) {
                 comsumpImg = 'images/consumption-low.svg';
@@ -253,6 +252,7 @@ function elgTest() {
 
 function checkSubmit(e) {
     if(e && e.keyCode == 13) {
+       e.preventDefault();
        searchFind();
     }
  }
@@ -411,7 +411,7 @@ function displayProducts() {
                       '</div>' +
                       '<div class="flip-card-back">' + 
                       '<p class="efficientProdDescription">' + products[x].description + '</p>' +
-                      '<button class="purchaseButton">Buy Now</button>' +
+                      '<a class="purchaseButton" target="_blank" href="' + products[x].purchaseLink + '">Buy Now</a>' +
                       '</div>' +
                     '</div>' +
                   '</div>'
@@ -427,7 +427,7 @@ function displayProducts() {
                       '</div>' +
                       '<div class="flip-card-back">' + 
                       '<p class="efficientProdDescription">' + products[x].description + '</p>' +
-                      '<button class="purchaseButton">Buy Now</button>' +
+                      '<a class="purchaseButton" target="_blank" href="' + products[x].purchaseLink + '">Buy Now</a>' +
                       '</div>' +
                     '</div>' +
                   '</div>'

@@ -46,9 +46,9 @@
 }
 
 .sideNav {
-    position: fixed;
+    position: absolute;
     z-index: 3;
-    top: 27%;
+    top: 250px;
     left: 45%;
     width: 70%;
     height: 50%;

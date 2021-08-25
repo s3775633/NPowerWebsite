@@ -198,6 +198,14 @@
 
 }
 
+.prodArea a {
+    text-decoration: none;
+}
+
+.prodArea a:hover {
+    color: white !important;
+}
+
 .swiperContainer {
     position: fixed;
     z-index: 4;
@@ -304,6 +312,7 @@
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+    box-shadow: 2px 2px 2px #000000;
 }
 
 @media screen and (max-width: 900px) {

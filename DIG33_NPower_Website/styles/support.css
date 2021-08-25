@@ -231,6 +231,7 @@
     top: 0;
     width: 100%;
     height: 300px;
+    /** Image from https://www.southslope.com/home/man-working-in-office-and-typing-on-computer-keyboard/ **/
     background-image: url("../images/supportImage.png");
     background-size: cover;
     background-repeat: no-repeat;
