@@ -251,6 +251,12 @@ function elgTest() {
         })
 }
 
+function checkSubmit(e) {
+    if(e && e.keyCode == 13) {
+       searchFind();
+    }
+ }
+
 function searchFind() {
     var formData = new FormData(document.getElementById('searchForm'));
     var container = document.querySelector(".resultsContainer");
@@ -265,7 +271,6 @@ function searchFind() {
             var pageCategory;
             if(results.length == 1)
             {
-                console.log("one result found");
                 if(results == "support")
                 {
                     supportPage();
@@ -309,15 +314,17 @@ function searchFind() {
                 var containerNumber = 1;
                 for(x = 0; x < results.length; x++)
                 {
-
+                    var sectionImg = "images/Innovative-Alternatives.png";
                     pageCategory = "";
                     if(results[x] == "support")
                     {
                         pageFunction = 'supportPage()';
+                        var sectionImg = "images/supportIcon.png";
                     }
                     else if(results[x] == "incentives")
                     {
                         pageFunction = 'esPage()';
+                        sectionImg = "images/Reduce-Cost.png";
                     }
                     else if(results[x] == "kitchen")
                     {
@@ -352,12 +359,14 @@ function searchFind() {
                     else if(results[x] == "products")
                     {
                         pageFunction = 'prodPage()';
+                        sectionImg = "images/Protect-Environment.png";
                     }
                     container.innerHTML += '<div class="rowSup">' +
                     '<div class="infoContainer">' +
                       '<a id="supportEnq">' +
                         '<button class="resultButton' + containerNumber + ' pull-center" onclick="' + pageFunction + '">' +
-                          '<h1 class="number1">' + pageCategory + results[x] + '</h1>' +
+                        '<img class=support1Img src="' + sectionImg + '">' +
+                        '<h1 class="searchText">' + pageCategory + results[x] + '</h1>' +
                         '</button>' +
                       '</a>' +
                       '</span>' +

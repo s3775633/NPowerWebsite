@@ -473,3 +473,9 @@
         font-size: 1.8vw;
     }
 }
+
+@media screen and (min-width: 1600px) {
+    .sectionTitle {
+        font-size: 60px;
+    }
+  }

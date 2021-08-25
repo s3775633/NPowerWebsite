@@ -115,6 +115,39 @@
     margin-bottom: 50px;
 }
 
+.searchText {  
+    color: white;
+    font-size: 2vw;
+}
+
+@media screen and (max-width: 900px) {
+    .resultsContainer {
+        margin-left: 0;
+    }
+
+    .searchText {
+        font-size: 4vw;
+    }
+
+    .resultButton1 {
+        font-size: 3vw;
+        width: 90%;
+        padding-left: 10vw;
+    }
+
+    .resultButton2 {
+        font-size: 3vw;
+        width: 90%;
+        padding-left: 10vw;
+    }
+
+    .resultButton3 {
+        font-size: 3vw;
+        width: 90%;
+        padding-left: 10vw;
+    }
+}
+
 @media screen and (max-width: 576px) {
     .noResultsContainer {
         position: absolute;
@@ -122,6 +155,10 @@
         top: 50%;
         margin-left: 10%;
         transform: translateY(-50%);
+    }
+
+    .searchText {
+        font-size: 5vw;
     }
 
     .noResultsText {
@@ -132,5 +169,26 @@
         font-size: 30px;
         color: blue;
         cursor: pointer;
+    }
+
+    .resultButton1 {
+        text-align: center;
+        padding-left: 0;
+        font-size: 5vw;
+        padding-top: 60px;
+    }
+
+    .resultButton2 {
+        text-align: center;
+        padding-left: 0;
+        font-size: 5vw;
+        padding-top: 60px;
+    }
+
+    .resultButton3 {
+        text-align: center;
+        padding-left: 0;
+        font-size: 5vw;
+        padding-top: 60px;
     }
 }

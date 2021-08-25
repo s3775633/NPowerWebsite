@@ -29,10 +29,10 @@ function handleMove(e) {
     * Control the rotation
     * You can change the value and see the results
     */
-  const yRotation = -20 * ((xVal - house.offsetWidth / 2) / house.offsetWidth)
+  const yRotation = -10 * ((xVal - house.offsetWidth / 2) / house.offsetWidth)
 
   /* Calculate the rotation along the X-axis */
-  const xRotation = 20 * ((yVal - house.offsetHeight / 2) / house.offsetHeight)
+  const xRotation = 10 * ((yVal - house.offsetHeight / 2) / house.offsetHeight)
 
   /* Generate string for CSS transform property */
   const string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'

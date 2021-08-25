@@ -1,4 +1,5 @@
 
+
 // Function used to close nav menu if in mobile display
 function closeNav() {
     // Screen width obtained
@@ -7,7 +8,8 @@ function closeNav() {
     if (screenWidth < 1301) {
         // nav toggled if not already collapsed.
         if (!document.getElementById('toggle').classList.contains('collapsed')) {
-            bsCollapse.toggle();
+            const menuToggle = document.getElementById('navbarCollapse')
+            const bsCollapse = new bootstrap.Collapse(menuToggle)
         }
     }
 }
@@ -116,6 +118,7 @@ function impKitchen() {
 // Function used to display the products page.
 function prodPage() {
     hidePages();
+    displayProducts();
     productPageOpen = true;
     var prodPage = document.querySelector(".productsPage");
     prodPage.scrollTo(0, 0);
@@ -211,4 +214,3 @@ function resetTiles() {
       removeHover(tile);
     }
   }
-
