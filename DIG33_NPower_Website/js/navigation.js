@@ -1,5 +1,4 @@
-const menuToggle = document.getElementById('navbarCollapse')
-const bsCollapse = new bootstrap.Collapse(menuToggle)
+
 
 // Function used to close nav menu if in mobile display
 function closeNav() {
@@ -9,7 +8,8 @@ function closeNav() {
     if (screenWidth < 1301) {
         // nav toggled if not already collapsed.
         if (!document.getElementById('toggle').classList.contains('collapsed')) {
-            bsCollapse.toggle();
+            const menuToggle = document.getElementById('navbarCollapse')
+            const bsCollapse = new bootstrap.Collapse(menuToggle)
         }
     }
 }
@@ -118,6 +118,7 @@ function impKitchen() {
 // Function used to display the products page.
 function prodPage() {
     hidePages();
+    displayProducts();
     productPageOpen = true;
     var prodPage = document.querySelector(".productsPage");
     prodPage.scrollTo(0, 0);
@@ -174,6 +175,21 @@ function elgFalsePage() {
     esNav.classList.add("active");
 }
 
+// Function used to display support page.
+function NoResultsPage() {
+    hidePages();
+    var noResults = document.querySelector(".noResultPage");
+    noResults.scrollTo(0, 0);
+    noResults.style.display = "block";
+}
+
+function multiResultsPage() {
+    hidePages();
+    var multiResults = document.querySelector(".multiResultPage");
+    multiResults.scrollTo(0, 0);
+    multiResults.style.display = "block";
+}
+
 // Function used to hide all pages on the site and make all nav options inactive.
 function hidePages() {
     productPageOpen = false;
@@ -192,21 +208,9 @@ function hidePages() {
     closeNav();
 }
 
-function activateNav() {
-    var nav = document.getElementById('navbarCollapse');
-    if (window.getComputedStyle(nav).visibility === "hidden") {
-        nav.style.visibility = "visible";
-    }
-}
-
-window.onload = function () {
-    bsCollapse.hide();
-}
-
 function resetTiles() {
     var tiles = document.getElementsByClassName('tile');
     for (tile of tiles) {
       removeHover(tile);
     }
   }
-

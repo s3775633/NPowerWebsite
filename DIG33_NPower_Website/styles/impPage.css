@@ -62,18 +62,27 @@
 
 /* Code obtained from https://codepen.io/technokami/pen/abojmZa */
 #house {
+    position: absolute;
     display: block;
-    height: 27vw;
-    width: 26vw;
+    height: calc(86vh - 300px);
+    width: calc(85vh - 300px);
     background-image: url("../images/House\ Layout.png");
     margin: auto;
-    margin-top: 230px;
+    left: 35%;
+    top: 10px;
     /*
       * Adding image to the background
       * No relation to the hover effect.
       */
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.houseContainer {
+  position: absolute;
+  top: 300px;
+  width: 100%;
+  height: calc(100% - 357px);
 }
 
 .rowImp {
@@ -89,19 +98,39 @@
     width: 100%;
     height: 300px;
     /** Image from https://www.designairmt.com/learn/istock-639009204-couple-kitchen-laptop/ **/
-    background-image: url("../images/Improvements\ Image.png");
+    background-image: url("../images/impTitleImage.png");
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.impSwiperContainer {
+  display: none;
+}
+
+.impSwiperText {
+  display: none;
 }
 
 .impPanel {
     position: absolute;
     bottom: 9%;
-    right: -150px;
-    width: 40%;
+    right: 0px;
+    width: 30%;
     height: 20%;
     background-color: #7548ac;
-    border-radius: 100px;
+    border-radius: 100px 0px 0px 100px;
+}
+
+.impSideNav {
+  position: absolute;
+  z-index: 3;
+  top: 250px;
+  left: 5px;
+  color: #ffffff;
+  font-size: 35px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .impPanelText {
@@ -123,6 +152,7 @@
   background-color: #7548ac;
   border-radius: 100px 0 0 100px;
   overflow: hidden;
+  z-index: 1;
 }
 
 .impRoomPanelText {
@@ -297,6 +327,7 @@
 }
 
 .infoDotKitchen3 {
+  z-index: 3;
   position: absolute;
   top: 51%;
   left: 58.5%;
@@ -310,6 +341,7 @@
 }
 
 .infoDotKitchen4 {
+  z-index: 3;
   position: absolute;
   top: 54%;
   left: 70%;
@@ -323,6 +355,7 @@
 }
 
 .infoDotKitchen5 {
+  z-index: 3;
   position: absolute;
   top: 58%;
   left: 85%;
@@ -436,6 +469,7 @@
 }
 
 .infoDotStudy3 {
+  z-index: 3;
   position: absolute;
   top: 51%;
   left: 58.5%;
@@ -459,6 +493,7 @@
 }
 
 .infoDotLaundry1 {
+  z-index: 3;
   position: absolute;
   top: 68%;
   left: 48%;
@@ -472,6 +507,7 @@
 }
 
 .infoDotLaundry2 {
+  z-index: 3;
   position: absolute;
   top: 72%;
   left: 30%;
@@ -605,9 +641,19 @@
       width: 100%;
   }
 
+  .impSideNav {
+    display: none;
+  }
+
+  .houseContainer {
+    padding-bottom: 200px;
+  }
+
   #house {
-    height: 57vw;
-    width: 54.5vw;
+    height: calc(86vh - 300px);
+    width: calc(85vh - 300px);
+    left: calc((105vw - (80vh - 300px)) / 2);
+    margin: 0;
   }
 
   .impPanel {
@@ -662,10 +708,10 @@
 
 @media screen and (max-width: 575px) {
   #house {
-    height: 82vw;
-    width: 80vw;
-    margin-left: 70px;
-    margin-top: 200px;
+    height: calc(81vh - 300px);
+    width: calc(80vh - 300px);
+    left: calc((105vw - (80vh - 300px)) / 2);
+    margin: 0;
   }
 
   .impRoomPanel {
@@ -677,8 +723,9 @@
   }
 
   .impSwiperContainer {
+    display: block;
     position: fixed;
-    bottom: 8%;
+    bottom: 59px;
     left: 0;
     background-color: #7548ac;
     width: 100%;
@@ -686,6 +733,7 @@
   }
 
   .impSwiperText {
+    display: block;
     position: absolute;
     text-transform: uppercase;
     color: #ffffff;

@@ -32,6 +32,7 @@
     transform: translateX(-8%);
     opacity: 0.9;
     animation: slideIn ease-out 2s;
+
 }
 
 .rowES1 {
@@ -43,6 +44,16 @@
     background-color: white;
     border-radius: 100px;
     transform: translateX(-8%);
+    opacity: 0.9;
+}
+
+.rowES2 {
+    position: absolute;
+    width: 125px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 0px 100px 100px 0px;
+    left: 0;
     opacity: 0.9;
 }
 
@@ -287,7 +298,7 @@
 .esText {
     margin-left: 25%;
     width: 70%;
-    padding-top: 400px;
+    padding-top: 40vh;
 }
 
 .buttonPanel {
@@ -772,6 +783,12 @@
     height: 15vw;
 }
 }
+
+@media screen and (min-width: 1600px) {
+    .backButton {
+        font-size: 80px;
+    }
+  }
 
 @keyframes slideIn {
     0% {

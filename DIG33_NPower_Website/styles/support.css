@@ -42,6 +42,7 @@
     padding-top: 330px;
     margin-left: 200px;
     animation: slideInContacts ease-out 2s;
+    padding-bottom: 50px;
 }
 
 .rowSup > .col2 {
